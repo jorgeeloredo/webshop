@@ -1,0 +1,3271 @@
+[
+    {
+        "id": 101,
+        "name": "Surjeteuse S0555",
+        "slug": "surjeteuse-s0555",
+        "category_id": 1,
+        "price": 549,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La surjeteuse S0555 vous aidera à réaliser de belles finitions. Son accès complet aux boucleurs d'enfilage a été spécialement conçu pour vous faciliter son utilisation. En cadeau, le livre \"21 jours pour apprendre à coudre à la surjeteuse\" ! Ce livre vous dévoile comment enfiler et régler les tensions et vous accompagnera dans vos premières coutures à la surjeteuse !<\/p>",
+        "sku": "719665",
+        "gtin": "3700394502681",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "surjeteuse_s0555-0.jpg",
+            "surjeteuse_s0555-1.jpg",
+            "surjeteuse_s0555-2.jpg",
+            "surjeteuse_s0555-3.jpg",
+            "surjeteuse_s0555-4.jpg",
+            "surjeteuse_s0555-5.jpg",
+            "surjeteuse_s0555-6.jpg",
+            "surjeteuse_s0555-7.jpg",
+            "surjeteuse_s0555-8.jpg",
+            "surjeteuse_s0555-9.jpg"
+        ],
+        "features": [
+            "Finitions parfaites",
+            "Entre 300€ et 700€",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Capacité 4, 3 , 2 fils",
+            "Avec entrainement différentiel",
+            "Surjet 4, 3, 2 fils",
+            "Ourlet roulotté",
+            "Position extra haute du pied presseur",
+            "Éclairage LED",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "2 aiguilles maximum",
+            "1300 points par minute",
+            "2 boucleurs",
+            "Accès complet aux boucleurs d'enfilage",
+            "Pression du pied de biche règlable",
+            "Système d'enfilage simplifié",
+            "Largeur de coupe ajustable",
+            "Pied avec guide de couture intégré",
+            "4 porte-cônes avec guide-fil télescopique"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur Surjeteuses",
+                "url": "pdfs\/42.pdf"
+            },
+            {
+                "name": "Fiche produit S0555",
+                "url": "pdfs\/62.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Notice d'utilisation S0555",
+                "url": "pdfs\/96.pdf"
+            }
+        ],
+        "related_products": [
+            "55",
+            "56",
+            "57",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:40:19.560168",
+        "updated_at": "2025-04-04T07:40:19.560168"
+    },
+    {
+        "id": 54,
+        "name": "Surjeteuse 14SH644",
+        "slug": "surjeteuse-14sh644",
+        "category_id": 1,
+        "price": 429,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La 14SH644 vous permettra de réussir toutes vos finitions sur tous types de tissus ! Un cours de 1 heure de prise en main de la machine offert avec la machine.  Pour en bénéficier, de ce cours en ligne consultez livret fournit avec votre surjeteuse.<\/p>",
+        "sku": "071644",
+        "gtin": "6935153300667",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "surjeteuse_14sh644-0.jpg",
+            "surjeteuse_14sh644-1.jpg",
+            "surjeteuse_14sh644-2.jpg",
+            "surjeteuse_14sh644-3.jpg",
+            "surjeteuse_14sh644-4.jpg",
+            "surjeteuse_14sh644-5.jpg",
+            "surjeteuse_14sh644-6.jpg",
+            "surjeteuse_14sh644-7.jpg",
+            "surjeteuse_14sh644-8.jpg"
+        ],
+        "features": [
+            "Finitions parfaites",
+            "Entre 300€ et 700€",
+            "Règlage de la tension du fil",
+            "Capacité 4, 3 , 2 fils",
+            "Surjet 4, 3 fils",
+            "Couture décorative 3 fils ou flatlock",
+            "Ourlet roulotté",
+            "Éclairage LED",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "2 aiguilles maximum",
+            "1300 points par minute",
+            "Dimensions (L*l*H) cm : 33,4*28,4*27,2"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation 14SH644",
+                "url": "pdfs\/31.pdf"
+            },
+            {
+                "name": "Comparateur Surjeteuses",
+                "url": "pdfs\/42.pdf"
+            },
+            {
+                "name": "Fiche produit 14SH644",
+                "url": "pdfs\/43.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "55",
+            "56",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:40:21.404173",
+        "updated_at": "2025-04-04T07:40:21.404173"
+    },
+    {
+        "id": 55,
+        "name": "Surjeteuse S0105",
+        "slug": "surjeteuse-s0105",
+        "category_id": 1,
+        "price": 599,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La S0105 a été conçue pour faciliter votre couture et pour aller plus loin dans vos créations !<\/p>",
+        "sku": "071655",
+        "gtin": "7393033112967",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "surjeteuse_s0105-0.jpg",
+            "surjeteuse_s0105-1.jpg",
+            "surjeteuse_s0105-2.jpg",
+            "surjeteuse_s0105-3.jpg",
+            "surjeteuse_s0105-4.jpg",
+            "surjeteuse_s0105-5.jpg",
+            "surjeteuse_s0105-6.jpg"
+        ],
+        "features": [
+            "Finitions parfaites",
+            "Entre 300€ et 700€",
+            "Capacité 4, 3 , 2 fils",
+            "Avec entrainement différentiel",
+            "Surjet 4, 3, 2 fils",
+            "Ourlet roulotté",
+            "Éclairage LED",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "2 aiguilles maximum",
+            "1300 points par minute",
+            "2 boucleurs",
+            "Système d'enfilage simplifié",
+            "Semelle du pied presseur à éjection automatique",
+            "Plaque à aiguille transformable",
+            "4 porte-cônes avec guide-fil télescopique",
+            "Dimensions (L*l*H) cm : 34,2*27,7*29,3"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation S0105",
+                "url": "pdfs\/13.pdf"
+            },
+            {
+                "name": "Comparateur Surjeteuses",
+                "url": "pdfs\/42.pdf"
+            },
+            {
+                "name": "Fiche produit S0105",
+                "url": "pdfs\/61.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "56",
+            "57",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:40:23.061865",
+        "updated_at": "2025-04-04T07:40:23.061865"
+    },
+    {
+        "id": 56,
+        "name": "Surjeteuse HD405S",
+        "slug": "surjeteuse-hd405s",
+        "category_id": 1,
+        "price": 699,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La surjeteuse HD405S vous permetra de réaliser des finitions professionnelle à grande vitesse ! Puissante et compacte, elle dispose de l'entraînement différentiel et de l'enfilage simplifié du boucleur gauche.<\/p>",
+        "sku": "071855",
+        "gtin": "7393033112059",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "surjeteuse_hd405s-0.jpg",
+            "surjeteuse_hd405s-1.jpg",
+            "surjeteuse_hd405s-2.jpg"
+        ],
+        "features": [
+            "Finitions parfaites",
+            "Entre 300€ et 700€",
+            "Enfilage simplifié",
+            "Avec entrainement différentiel",
+            "Surjet 4, 3, 2 fils",
+            "Couture décorative 3 fils ou flatlock",
+            "Ourlet roulotté",
+            "Position extra haute du pied presseur",
+            "Éclairage LED",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "2 aiguilles maximum",
+            "1300 points par minute",
+            "2 boucleurs",
+            "Semelle du pied presseur à éjection automatique",
+            "Plaque à aiguille transformable",
+            "4 porte-cônes avec guide-fil télescopique",
+            "Dimensions (L*l*H) cm : 33,4*28,4*27,2"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation HD0405S",
+                "url": "pdfs\/12.pdf"
+            },
+            {
+                "name": "Comparateur Surjeteuses",
+                "url": "pdfs\/42.pdf"
+            },
+            {
+                "name": "Fiche produit HD405S",
+                "url": "pdfs\/53.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "55",
+            "57",
+            "59",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:40:24.701827",
+        "updated_at": "2025-04-04T07:40:24.701827"
+    },
+    {
+        "id": 57,
+        "name": "Surjeteuse S0705",
+        "slug": "surjeteuse-s0705",
+        "category_id": 1,
+        "price": 1590,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Facilitez vous la vie avec la S0705 grâce à son enfilage automatique par pression d'air.<\/p>",
+        "sku": "071965",
+        "gtin": "7393033104993",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "surjeteuse_s0705-0.jpg",
+            "surjeteuse_s0705-1.jpg",
+            "surjeteuse_s0705-2.jpg",
+            "surjeteuse_s0705-3.jpg",
+            "surjeteuse_s0705-4.jpg",
+            "surjeteuse_s0705-5.jpg",
+            "surjeteuse_s0705-6.jpg",
+            "surjeteuse_s0705-7.jpg",
+            "surjeteuse_s0705-8.jpg",
+            "surjeteuse_s0705-9.jpg",
+            "surjeteuse_s0705-10.jpg",
+            "surjeteuse_s0705-11.jpg"
+        ],
+        "features": [
+            "Finitions parfaites",
+            "Plus de 1500€",
+            "15 programmes de point",
+            "Longueur de point ajustable",
+            "Capacité 4, 3 , 2 fils",
+            "Avec entrainement différentiel",
+            "Avec enfilage à air automatique",
+            "Surjet 4, 3, 2 fils",
+            "Couture décorative 3 fils ou flatlock",
+            "Éclairage LED",
+            "Contrôle de la vitesse",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1300 points par minute",
+            "Pression du pied de biche règlable",
+            "Convertisseur 2 fils intégré",
+            "Dimensions (L*l*H) cm : 34,8*29*29,9"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation S0705",
+                "url": "pdfs\/34.pdf"
+            },
+            {
+                "name": "Comparateur Surjeteuses",
+                "url": "pdfs\/42.pdf"
+            },
+            {
+                "name": "Fiche produit S0705",
+                "url": "pdfs\/63.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "55",
+            "56",
+            "59",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:40:26.468370",
+        "updated_at": "2025-04-04T07:40:26.468370"
+    },
+    {
+        "id": 58,
+        "name": "Recouvreuse 14T970",
+        "slug": "recouvreuse-14t970",
+        "category_id": 1,
+        "price": 999,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La recouvreuse 14T970 est idéale pour les tissus extensibles mais aussi pour les tissus difficiles à assembler.<\/p>",
+        "sku": "074970",
+        "gtin": "3743188534000",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "recouvreuse_14t970-0.jpg",
+            "recouvreuse_14t970-1.jpg",
+            "recouvreuse_14t970-2.jpg",
+            "recouvreuse_14t970-3.jpg",
+            "recouvreuse_14t970-4.jpg",
+            "recouvreuse_14t970-5.jpg",
+            "recouvreuse_14t970-6.jpg"
+        ],
+        "features": [
+            "Finitions parfaites",
+            "Entre 700€ et 1500€",
+            "Longueur de point ajustable",
+            "Enfilage simplifié",
+            "Capacité 4, 3 , 2 fils",
+            "Avec entrainement différentiel",
+            "Points de recouvrement étroit \/ large \/ triple",
+            "Point de chaînette",
+            "Éclairage LED",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "3 aiguilles maximum",
+            "1100 points par minute",
+            "Dimensions (L*l*H) cm : 34*27*31"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation 14T970C",
+                "url": "pdfs\/32.pdf"
+            },
+            {
+                "name": "Comparateur Surjeteuses",
+                "url": "pdfs\/42.pdf"
+            },
+            {
+                "name": "Fiche produit 14T970C",
+                "url": "pdfs\/45.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "56",
+            "57",
+            "59",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:40:28.142879",
+        "updated_at": "2025-04-04T07:40:28.142879"
+    },
+    {
+        "id": 59,
+        "name": "Surjeteuse - Recouvreuse 14T968",
+        "slug": "surjeteuse-recouvreuse-14t968",
+        "category_id": 1,
+        "price": 1690,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La 14T968 est une surjeteuse-recouvreuse vous permettant de réaliser des finitions parfaites, comme les professionnels.<\/p>",
+        "sku": "071968",
+        "gtin": "374318826844",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "surjeteuse_-_recouvreuse_14t968-0.jpg",
+            "surjeteuse_-_recouvreuse_14t968-1.jpg",
+            "surjeteuse_-_recouvreuse_14t968-2.jpg",
+            "surjeteuse_-_recouvreuse_14t968-3.jpg",
+            "surjeteuse_-_recouvreuse_14t968-4.jpg",
+            "surjeteuse_-_recouvreuse_14t968-5.jpg",
+            "surjeteuse_-_recouvreuse_14t968-6.jpg",
+            "surjeteuse_-_recouvreuse_14t968-7.jpg",
+            "surjeteuse_-_recouvreuse_14t968-8.jpg",
+            "surjeteuse_-_recouvreuse_14t968-9.jpg",
+            "surjeteuse_-_recouvreuse_14t968-10.jpg",
+            "surjeteuse_-_recouvreuse_14t968-11.jpg"
+        ],
+        "features": [
+            "Finitions parfaites",
+            "Entre 700€ et 1500€",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Capacité 5, 4, 3, 2 fils",
+            "Avec entrainement différentiel",
+            "Surjet 5 fils sécurisé",
+            "Ourlet roulotté",
+            "Points de recouvrement étroit \/ large \/ triple",
+            "Point de chaînette",
+            "Position extra haute du pied presseur",
+            "Éclairage LED",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "3 aiguilles maximum",
+            "1300 points par minute",
+            "Plaque à aiguille transformable",
+            "Couteau inférieur fixe et supérieur amovible",
+            "5 porte-cônes avec guide-fil télescopique",
+            "Dimensions (L*l*H) cm : 34*27*31"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation 14T668",
+                "url": "pdfs\/11.pdf"
+            },
+            {
+                "name": "Comparateur Surjeteuses",
+                "url": "pdfs\/42.pdf"
+            },
+            {
+                "name": "Fiche produit 14T968",
+                "url": "pdfs\/44.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "57",
+            "58",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:40:29.762515",
+        "updated_at": "2025-04-04T07:40:29.762515"
+    },
+    {
+        "id": 111,
+        "name": "Offre spéciale : Surjeteuse avec sac et cours offerts",
+        "slug": "offre-speciale-surjeteuse-avec-sac-et-cours-offerts",
+        "category_id": 1,
+        "price": 399,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Offre exceptionnelle jusqu'au 30 avril 2025 : la surjeteuse 14SH644 est à 399€ (au lieu de 429€) avec le sac de transport offert (valeur : 45€) et le cours de couture vidéo pour vous guider dans la prise en main de votre surjeteuse ! La surjeteuse 14SH644 est parfaite pour réaliser les finitions de vos vêtement et assembler les tissus extensibles. Avec votre surjeteuse vous trouverez un livret vous donnant accès à un cours vidéo de prise en main de la surjeteuse de 1 heure. Ce cours est réalisé par Artésane, le site spécialiste des cours de loisirs créatifs en ligne. Un sac de transport adaptée à votre surjeteuse vous sera également offert pour pouvoir facilement la protéger et la transporter.<\/p>",
+        "sku": "716450",
+        "gtin": "3700394502360",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-0.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-1.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-2.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-3.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-4.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-5.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-6.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-7.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-8.jpg",
+            "offre_spéciale_:_surjeteuse_avec_sac_et_cours_offerts-9.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Règlage de la tension du fil",
+            "Capacité 4, 3 , 2 fils",
+            "Surjet 4, 3, 2 fils",
+            "Couture décorative 3 fils ou flatlock",
+            "Ourlet roulotté",
+            "Éclairage LED",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1300 points par minute"
+        ],
+        "documents": [],
+        "related_products": [
+            "55",
+            "56",
+            "57",
+            "83"
+        ],
+        "created_at": "2025-04-04T07:40:31.613761",
+        "updated_at": "2025-04-04T07:40:31.613761"
+    },
+    {
+        "id": 64,
+        "name": "Fer à repasser Steamchoice 1.0",
+        "slug": "fer-a-repasser-steamchoice-1-0",
+        "category_id": 2,
+        "price": 29,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Avec sa semelle anti-adhésive et son système anti-goutte, leSteamchoice 1.0 est prêt à relever vos défis de repassage ! Puissance : 2200W, Capacité de réservoir d’eau : 270ml, Semelle anti-adhésive, Contrôle de la température réglable, Filtre anti-calcaire, Système anti-goutte, Câble pivotant à 360°<\/p>",
+        "sku": "233285",
+        "gtin": "7393033113216",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "fer_à_repasser_steamchoice_1.0-0.jpg",
+            "fer_à_repasser_steamchoice_1.0-1.jpg",
+            "fer_à_repasser_steamchoice_1.0-2.jpg",
+            "fer_à_repasser_steamchoice_1.0-3.jpg",
+            "fer_à_repasser_steamchoice_1.0-4.jpg",
+            "fer_à_repasser_steamchoice_1.0-5.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "65",
+            "66",
+            "70",
+            "73"
+        ],
+        "created_at": "2025-04-04T07:40:34.780625",
+        "updated_at": "2025-04-04T07:40:34.780625"
+    },
+    {
+        "id": 65,
+        "name": "Fer à repasser Steamcraft",
+        "slug": "fer-a-repasser-steamcraft",
+        "category_id": 2,
+        "price": 89,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le Steamcraft est idéal pour le repassage de finitions avec sa fonction pressing et sa semelle en acier inoxydable. Puissance : 2600W, Semelle en acier inoxydable, Auto-nettoyage, Contrôle de la température réglable, Système anti-calcaire, Câble pivotant à 360°, Poignée anti-dérapante, Fonction pressing : 15-17 gr\/min, Capacité de réservoir d’eau : 300ml, Jet de vapeur vertical, Sélecteur repassage sec \/ vapeur, Système anti-goutte<\/p>",
+        "sku": "233280",
+        "gtin": "7393033106126",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "fer_à_repasser_steamcraft-0.jpg",
+            "fer_à_repasser_steamcraft-1.jpg",
+            "fer_à_repasser_steamcraft-2.jpg",
+            "fer_à_repasser_steamcraft-3.jpg",
+            "fer_à_repasser_steamcraft-4.jpg",
+            "fer_à_repasser_steamcraft-5.jpg",
+            "fer_à_repasser_steamcraft-6.jpg",
+            "fer_à_repasser_steamcraft-7.jpg",
+            "fer_à_repasser_steamcraft-8.jpg",
+            "fer_à_repasser_steamcraft-9.jpg",
+            "fer_à_repasser_steamcraft-10.jpg",
+            "fer_à_repasser_steamcraft-11.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "66",
+            "70",
+            "73"
+        ],
+        "created_at": "2025-04-04T07:40:36.473017",
+        "updated_at": "2025-04-04T07:40:36.473017"
+    },
+    {
+        "id": 66,
+        "name": "Défroisseur SWP Smart",
+        "slug": "defroisseur-swp-smart",
+        "category_id": 2,
+        "price": 169,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le SWP Smart est un défroisseur vertical et fer à repasser à charge continue avec température réglable. Il vous permettra de repasser verticalement vos vêtements et draps mais aussi de désinfecter vos matelas, draps, vêtements et tous vos tissus avec son puissant jet vapeur allant jusqu'à 150°. Sa semelle en aluminium est recouverte par une couche de céramique. Il est aussi pratique à transporter et léger et vous pourrez l'accrocher facilement grâce à son crochet, c'est donc un indispensable pour votre maison ! Autres caractéristiques : Touche émission vapeur, réservoir pour 330 ml d’eau transparent, avec enclenchement et dé-enclenchement à pression. Base repose fer, pieds anti éraflures, enrouleur de câble, crochet et boucle pour rangement vertical. 2 niveaux de chaleur : semelle 90-120°C, vapeur 15-20g\/min ou semelle 120-150°C, vapeur 25-35g\/min<\/p>",
+        "sku": "233855",
+        "gtin": "3700394500922",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "défroisseur_swp_smart-0.jpg",
+            "défroisseur_swp_smart-1.jpg",
+            "défroisseur_swp_smart-2.jpg",
+            "défroisseur_swp_smart-3.jpg",
+            "défroisseur_swp_smart-4.jpg",
+            "défroisseur_swp_smart-5.jpg",
+            "défroisseur_swp_smart-6.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "65",
+            "69"
+        ],
+        "created_at": "2025-04-04T07:40:38.075073",
+        "updated_at": "2025-04-04T07:40:38.075073"
+    },
+    {
+        "id": 67,
+        "name": "Fer à repasser STI 1720",
+        "slug": "fer-a-repasser-sti-1720",
+        "category_id": 2,
+        "price": 29,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le fer STI 1720 vous facilite le repassage avec ses multiples fonctionnalités ! Il a une puissance de 2200 W, une fonction pressing de 25 gr\/min et un réservoir de 300 mL, une semelle en acier inoxydable et la fonction auto-nettoyante ! Contrôle de la température réglable, Système anti-calcaire, Câble pivotant à 360°, Poignée anti-dérapante.<\/p>",
+        "sku": "233265",
+        "gtin": "5205022012177",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "fer_à_repasser_sti_1720-0.jpg",
+            "fer_à_repasser_sti_1720-1.jpg",
+            "fer_à_repasser_sti_1720-2.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "65",
+            "68",
+            "69"
+        ],
+        "created_at": "2025-04-04T07:40:40.146918",
+        "updated_at": "2025-04-04T07:40:40.146918"
+    },
+    {
+        "id": 68,
+        "name": "Fer à repasser STI 1730",
+        "slug": "fer-a-repasser-sti-1730",
+        "category_id": 2,
+        "price": 39,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le fer STI 1730 vous facilite le repassage avec ses multiples fonctionnalités ! Avec sa puissance de 2400 W, sa fonction pressing de 30 gr\/min et son réservoir de 320 Ml,il vous assurera un repassage parfait. Sans oublier sa semelle en acier inoxydable et sa fonction auto-nettoyante ! Système anti-calcaire, Câble pivotant à 360°, Poignée antidérapante, Sélecteur repassage sec\/vapeur.<\/p>",
+        "sku": "233270",
+        "gtin": "5205022012184",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "fer_à_repasser_sti_1730-0.jpg",
+            "fer_à_repasser_sti_1730-1.jpg",
+            "fer_à_repasser_sti_1730-2.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "67",
+            "69",
+            "70",
+            "73"
+        ],
+        "created_at": "2025-04-04T07:40:42.149645",
+        "updated_at": "2025-04-04T07:40:42.149645"
+    },
+    {
+        "id": 69,
+        "name": "Fer à repasser STI 1740",
+        "slug": "fer-a-repasser-sti-1740",
+        "category_id": 2,
+        "price": 49,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le fer STI 1740 vous facilite le repassage avec ses multiples fonctionnalités ! Avec sa puissance de 2600 W, sa fonction pressing de 35 gr\/min et son réservoir de 320 mL. Sans oublier sa semelle en acier inoxydable et sa fonction auto-nettoyante ! Contrôle de la température réglable, Système anti-calcaire, Câble pivotant à 360°, Poignée antidérapante, Jet de vapeur horizontal et vertical, Sélecteur repassage sec \/ vapeur<\/p>",
+        "sku": "233275",
+        "gtin": "5205022012191",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "fer_à_repasser_sti_1740-0.jpg",
+            "fer_à_repasser_sti_1740-1.jpg",
+            "fer_à_repasser_sti_1740-2.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "65",
+            "66",
+            "68"
+        ],
+        "created_at": "2025-04-04T07:40:43.815897",
+        "updated_at": "2025-04-04T07:40:43.815897"
+    },
+    {
+        "id": 70,
+        "name": "Fer à repasser Steamlogic plus",
+        "slug": "fer-a-repasser-steamlogic-plus",
+        "category_id": 2,
+        "price": 99,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Conçu pour un repassage facile et rapide, le Steamlogic Plus est un fer à repasser de 3100 W. Réservoir d’eau extra large : 380 ml (facile à remplir et sans débordement)<br\/>Affichage numérique avec sélection de 4 types de tissus, Chauffage ultra-rapide, Semelle anti-adhésive ArmorGlide pour une meilleure glisse sur les tissus difficiles<br\/>Configuration micro-vapeur pour une circulation dynamique de la vapeur, Arrêt en position verticale à partir de 30mn, Cordonnet long de 3,7 mètres pivot à 360°, Anticalcaire convient à l’eau du robinet.<\/p>",
+        "sku": "233290",
+        "gtin": "7393033105952",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "fer_à_repasser_steamlogic_plus-0.jpg",
+            "fer_à_repasser_steamlogic_plus-1.jpg",
+            "fer_à_repasser_steamlogic_plus-2.jpg",
+            "fer_à_repasser_steamlogic_plus-3.jpg",
+            "fer_à_repasser_steamlogic_plus-4.jpg",
+            "fer_à_repasser_steamlogic_plus-5.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "65",
+            "73"
+        ],
+        "created_at": "2025-04-04T07:40:45.419035",
+        "updated_at": "2025-04-04T07:40:45.419035"
+    },
+    {
+        "id": 71,
+        "name": "Presse à repasser Supernova",
+        "slug": "presse-a-repasser-supernova",
+        "category_id": 2,
+        "price": 399,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Réglez l'intensité de la vapeur pour défroisser et repasser vos vêtements du nylon au lin. Réglage de l’intensité de la vapeur, Vapeur verticale pour défroissage, Large surface de repassage, Semelle moulée en aluminium, Mise hors tension automatique avec alarme sonore, Puissance 1 600 W, réservoir 300 ml. Dimensions du produit : 67cm longueur, 58 cm de profondeur avec le bras (28 cm sans le bras).<\/p>",
+        "sku": "214600",
+        "gtin": "6938167862961",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "presse_à_repasser_supernova-0.jpg",
+            "presse_à_repasser_supernova-1.jpg",
+            "presse_à_repasser_supernova-2.jpg",
+            "presse_à_repasser_supernova-3.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "65",
+            "66",
+            "67"
+        ],
+        "created_at": "2025-04-04T07:40:47.127217",
+        "updated_at": "2025-04-04T07:40:47.127217"
+    },
+    {
+        "id": 73,
+        "name": "Défroisseur Steamworks pro",
+        "slug": "defroisseur-steamworks-pro",
+        "category_id": 2,
+        "price": 199,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le Steamworks Pro est un repasseur vapeur vertical prêt à l'utilisation en 45 secondes ! 90 minutes de vapeur continue !<br\/>Grand réservoir amovible : peut contenir jusqu’à 2,5 litres d’eau, Tube télescopique : s’ajuste selon les dimensions du vêtement ou votre espace de rangement, Cintre rotatif 360° : défroissez un vêtement sous toutes les coutures !, Système de double clip : pour des pantalons avec un repassage et un pli professionnels !, Smart Auto-Off : l’appareil s’éteint automatiquement quand le réservoir d’eau est vide, Accessoires inclus : clip pour pli de pantalons et brosse pour vêtements.<\/p>",
+        "sku": "233850",
+        "gtin": "8032817501809",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "défroisseur_steamworks_pro-0.jpg",
+            "défroisseur_steamworks_pro-1.jpg",
+            "défroisseur_steamworks_pro-2.jpg",
+            "défroisseur_steamworks_pro-3.jpg",
+            "défroisseur_steamworks_pro-4.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "65",
+            "66",
+            "71"
+        ],
+        "created_at": "2025-04-04T07:40:48.777438",
+        "updated_at": "2025-04-04T07:40:48.777438"
+    },
+    {
+        "id": 105,
+        "name": "Centrale vapeur TrueBlast 1.0",
+        "slug": "centrale-vapeur-trueblast-1-0",
+        "category_id": 2,
+        "price": 149,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Pratique et compacte, la centrale vapeur TrueBlast Steam sera votre principal allié pour un repassage efficace même sur les vêtements les plus délicats. Elle a une puissance de 2200w et d'une pression de vapeur de 4.5 bars. Equipée d'un thermostat réglable, d'un réservoir d'eau de 1700 ml elle débite 130 g\/mn de vapeur et fonctionne à l'eau de robinet ou déminéralisée. Elle est dotée d'une poignée ergonomique résistant à une température élevée pour vous garantir une sécurité maximale, même lorsque vous effectuez un repassage vertical. Elle est aussi équipée d'un système anticalcaire qui prolonge sa durée de vie. Sa semelle en acier à revêtement antiadhésif permet une glisse optimale sur tous les tissus, sa pointe et ses fentes sont conçues spécialement pour éliminer les faux plis même dans les plus petits coins. Résultat maximal, effort minimal ! Possibilité de fonctionner à sec ou à vapeur, dimensions : 20 x 37 x 37 cm.<\/p>\n<p><\/p>",
+        "sku": "233740",
+        "gtin": "7393033112455",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "centrale_vapeur_trueblast_1.0-0.jpg",
+            "centrale_vapeur_trueblast_1.0-1.jpg",
+            "centrale_vapeur_trueblast_1.0-2.jpg",
+            "centrale_vapeur_trueblast_1.0-3.jpg",
+            "centrale_vapeur_trueblast_1.0-4.jpg"
+        ],
+        "features": [],
+        "documents": [
+            {
+                "name": "Fiche produit TrueBlast 1.0",
+                "url": "pdfs\/88.pdf"
+            }
+        ],
+        "related_products": [
+            "65",
+            "66",
+            "70",
+            "73"
+        ],
+        "created_at": "2025-04-04T07:40:50.467219",
+        "updated_at": "2025-04-04T07:40:50.467219"
+    },
+    {
+        "id": 96,
+        "name": "Machine à coudre - Brodeuse Futura 500",
+        "slug": "machine-a-coudre-brodeuse-futura-500",
+        "category_id": 3,
+        "price": 1690,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Alliez couture et broderie grâce à la Futura 500 ! Accessible à tous, son écran tactile de 7 pouces et son enfile aiguille automatique assurent un confort et rapidité de couture. Elle possède 150 motifs de broderie intégrés et plus de 250 points. Vous avez aussi 3 mois offert à la plateforme de broderie MySewnet, pour d'accéder à davantage de motifs de broderie mais aussi de les créer vous-même vos propres motifs.<\/p>",
+        "sku": "192100",
+        "gtin": "7393033147686",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_-_brodeuse_futura_500-0.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-1.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-2.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-3.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-4.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-5.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-6.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-7.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-8.jpg"
+        ],
+        "features": [
+            "250 programmes de points",
+            "Système de canette horizontale \"top drop-in\"",
+            "10 alphabets",
+            "Écran tactile couleur XXL",
+            "Coupe-fils automatique",
+            "Enfile-aiguille automatique",
+            "Programme et mémoire de points",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Éclairage LED",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Couture sans pédale",
+            "Fonction \"Drop & Sew\"",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "Détecteur de fil cassé",
+            "Plus de 150 motifs de broderie",
+            "Mémoire de motifs",
+            "Connection en Wifi à MySewnet",
+            "Dimensions (L*l*H) cm : sans UB 48*21*31 \/ avec UB 61 x 36 x 31"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Notice d'utilisation Futura 500",
+                "url": "pdfs\/85.pdf"
+            },
+            {
+                "name": "Fiche produit Futura 500",
+                "url": "pdfs\/86.pdf"
+            }
+        ],
+        "related_products": [
+            "53",
+            "83"
+        ],
+        "created_at": "2025-04-04T07:40:53.735531",
+        "updated_at": "2025-04-04T07:40:53.735531"
+    },
+    {
+        "id": 53,
+        "name": "Brodeuse EM 9305",
+        "slug": "brodeuse-em-9305",
+        "category_id": 3,
+        "price": 2490,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Optez pour la EM9305 et ses qualités créatives exceptionnelles pour personnaliser tous vos projets. Elle est facile à utiliser grâce à son écran tactile couleur et son large cadre à broder. Elle possède plus de 150 motifs de broderie enregistrés et 3 alphabets.<\/p>",
+        "sku": "012305",
+        "gtin": "7393033111816",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "brodeuse_em_9305-0.jpg",
+            "brodeuse_em_9305-1.jpg",
+            "brodeuse_em_9305-2.jpg",
+            "brodeuse_em_9305-3.jpg",
+            "brodeuse_em_9305-4.jpg",
+            "brodeuse_em_9305-5.jpg",
+            "brodeuse_em_9305-6.jpg",
+            "brodeuse_em_9305-7.jpg",
+            "brodeuse_em_9305-8.jpg"
+        ],
+        "features": [
+            "Coupe-fil automatique\nPoints décoratifs",
+            "Plus de 1500€",
+            "Système de canette horizontale \"top drop-in\"",
+            "3 alphabets",
+            "Écran tactile couleur",
+            "Coupe-fils automatique",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "2 lumières LED",
+            "Abaissement des griffes d'entrainement",
+            "Couture sans pédale",
+            "Fonction \"Drop & Sew\"",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "Large cadre à broder : 240 x 150 mm",
+            "Détecteur de fil cassé",
+            "150 motifs de broderie",
+            "Dimensions (L*l*H) cm : 44,5*21*30"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation EM9305",
+                "url": "pdfs\/14.pdf"
+            },
+            {
+                "name": "Fiche produit EM9305",
+                "url": "pdfs\/48.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Manuel des broderies",
+                "url": "pdfs\/76.pdf"
+            }
+        ],
+        "related_products": [
+            "79",
+            "80"
+        ],
+        "created_at": "2025-04-04T07:40:55.383287",
+        "updated_at": "2025-04-04T07:40:55.383287"
+    },
+    {
+        "id": 79,
+        "name": "Logiciel Logibrod V2",
+        "slug": "logiciel-logibrod-v2",
+        "category_id": 3,
+        "price": 590,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Logiciel de création de broderie 2.0. Des fonctions étonnantes pour la numérisation et l'édition de broderies. Compatible avec nos brodeuse, le logiciel est facile à comprendre et à utiliser.<\/p>",
+        "sku": "106000",
+        "gtin": "3700394502506",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "logiciel_logibrod_v2-0.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "53"
+        ],
+        "created_at": "2025-04-04T07:40:57.011128",
+        "updated_at": "2025-04-04T07:40:57.011128"
+    },
+    {
+        "id": 80,
+        "name": "Logiciel de broderie Platinium",
+        "slug": "logiciel-de-broderie-platinium",
+        "category_id": 3,
+        "price": 1299,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Pour un contrôle total du processus de création. Compatible avec Windows® 10 (français) et macOS® (anglais). Activation et exécution sur ordinateur. Mise à niveau disponible pour les logiciels 4D, 5D, 6D et Premier +2<\/p>",
+        "sku": "620151596",
+        "gtin": "7393033114701",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "logiciel_de_broderie_platinium-0.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "53",
+            "79"
+        ],
+        "created_at": "2025-04-04T07:40:58.622448",
+        "updated_at": "2025-04-04T07:40:58.622448"
+    },
+    {
+        "id": 61,
+        "name": "Sac de transport pour machine à coudre",
+        "slug": "sac-de-transport-pour-machine-a-coudre",
+        "category_id": 4,
+        "price": 45,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le sac de transport Singer est très utile pour transporter votre machine à coudre sans l'abimer. Ce sac en nylon dispose d'une poignée et d'un fond renforcé pour plus de solidité. Dispose d'une poche séparée pour les accessoires. La sac mesure 45cm de longueur 37cm de hauteur et 16cm de profondeur. Pochette : 35x23x4. Le sac est compatible avec l'ensemble de la gamme de machines à coudre Singer mécaniques et électroniques.<\/p>",
+        "sku": "120021",
+        "gtin": "3700394501707",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "sac_de_transport_pour_machine_à_coudre-0.jpg",
+            "sac_de_transport_pour_machine_à_coudre-1.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "34",
+            "62",
+            "78"
+        ],
+        "created_at": "2025-04-04T07:41:01.815564",
+        "updated_at": "2025-04-04T07:41:01.815564"
+    },
+    {
+        "id": 62,
+        "name": "Sac transport pour surjeteuse",
+        "slug": "sac-transport-pour-surjeteuse",
+        "category_id": 4,
+        "price": 45,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Le sac de transport Singer est indispensable pour transporter votre surjeteuse sans l'abimer. Sa forme est spécialement conçue pour faciliter le transport de notre gamme de surjeteuses et recouvreuses.<\/p>",
+        "sku": "120022",
+        "gtin": "3700394500229",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "sac_transport_pour_surjeteuse-0.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "55",
+            "57",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:03.683943",
+        "updated_at": "2025-04-04T07:41:03.683943"
+    },
+    {
+        "id": 63,
+        "name": "Mégabox",
+        "slug": "megabox",
+        "category_id": 4,
+        "price": 49.9,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Optez pour la Megabox Singer qui vous fournira tout le nécessaire pour démarrer la couture : 14 bobines de fils, des aiguilles, canettes, épingles, ciseaux et bien d'autres accessoires. Contenu de la box : 14 bobines de fils, 5 aiguilles, 4 cannettes, 75 épingles à têtes multicolores, 1 paire de ciseaux, mètre ruban, découseur, craie, enfile-aiguille, plateau de rangement à canettes, 1 flacon d’huile, 1 petit tournevis, 1 grand tournevis, 1 grande brosse à peluche, 1 petite brosse à peluches.<\/p>",
+        "sku": "292116",
+        "gtin": "3700394501639",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "mégabox-0.jpg",
+            "mégabox-1.jpg",
+            "mégabox-2.jpg",
+            "mégabox-3.jpg",
+            "mégabox-4.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "33",
+            "34",
+            "45",
+            "46"
+        ],
+        "created_at": "2025-04-04T07:41:05.517548",
+        "updated_at": "2025-04-04T07:41:05.517548"
+    },
+    {
+        "id": 78,
+        "name": "Valise de transport pour machine à coudre",
+        "slug": "valise-de-transport-pour-machine-a-coudre",
+        "category_id": 4,
+        "price": 149,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Cette valise vous permettra déplacer votre machine à coudre où vous le souhaitez !  Elle est compatible avec la plupart des machines à coudre Singer. Elle possède une courroie de retenue à l'intérieur et une coque rigide pour un transport sûr. Dimensions : 60x23x47 cm. Poignée télescopique et roulettes résistantes.<\/p>",
+        "sku": "129100",
+        "gtin": "3700394502421",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "valise_de_transport_pour_machine_à_coudre-0.jpg",
+            "valise_de_transport_pour_machine_à_coudre-1.jpg",
+            "valise_de_transport_pour_machine_à_coudre-2.jpg",
+            "valise_de_transport_pour_machine_à_coudre-3.jpg",
+            "valise_de_transport_pour_machine_à_coudre-4.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "42",
+            "61",
+            "62"
+        ],
+        "created_at": "2025-04-04T07:41:07.303023",
+        "updated_at": "2025-04-04T07:41:07.303023"
+    },
+    {
+        "id": 79,
+        "name": "Logiciel Logibrod V2",
+        "slug": "logiciel-logibrod-v2",
+        "category_id": 4,
+        "price": 590,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Logiciel de création de broderie 2.0. Des fonctions étonnantes pour la numérisation et l'édition de broderies. Compatible avec nos brodeuse, le logiciel est facile à comprendre et à utiliser.<\/p>",
+        "sku": "106000",
+        "gtin": "3700394502506",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "logiciel_logibrod_v2-0.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "53"
+        ],
+        "created_at": "2025-04-04T07:41:09.086573",
+        "updated_at": "2025-04-04T07:41:09.086573"
+    },
+    {
+        "id": 80,
+        "name": "Logiciel de broderie Platinium",
+        "slug": "logiciel-de-broderie-platinium",
+        "category_id": 4,
+        "price": 1299,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Pour un contrôle total du processus de création. Compatible avec Windows® 10 (français) et macOS® (anglais). Activation et exécution sur ordinateur. Mise à niveau disponible pour les logiciels 4D, 5D, 6D et Premier +2<\/p>",
+        "sku": "620151596",
+        "gtin": "7393033114701",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "logiciel_de_broderie_platinium-0.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "53",
+            "79"
+        ],
+        "created_at": "2025-04-04T07:41:10.958105",
+        "updated_at": "2025-04-04T07:41:10.958105"
+    },
+    {
+        "id": 83,
+        "name": "Mannequin rouge taille 36-44",
+        "slug": "mannequin-rouge-taille-36-44",
+        "category_id": 4,
+        "price": 199,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Mannequin réglable de la taille 36 à 44. Réglage possible de la largeur du buste grâce aux molettes au niveau de la poitrine, de la taille et des hanches. Le pied vous permettra de régler la hauteur du buste et assurera la stabilité du mannequin. Poitrine 84 - 100 cm , Taille 64 - 80 cm, Hanches 85 - 102 cm.<\/p>",
+        "sku": "250952",
+        "gtin": "3700394503923",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "mannequin_rouge_taille_36-44-0.jpg",
+            "mannequin_rouge_taille_36-44-1.jpg"
+        ],
+        "features": [],
+        "documents": [
+            {
+                "name": "Fiche produit Mannequin",
+                "url": "pdfs\/87.pdf"
+            }
+        ],
+        "related_products": [],
+        "created_at": "2025-04-04T07:41:13.131578",
+        "updated_at": "2025-04-04T07:41:13.131578"
+    },
+    {
+        "id": 84,
+        "name": "Mannequin rouge taille 44-50",
+        "slug": "mannequin-rouge-taille-44-50",
+        "category_id": 4,
+        "price": 199,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Mannequin réglable de la taille 36 à 44. Réglage possible de la largeur du buste grâce aux molettes au niveau de la poitrine, de la taille et des hanches. Le pied vous permettra de régler la hauteur du buste et assurera la stabilité du mannequin. Tour de poitrine en cm 100\/119, tour de taille en cm 80\/100, tour de hanches en cm 104\/124.<\/p>",
+        "sku": "250953",
+        "gtin": "3700394503930",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "mannequin_rouge_taille_44-50-0.jpg",
+            "mannequin_rouge_taille_44-50-1.jpg"
+        ],
+        "features": [],
+        "documents": [
+            {
+                "name": "Fiche produit Mannequin",
+                "url": "pdfs\/87.pdf"
+            }
+        ],
+        "related_products": [],
+        "created_at": "2025-04-04T07:41:14.800527",
+        "updated_at": "2025-04-04T07:41:14.800527"
+    },
+    {
+        "id": 109,
+        "name": "Table d'extension Supera F687C",
+        "slug": "table-d-extension-supera-f687c",
+        "category_id": 4,
+        "price": 49,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La table d'extension pour la machine à coudre Supera F687C vous permettra d'agrandir votre surface de travail et de coudre ainsi de plus grandes pièces de tissus telles que les patchwork, les rideaux et le nappes par exemple. Plateau stable, réglable grâce aux pieds, règle intégrée sur le plateau, pied pliable pour un rangement plus facile. Dimensions : 40 x 25 cm et 7.5 cm de hauteur.<\/p>\n<p><\/p>",
+        "sku": "272460",
+        "gtin": "7393033112554",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "table_d'extension_supera_f687c-0.jpg",
+            "table_d'extension_supera_f687c-1.jpg",
+            "table_d'extension_supera_f687c-2.jpg",
+            "table_d'extension_supera_f687c-3.jpg",
+            "table_d'extension_supera_f687c-4.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "41",
+            "42",
+            "83"
+        ],
+        "created_at": "2025-04-04T07:41:16.530211",
+        "updated_at": "2025-04-04T07:41:16.530211"
+    },
+    {
+        "id": 119,
+        "name": "Kit couture premium",
+        "slug": "kit-couture-premium",
+        "category_id": 4,
+        "price": 49,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La pochette premium est bien pratique pour emporter vos essentiels couture partout avec vous. La pochette contient un couturomètre, un coupe-fil, un mètre ruban, une pelote à épingles, un dé à coudre en cuir, un découvit, des ciseaux 20 cm, des épingles à tête. Dimensions pochette fermée : 12x23 cm. Couleur argentée.<\/p>",
+        "sku": "57851302",
+        "gtin": "7393033111984",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "kit_couture_premium-0.jpg",
+            "kit_couture_premium-1.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "34",
+            "47",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:41:18.347235",
+        "updated_at": "2025-04-04T07:41:18.347235"
+    },
+    {
+        "id": 120,
+        "name": "Coffret pied de biche",
+        "slug": "coffret-pied-de-biche",
+        "category_id": 4,
+        "price": 49,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Kit de pieds optionnels Singer de 15 pièces. Composé de semelle bourdon, surjet, ourlet roulotté, ourlet invisible, fermeture a glissière invisible, rouleau, téflon, pose cordonnet, pose biais, pied fronceur, pied double entrainement, attache semelle et guide de couture aimanté. Pieds compatibles avec toutes les machines Singer<\/p>",
+        "sku": "27044851970",
+        "gtin": "01",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "coffret_pied_de_biche-0.jpg",
+            "coffret_pied_de_biche-1.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "34",
+            "47",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:41:20.018665",
+        "updated_at": "2025-04-04T07:41:20.018665"
+    },
+    {
+        "id": 126,
+        "name": "Table d'extension Futura 4300",
+        "slug": "table-d-extension-futura-4300",
+        "category_id": 4,
+        "price": 109,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La table d'extension pour la machine à coudre Futura 4300 vous permettra d'agrandir votre surface de travail et de coudre ainsi de plus grandes pièces de tissus telles que les patchwork, les rideaux et les nappes par exemple. Plateau stable, en plexiglass transparent, pied démontable pour un rangement plus facile. Dimensions : 43 longueur, 30 largeur, 7,5 hauteur.<\/p>\n<p><\/p>",
+        "sku": "",
+        "gtin": "",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "42",
+            "78",
+            "83",
+            "109"
+        ],
+        "created_at": "2025-04-04T07:41:21.625132",
+        "updated_at": "2025-04-04T07:41:21.625132"
+    },
+    {
+        "id": 40,
+        "name": "Machine à coudre Featherweight C240",
+        "slug": "machine-a-coudre-featherweight-c240",
+        "category_id": 5,
+        "price": 699,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La Featherweight est compacte et complète, elle est facile à transporter et possède aussi de nombreuses fonctionnalités pour vous faciliter la couture. Son point fort : son système d'entrainement régulier intégré, pour des coutures parfaites sur tous tissus ! <\/p>",
+        "sku": "027240",
+        "gtin": "7393033096519",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_featherweight_c240-0.jpg",
+            "machine_à_coudre_featherweight_c240-1.jpg",
+            "machine_à_coudre_featherweight_c240-2.jpg",
+            "machine_à_coudre_featherweight_c240-3.jpg",
+            "machine_à_coudre_featherweight_c240-4.jpg",
+            "machine_à_coudre_featherweight_c240-5.jpg",
+            "machine_à_coudre_featherweight_c240-6.jpg",
+            "machine_à_coudre_featherweight_c240-7.jpg",
+            "machine_à_coudre_featherweight_c240-8.jpg",
+            "machine_à_coudre_featherweight_c240-9.jpg",
+            "machine_à_coudre_featherweight_c240-10.jpg"
+        ],
+        "features": [
+            "Coudre des tissus épais\nPatchwork & Quilting\nPoints décoratifs",
+            "Intermédiaire",
+            "Entre 700€ et 1500€",
+            "70 programmes de points",
+            "Écran graphique",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Couture sans pédale",
+            "Contrôle de la vitesse",
+            "Fonction \"Drop & Sew\"",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "Système d'entraînement régulier intégré",
+            "3 boutonnières en 1 temps",
+            "Dimensions (L*l*H) cm : 43*23*32"
+        ],
+        "documents": [
+            {
+                "name": "Notice Featherweight",
+                "url": "pdfs\/35.pdf"
+            },
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Fiche produit Featherweight",
+                "url": "pdfs\/50.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "41",
+            "42",
+            "55"
+        ],
+        "created_at": "2025-04-04T07:41:24.998888",
+        "updated_at": "2025-04-04T07:41:24.998888"
+    },
+    {
+        "id": 44,
+        "name": "Machine à coudre Stylist 4085",
+        "slug": "machine-a-coudre-stylist-4085",
+        "category_id": 5,
+        "price": 1990,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Puissante et moderne avec une technologie écran tactile, la Stylist 4085 propose une qualité de couture impressionnante.<\/p>",
+        "sku": "019985",
+        "gtin": "3743188551700",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_stylist_4085-0.jpg",
+            "machine_à_coudre_stylist_4085-1.jpg",
+            "machine_à_coudre_stylist_4085-2.jpg",
+            "machine_à_coudre_stylist_4085-3.jpg",
+            "machine_à_coudre_stylist_4085-4.jpg"
+        ],
+        "features": [
+            "Coudre des tissus épais\nCoupe-fil automatique\nPatchwork & Quilting\nPoints décoratifs",
+            "Expert",
+            "Plus de 1500€",
+            "960 programmes de points",
+            "6 alphabets",
+            "Écran tactile couleur",
+            "Coupe-fils automatique",
+            "Enfile-aiguille automatique",
+            "Programme et mémoire d'alphabet",
+            "Programme et mémoire de points",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 50 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Couture sans pédale",
+            "Contrôle de la vitesse",
+            "Fonction \"Drop & Sew\"",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "13 boutonnières en 1 temps",
+            "Point miroir inversé",
+            "Dimensions (L*l*H) cm : 43,1*20,8*29,5"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation Stylist4085",
+                "url": "pdfs\/18.pdf"
+            },
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Fiche produit Stylist 4095",
+                "url": "pdfs\/66.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "42",
+            "59"
+        ],
+        "created_at": "2025-04-04T07:41:26.669584",
+        "updated_at": "2025-04-04T07:41:26.669584"
+    },
+    {
+        "id": 51,
+        "name": "Machine à coudre C 5205 TQ",
+        "slug": "machine-a-coudre-c-5205-tq",
+        "category_id": 5,
+        "price": 349,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La machine à coudre C5205 TQ vous offre une grande créativité grâce à ses nombreux points et sa simplicité d'utilisation.<\/p>",
+        "sku": "025202",
+        "gtin": "7393033104870",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_c_5205_tq-0.jpg",
+            "machine_à_coudre_c_5205_tq-1.jpg",
+            "machine_à_coudre_c_5205_tq-2.jpg",
+            "machine_à_coudre_c_5205_tq-3.jpg",
+            "machine_à_coudre_c_5205_tq-4.jpg",
+            "machine_à_coudre_c_5205_tq-5.jpg",
+            "machine_à_coudre_c_5205_tq-6.jpg",
+            "machine_à_coudre_c_5205_tq-7.jpg",
+            "machine_à_coudre_c_5205_tq-8.jpg",
+            "machine_à_coudre_c_5205_tq-9.jpg"
+        ],
+        "features": [
+            "Patchwork & Quilting\nPoints décoratifs",
+            "Débutant\nIntermédiaire",
+            "Entre 300€ et 700€",
+            "80 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Écran graphique",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 65 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Table d'extension incluse",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "6 boutonnières en 1 temps",
+            "Dimensions (L*l*H) cm : 42,5*21,1*32,9"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation C5205",
+                "url": "pdfs\/15.pdf"
+            },
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Fiche produit C5205",
+                "url": "pdfs\/47.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "40",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:28.301309",
+        "updated_at": "2025-04-04T07:41:28.301309"
+    },
+    {
+        "id": 41,
+        "name": "Machine à coudre Supera F687C",
+        "slug": "machine-a-coudre-supera-f687c",
+        "category_id": 5,
+        "price": 999,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La Supera F687C sera l'alliée de toutes vos coutures même avec les tisssus les plus épais ! Avec son moteur puissant, la Supera est résistante et ultra-rapide.<\/p>",
+        "sku": "045524",
+        "gtin": "7393033106263",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_supera_f687c-0.jpg",
+            "machine_à_coudre_supera_f687c-1.jpg",
+            "machine_à_coudre_supera_f687c-2.jpg",
+            "machine_à_coudre_supera_f687c-3.jpg",
+            "machine_à_coudre_supera_f687c-4.jpg",
+            "machine_à_coudre_supera_f687c-5.jpg",
+            "machine_à_coudre_supera_f687c-6.jpg",
+            "machine_à_coudre_supera_f687c-7.jpg",
+            "machine_à_coudre_supera_f687c-8.jpg",
+            "machine_à_coudre_supera_f687c-9.jpg"
+        ],
+        "features": [
+            "Coudre des tissus épais\nCoupe-fil automatique\nPoints décoratifs",
+            "Expert\nIntermédiaire",
+            "Entre 700€ et 1500€",
+            "568 programmes de points",
+            "2 alphabets",
+            "Écran graphique",
+            "Coupe-fils automatique",
+            "Enfile-aiguille automatique",
+            "Programme et mémoire de points",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 90 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Vitesse de couture élevée",
+            "Couture sans pédale",
+            "Contrôle de la vitesse",
+            "Fonction \"Drop & Sew\"",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "9 boutonnières en 1 temps",
+            "Point miroir inversé",
+            "Dimensions (L*l*H) cm : 43,9*19,1*27,7"
+        ],
+        "documents": [
+            {
+                "name": "Notice Supera F687C",
+                "url": "pdfs\/38.pdf"
+            },
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Fiche produit Supera F687C",
+                "url": "pdfs\/68.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "44",
+            "83",
+            "96",
+            "109"
+        ],
+        "created_at": "2025-04-04T07:41:29.925645",
+        "updated_at": "2025-04-04T07:41:29.925645"
+    },
+    {
+        "id": 42,
+        "name": "Machine à coudre Futura 4300",
+        "slug": "machine-a-coudre-futura-4300",
+        "category_id": 5,
+        "price": 1590,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Avec ses 810 programmes de points et son mode édition de points, la Futura 4300 vous offre des possibilités créatives illimitées !<\/p>",
+        "sku": "019445",
+        "gtin": "7393033105631",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_futura_4300-0.jpg",
+            "machine_à_coudre_futura_4300-1.jpg",
+            "machine_à_coudre_futura_4300-2.jpg",
+            "machine_à_coudre_futura_4300-3.jpg",
+            "machine_à_coudre_futura_4300-4.jpg",
+            "machine_à_coudre_futura_4300-5.jpg",
+            "machine_à_coudre_futura_4300-6.jpg",
+            "machine_à_coudre_futura_4300-7.jpg",
+            "machine_à_coudre_futura_4300-8.jpg"
+        ],
+        "features": [
+            "Coudre des tissus épais\nCoupe-fil automatique\nPoints décoratifs",
+            "Expert",
+            "Entre 700€ et 1500€",
+            "810 programmes de points",
+            "5 alphabets",
+            "Écran graphique",
+            "Coupe-fils automatique",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 50 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Couture sans pédale",
+            "Contrôle de la vitesse",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "13 boutonnières en 1 temps",
+            "Point miroir inversé\nPoints basiques, stretch, décoratif, quilting",
+            "Mode édition : possibilité de combiner points et alphabet",
+            "Création et modification de séquences de points",
+            "Dimensions (L*l*H) cm : 43,1*20,8*29,5"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Fiche produit Futura 4300",
+                "url": "pdfs\/52.pdf"
+            },
+            {
+                "name": "Notice Futura 4300",
+                "url": "pdfs\/72.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "44",
+            "56",
+            "126"
+        ],
+        "created_at": "2025-04-04T07:41:31.554624",
+        "updated_at": "2025-04-04T07:41:31.554624"
+    },
+    {
+        "id": 92,
+        "name": "Machine à coudre Haute Couture",
+        "slug": "machine-a-coudre-haute-couture",
+        "category_id": 5,
+        "price": 399,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La machine à coudre Haute Couture est parfaite pour coudre vos vêtements et accessoires avec son bras libre et sa table d'extension intégrée. Sont inclus avec la machine 8 pieds presseurs dont le pied téflon et le pied fermeture invisible.<\/p>",
+        "sku": "025270",
+        "gtin": "7393033104917",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_haute_couture-0.jpg",
+            "machine_à_coudre_haute_couture-1.jpg",
+            "machine_à_coudre_haute_couture-2.jpg",
+            "machine_à_coudre_haute_couture-3.jpg",
+            "machine_à_coudre_haute_couture-4.jpg",
+            "machine_à_coudre_haute_couture-5.jpg",
+            "machine_à_coudre_haute_couture-6.jpg",
+            "machine_à_coudre_haute_couture-7.jpg",
+            "machine_à_coudre_haute_couture-8.jpg",
+            "machine_à_coudre_haute_couture-9.jpg",
+            "machine_à_coudre_haute_couture-10.jpg"
+        ],
+        "features": [
+            "Patchwork & Quilting\nPoints décoratifs",
+            "Débutant\nIntermédiaire",
+            "Entre 300€ et 700€",
+            "80 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Écran graphique",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 65 Watts",
+            "Éclairage LED",
+            "Table d'extension incluse",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "6 boutonnières en 1 temps",
+            "Points extensibles, décoratifs, patchwork",
+            "Dimensions (L*l*H) cm : 42,5*21,1*32,9"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Notice Haute Couture",
+                "url": "pdfs\/79.pdf"
+            },
+            {
+                "name": "Fiche produit Haute Couture",
+                "url": "pdfs\/80.pdf"
+            }
+        ],
+        "related_products": [
+            "51",
+            "61",
+            "83"
+        ],
+        "created_at": "2025-04-04T07:41:33.164372",
+        "updated_at": "2025-04-04T07:41:33.164372"
+    },
+    {
+        "id": 122,
+        "name": "Machine à coudre Experience 500",
+        "slug": "machine-a-coudre-experience-500",
+        "category_id": 5,
+        "price": 699,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Parfaite pour le patchwork et le quilting avec sa table d'extension et l'abaissement des griffes d'entrainement. Vous pourrez aussi réaliser toutes vos coutures avec ses 200 programmes de points (dont points décoratifs) et ses 8 boutonnières automatiques en 1 temps. Inclus avec la machine : une boîte d'accessoires (canette, découvite, pinceau, etc.) avec 5 pieds de biche pour des points parfaits sur tous types de tissus !<\/p>",
+        "sku": "230481",
+        "gtin": "7393033151171",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_experience_500-0.jpg",
+            "machine_à_coudre_experience_500-1.jpg",
+            "machine_à_coudre_experience_500-2.jpg",
+            "machine_à_coudre_experience_500-3.jpg",
+            "machine_à_coudre_experience_500-4.jpg",
+            "machine_à_coudre_experience_500-5.jpg",
+            "machine_à_coudre_experience_500-6.jpg",
+            "machine_à_coudre_experience_500-7.jpg",
+            "machine_à_coudre_experience_500-8.jpg",
+            "machine_à_coudre_experience_500-9.jpg",
+            "machine_à_coudre_experience_500-10.jpg"
+        ],
+        "features": [
+            "Patchwork & Quilting\nPoints décoratifs",
+            "Intermédiaire",
+            "Entre 300€ et 700€",
+            "200 programmes de points",
+            "Système de canette horizontale \"top drop-in\"",
+            "1 alphabet",
+            "Écran graphique",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 65 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Couture sans pédale",
+            "Contrôle de la vitesse",
+            "Table d'extension incluse",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "8 boutonnières en 1 temps",
+            "Dimensions (L*l*H) cm : 46,9*20,1*27,9"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Notice Experience 500",
+                "url": "pdfs\/90.pdf"
+            },
+            {
+                "name": "Fiche produit Experience 500",
+                "url": "pdfs\/91.pdf"
+            }
+        ],
+        "related_products": [
+            "40",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:34.937541",
+        "updated_at": "2025-04-04T07:41:34.937541"
+    },
+    {
+        "id": 139,
+        "name": "Machine à coudre Madam 8",
+        "slug": "machine-a-coudre-madam-8",
+        "category_id": 5,
+        "price": 799,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La Madam 8 est une machine électronique particulièrement puissante et parfaitement adaptée à la couture des tissus épais et possède une vitesse de couture impressionnante. Ses 200 programmes de points et ses 7 boutonnières en 1 temps vous offriront de nombreuses possibilités de personnaliser vos projets couture. Elle possède aussi le point d'arrêt mais également la pression du pied ajustable. La Madam 8 possède un bras libre et est vendue avec une boite d'accessoires comprenant divers outils indispensables dont 6 pieds de biche et 4 canettes. <\/p>",
+        "sku": "230480",
+        "gtin": "7393033151164",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_madam_8-0.jpg",
+            "machine_à_coudre_madam_8-1.jpg",
+            "machine_à_coudre_madam_8-2.jpg",
+            "machine_à_coudre_madam_8-3.jpg",
+            "machine_à_coudre_madam_8-4.jpg",
+            "machine_à_coudre_madam_8-5.jpg",
+            "machine_à_coudre_madam_8-6.jpg",
+            "machine_à_coudre_madam_8-7.jpg",
+            "machine_à_coudre_madam_8-8.jpg",
+            "machine_à_coudre_madam_8-9.jpg",
+            "machine_à_coudre_madam_8-10.jpg",
+            "machine_à_coudre_madam_8-11.jpg"
+        ],
+        "features": [
+            "Coudre des tissus épais\nPoints décoratifs",
+            "Débutant\nIntermédiaire",
+            "Entre 700€ et 1500€",
+            "200 programmes de points",
+            "Système de canette horizontale \"top drop-in\"",
+            "1 alphabet",
+            "Écran graphique",
+            "Programme et mémoire de points",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 90 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Vitesse de couture élevée",
+            "Couture sans pédale",
+            "Contrôle de la vitesse",
+            "Fonction \"Drop & Sew\"",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "7 boutonnières en 1 temps",
+            "Pression du pied de biche règlable",
+            "Enfile-aiguille",
+            "Point d'arrêt automatique",
+            "Dimensions (L*l*H) cm : 46,9*20,1*27,9"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Notice d'utilisation Madam 8",
+                "url": "pdfs\/94.pdf"
+            },
+            {
+                "name": "Fiche produit Madam 8",
+                "url": "pdfs\/95.pdf"
+            }
+        ],
+        "related_products": [
+            "41",
+            "61",
+            "122",
+            "136"
+        ],
+        "created_at": "2025-04-04T07:41:36.704499",
+        "updated_at": "2025-04-04T07:41:36.704499"
+    },
+    {
+        "id": 96,
+        "name": "Machine à coudre - Brodeuse Futura 500",
+        "slug": "machine-a-coudre-brodeuse-futura-500",
+        "category_id": 5,
+        "price": 1690,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Alliez couture et broderie grâce à la Futura 500 ! Accessible à tous, son écran tactile de 7 pouces et son enfile aiguille automatique assurent un confort et rapidité de couture. Elle possède 150 motifs de broderie intégrés et plus de 250 points. Vous avez aussi 3 mois offert à la plateforme de broderie MySewnet, pour d'accéder à davantage de motifs de broderie mais aussi de les créer vous-même vos propres motifs.<\/p>",
+        "sku": "192100",
+        "gtin": "7393033147686",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_-_brodeuse_futura_500-0.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-1.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-2.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-3.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-4.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-5.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-6.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-7.jpg",
+            "machine_à_coudre_-_brodeuse_futura_500-8.jpg"
+        ],
+        "features": [
+            "250 programmes de points",
+            "Système de canette horizontale \"top drop-in\"",
+            "10 alphabets",
+            "Écran tactile couleur XXL",
+            "Coupe-fils automatique",
+            "Enfile-aiguille automatique",
+            "Programme et mémoire de points",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Éclairage LED",
+            "Abaissement des griffes d'entrainement",
+            "Position de l'aiguille haute \/ basse",
+            "Couture sans pédale",
+            "Fonction \"Drop & Sew\"",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "Détecteur de fil cassé",
+            "Plus de 150 motifs de broderie",
+            "Mémoire de motifs",
+            "Connection en Wifi à MySewnet",
+            "Dimensions (L*l*H) cm : sans UB 48*21*31 \/ avec UB 61 x 36 x 31"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC électroniques",
+                "url": "pdfs\/41.pdf"
+            },
+            {
+                "name": "Notice d'utilisation Futura 500",
+                "url": "pdfs\/85.pdf"
+            },
+            {
+                "name": "Fiche produit Futura 500",
+                "url": "pdfs\/86.pdf"
+            }
+        ],
+        "related_products": [
+            "53",
+            "83"
+        ],
+        "created_at": "2025-04-04T07:41:38.353337",
+        "updated_at": "2025-04-04T07:41:38.353337"
+    },
+    {
+        "id": 173,
+        "name": "En promotion : Mademoiselle avec sac offert",
+        "slug": "en-promotion-mademoiselle-avec-sac-offert",
+        "category_id": 6,
+        "price": 159,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Jusqu'au 31\/03\/2025 la machine à coudre Mademoiselle est à 159€ au lieu de 189€ et son sac de transport rouge est offert (valeur : 45€). Parfaite pour les petits espaces et pour débuter la couture la Mademoiselle possède 8 programmes de points.<\/p>",
+        "sku": "414600",
+        "gtin": "3700394503299",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "en_promotion_:_mademoiselle_avec_sac_offert-0.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-1.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-2.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-3.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-4.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-5.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-6.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-7.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-8.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-9.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-10.jpg",
+            "en_promotion_:_mademoiselle_avec_sac_offert-11.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "8 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 38,5*18,7*29"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation M2105",
+                "url": "pdfs\/21.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Fiche produit Mademoiselle",
+                "url": "pdfs\/100.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "47",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:41:41.772068",
+        "updated_at": "2025-04-04T07:41:41.772068"
+    },
+    {
+        "id": 163,
+        "name": "Machine à coudre Legend",
+        "slug": "machine-a-coudre-legend",
+        "category_id": 6,
+        "price": 199,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Vous démarrez la couture ? Le modèle Legend est parfait pour vous, il possède 32 programmes de points, la longueur et la largeur de point sont ajustables.<\/p>",
+        "sku": "043247",
+        "gtin": "7393033106669",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_legend-0.jpg",
+            "machine_à_coudre_legend-1.jpg",
+            "machine_à_coudre_legend-2.jpg",
+            "machine_à_coudre_legend-3.jpg",
+            "machine_à_coudre_legend-4.jpg",
+            "machine_à_coudre_legend-5.jpg",
+            "machine_à_coudre_legend-6.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "32 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 Boutonnière en 1 temps",
+            "Dimensions (L*l*H) cm : 38,4*18,6*27,7"
+        ],
+        "documents": [],
+        "related_products": [
+            "34",
+            "35",
+            "49",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:43.443939",
+        "updated_at": "2025-04-04T07:41:43.443939"
+    },
+    {
+        "id": 34,
+        "name": "Machine à coudre Madam 2",
+        "slug": "machine-a-coudre-madam-2",
+        "category_id": 6,
+        "price": 369,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Cette machine à coudre Madam 2 vous permet d'accompagner votre créativité avec sa ligne moderne et ses capacités de couture très variées.<\/p>",
+        "sku": "023801",
+        "gtin": "7393033095703",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_madam_2-0.jpg",
+            "machine_à_coudre_madam_2-1.jpg",
+            "machine_à_coudre_madam_2-2.jpg",
+            "machine_à_coudre_madam_2-3.jpg",
+            "machine_à_coudre_madam_2-4.jpg",
+            "machine_à_coudre_madam_2-5.jpg",
+            "machine_à_coudre_madam_2-6.jpg",
+            "machine_à_coudre_madam_2-7.jpg",
+            "machine_à_coudre_madam_2-8.jpg",
+            "machine_à_coudre_madam_2-9.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Entre 300€ et 700€",
+            "23 programmes de points",
+            "Système de canette horizontale \"top drop-in\"",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Fonction \"Drop & Sew\"",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 38*18*30"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation Madam 2",
+                "url": "pdfs\/29.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit Madam2",
+                "url": "pdfs\/59.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "35",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:41:45.066338",
+        "updated_at": "2025-04-04T07:41:45.066338"
+    },
+    {
+        "id": 36,
+        "name": "Machine à coudre Supera 5523",
+        "slug": "machine-a-coudre-supera-5523",
+        "category_id": 6,
+        "price": 749,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La Supera 5523 possède de nombreux atouts : elle coud facilement les épaisseurs, du jean, des tissus d'ameublement, des toiles cirées ainsi que toutes les coutures traditionnelles. Elle possède un châssis métallique robuste et une vitesse de couture extra-haute, la Supera 5523 est votre alliée de tous les jours.<\/p>",
+        "sku": "045523",
+        "gtin": "3743188301930",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_supera_5523-0.jpg",
+            "machine_à_coudre_supera_5523-1.jpg",
+            "machine_à_coudre_supera_5523-2.jpg",
+            "machine_à_coudre_supera_5523-3.jpg",
+            "machine_à_coudre_supera_5523-4.jpg",
+            "machine_à_coudre_supera_5523-5.jpg",
+            "machine_à_coudre_supera_5523-6.jpg"
+        ],
+        "features": [
+            "Débutant\nIntermédiaire",
+            "Entre 300€ et 700€",
+            "23 programmes de points",
+            "Système de canette horizontale \"top drop-in\"",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 90 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Position de l'aiguille haute \/ basse",
+            "Vitesse de couture élevée",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 Boutonnière en 1 temps",
+            "Plan de travail en acier inoxidable",
+            "Dimensions (L*l*H) cm : 40*16,5*28"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation Supera 5523",
+                "url": "pdfs\/27.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit Supera 5523",
+                "url": "pdfs\/67.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "41",
+            "56",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:46.935579",
+        "updated_at": "2025-04-04T07:41:46.935579"
+    },
+    {
+        "id": 35,
+        "name": "Machine à coudre Madam 5",
+        "slug": "machine-a-coudre-madam-5",
+        "category_id": 6,
+        "price": 469,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La machine à coudre de la gamme Madam 5 est plus design, plus accessible et plus compacte, elle est aussi totalement adaptée aux débutantes comme aux couturières confirmées !<\/p>",
+        "sku": "023342",
+        "gtin": "7393033097769",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_madam_5-0.jpg",
+            "machine_à_coudre_madam_5-1.jpg",
+            "machine_à_coudre_madam_5-2.jpg",
+            "machine_à_coudre_madam_5-3.jpg",
+            "machine_à_coudre_madam_5-4.jpg",
+            "machine_à_coudre_madam_5-5.jpg",
+            "machine_à_coudre_madam_5-6.jpg",
+            "machine_à_coudre_madam_5-7.jpg",
+            "machine_à_coudre_madam_5-8.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Entre 300€ et 700€",
+            "32 programmes de points",
+            "Système de canette horizontale \"top drop-in\"",
+            "Enfile-aiguille automatique",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Fonction \"Drop & Sew\"",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 Boutonnière en 1 temps",
+            "Dimensions (L*l*H) cm : 38*18*30"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation Madam 5",
+                "url": "pdfs\/10.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit Madam5",
+                "url": "pdfs\/60.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "36",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:48.552936",
+        "updated_at": "2025-04-04T07:41:48.552936"
+    },
+    {
+        "id": 136,
+        "name": "Machine à coudre Madam 6",
+        "slug": "machine-a-coudre-madam-6",
+        "category_id": 6,
+        "price": 549,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Découvrez la toute dernière sortie dans la famille des Madam ! Avec ses 32 programmes de points (basiques et décoratifs), sa boutonnière en 1 temps la Madam 6 est aussi puissante et robuste.  Elle possède en plus 3 positions d'aiguilles et l'abaissement des griffes d'entrainement. <\/p>",
+        "sku": "230479",
+        "gtin": "7393033151157",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_madam_6-0.jpg",
+            "machine_à_coudre_madam_6-1.jpg",
+            "machine_à_coudre_madam_6-2.jpg",
+            "machine_à_coudre_madam_6-3.jpg",
+            "machine_à_coudre_madam_6-4.jpg",
+            "machine_à_coudre_madam_6-5.jpg",
+            "machine_à_coudre_madam_6-6.jpg",
+            "machine_à_coudre_madam_6-7.jpg",
+            "machine_à_coudre_madam_6-8.jpg",
+            "machine_à_coudre_madam_6-9.jpg",
+            "machine_à_coudre_madam_6-10.jpg",
+            "machine_à_coudre_madam_6-11.jpg",
+            "machine_à_coudre_madam_6-12.jpg",
+            "machine_à_coudre_madam_6-13.jpg",
+            "machine_à_coudre_madam_6-14.jpg",
+            "machine_à_coudre_madam_6-15.jpg"
+        ],
+        "features": [
+            "Coudre des tissus épais",
+            "Débutant\nIntermédiaire",
+            "Entre 300€ et 700€",
+            "32 programmes de points",
+            "Boutonnière en 1 temps",
+            "Système de canette horizontale \"top drop-in\"",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 90 Watts",
+            "Éclairage LED",
+            "Abaissement des griffes d'entrainement",
+            "Vitesse de couture élevée",
+            "Fonction \"Drop & Sew\"",
+            "Bras libre",
+            "Boîte d'accessoires incluse dont 5 pieds de biche",
+            "Châssis en métal",
+            "Pression du pied de biche règlable",
+            "Enfile-aiguille",
+            "3 positions d'aiguille",
+            "Dimensions (L*l*H) cm : 45,1*19,7*28,1"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Fiche produit Madam 6",
+                "url": "pdfs\/92.pdf"
+            },
+            {
+                "name": "Notice d'utilisation Madam 6",
+                "url": "pdfs\/93.pdf"
+            }
+        ],
+        "related_products": [
+            "35",
+            "36",
+            "61",
+            "139"
+        ],
+        "created_at": "2025-04-04T07:41:50.155997",
+        "updated_at": "2025-04-04T07:41:50.155997"
+    },
+    {
+        "id": 45,
+        "name": "Machine à coudre M1605",
+        "slug": "machine-a-coudre-m1605",
+        "category_id": 6,
+        "price": 159,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La M1605 est compacte et légère, elle est parfaitement adaptée aux débutants en couture.<\/p>",
+        "sku": "041350",
+        "gtin": "7393033102722",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_m1605-0.jpg",
+            "machine_à_coudre_m1605-1.jpg",
+            "machine_à_coudre_m1605-2.jpg",
+            "machine_à_coudre_m1605-3.jpg",
+            "machine_à_coudre_m1605-4.jpg",
+            "machine_à_coudre_m1605-5.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "6 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 37*181,*28,8"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation M1605",
+                "url": "pdfs\/22.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit M1605",
+                "url": "pdfs\/54.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "46",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:41:51.886778",
+        "updated_at": "2025-04-04T07:41:51.886778"
+    },
+    {
+        "id": 46,
+        "name": "Machine à coudre M2105",
+        "slug": "machine-a-coudre-m2105",
+        "category_id": 6,
+        "price": 189,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Parfaite pour les petits espaces, débuter la couture avec la M2105 et ses 8 programmes de points.<\/p>",
+        "sku": "041436",
+        "gtin": "7393033102739",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_m2105-0.jpg",
+            "machine_à_coudre_m2105-1.jpg",
+            "machine_à_coudre_m2105-2.jpg",
+            "machine_à_coudre_m2105-3.jpg",
+            "machine_à_coudre_m2105-4.jpg",
+            "machine_à_coudre_m2105-5.jpg",
+            "machine_à_coudre_m2105-6.jpg",
+            "machine_à_coudre_m2105-7.jpg",
+            "machine_à_coudre_m2105-8.jpg",
+            "machine_à_coudre_m2105-9.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "8 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 38,5*18,7*29"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation M2105",
+                "url": "pdfs\/21.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit M2105",
+                "url": "pdfs\/55.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "47",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:41:53.493221",
+        "updated_at": "2025-04-04T07:41:53.493221"
+    },
+    {
+        "id": 47,
+        "name": "Machine à coudre M2405",
+        "slug": "machine-a-coudre-m2405",
+        "category_id": 6,
+        "price": 199,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>La M2405 est parfaite pour vos travaux de couture du quotidien. Elle dispose de programmes de 8 points : utilitaires, stretch et décoratifs pour laisser parler votre créativité.<\/p>",
+        "sku": "041215",
+        "gtin": "7393033102753",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_m2405-0.jpg",
+            "machine_à_coudre_m2405-1.jpg",
+            "machine_à_coudre_m2405-2.jpg",
+            "machine_à_coudre_m2405-3.jpg",
+            "machine_à_coudre_m2405-4.jpg",
+            "machine_à_coudre_m2405-5.jpg",
+            "machine_à_coudre_m2405-6.jpg",
+            "machine_à_coudre_m2405-7.jpg",
+            "machine_à_coudre_m2405-8.jpg",
+            "machine_à_coudre_m2405-9.jpg",
+            "machine_à_coudre_m2405-10.jpg",
+            "machine_à_coudre_m2405-11.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "8 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation M2405",
+                "url": "pdfs\/23.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit M2405",
+                "url": "pdfs\/56.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "35",
+            "48",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:55.130011",
+        "updated_at": "2025-04-04T07:41:55.130011"
+    },
+    {
+        "id": 48,
+        "name": "Machine à coudre M2605",
+        "slug": "machine-a-coudre-m2605",
+        "category_id": 6,
+        "price": 229,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Compacte et légère, adoptez la M2605 avec ses 12 programmes de points et sa boîte d'accessoires incluse.<\/p>",
+        "sku": "043248",
+        "gtin": "7393033112820",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_m2605-0.jpg",
+            "machine_à_coudre_m2605-1.jpg",
+            "machine_à_coudre_m2605-2.jpg",
+            "machine_à_coudre_m2605-3.jpg",
+            "machine_à_coudre_m2605-4.jpg",
+            "machine_à_coudre_m2605-5.jpg",
+            "machine_à_coudre_m2605-6.jpg",
+            "machine_à_coudre_m2605-7.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "12 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 38,4*18,6*27,7"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation M2605",
+                "url": "pdfs\/30.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit M2605",
+                "url": "pdfs\/57.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "35",
+            "47",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:56.890812",
+        "updated_at": "2025-04-04T07:41:56.890812"
+    },
+    {
+        "id": 49,
+        "name": "Machine à coudre M3305",
+        "slug": "machine-a-coudre-m3305",
+        "category_id": 6,
+        "price": 329,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Vous démarrez la couture ? Choissisez notre modèle M3305 avec ses 23 programmes de points.<\/p>",
+        "sku": "042278",
+        "gtin": "7393033102982",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_m3305-0.jpg",
+            "machine_à_coudre_m3305-1.jpg",
+            "machine_à_coudre_m3305-2.jpg",
+            "machine_à_coudre_m3305-3.jpg",
+            "machine_à_coudre_m3305-4.jpg",
+            "machine_à_coudre_m3305-5.jpg",
+            "machine_à_coudre_m3305-6.jpg",
+            "machine_à_coudre_m3305-7.jpg",
+            "machine_à_coudre_m3305-8.jpg",
+            "machine_à_coudre_m3305-9.jpg",
+            "machine_à_coudre_m3305-10.jpg",
+            "machine_à_coudre_m3305-11.jpg",
+            "machine_à_coudre_m3305-12.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "23 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 Boutonnière en 1 temps",
+            "Dimensions (L*l*H) cm : 38,4*18,6*27,7"
+        ],
+        "documents": [
+            {
+                "name": "Notice d'utilisation M3305",
+                "url": "pdfs\/24.pdf"
+            },
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit M3305",
+                "url": "pdfs\/58.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "35",
+            "48",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:41:58.555126",
+        "updated_at": "2025-04-04T07:41:58.555126"
+    },
+    {
+        "id": 88,
+        "name": "Machine à coudre M3505",
+        "slug": "machine-a-coudre-m3505",
+        "category_id": 6,
+        "price": 399,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Vous démarrez la couture ? Le modèle M3505 est parfait pour vous, il possède 32 programmes de points, la longueur et la largeur de point sont ajustables.<\/p>",
+        "sku": "043245",
+        "gtin": "7393033102746",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_m3505-0.jpg",
+            "machine_à_coudre_m3505-1.jpg",
+            "machine_à_coudre_m3505-2.jpg",
+            "machine_à_coudre_m3505-3.jpg",
+            "machine_à_coudre_m3505-4.jpg",
+            "machine_à_coudre_m3505-5.jpg",
+            "machine_à_coudre_m3505-6.jpg",
+            "machine_à_coudre_m3505-7.jpg",
+            "machine_à_coudre_m3505-8.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "32 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Largeur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 Boutonnière en 1 temps",
+            "Dimensions (L*l*H) cm : 38,4*18,6*27,7"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Fiche produit M3505",
+                "url": "pdfs\/77.pdf"
+            },
+            {
+                "name": "Notice d'utilisation M3505",
+                "url": "pdfs\/78.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "35",
+            "49",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:42:00.163665",
+        "updated_at": "2025-04-04T07:42:00.163665"
+    },
+    {
+        "id": 172,
+        "name": "Machine à coudre Simple M3221",
+        "slug": "machine-a-coudre-simple-m3221",
+        "category_id": 6,
+        "price": 279,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Vous démarrez la couture ? Choisissez notre modèle Simple M3221 avec ses 21 programmes de points.<\/p>",
+        "sku": "043221",
+        "gtin": "0374318838342",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_simple_m3221-0.jpg",
+            "machine_à_coudre_simple_m3221-1.jpg",
+            "machine_à_coudre_simple_m3221-2.jpg",
+            "machine_à_coudre_simple_m3221-3.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "21 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Points extensibles",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 Boutonnière en 1 temps"
+        ],
+        "documents": [
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            },
+            {
+                "name": "Fiche produit Simple 3221",
+                "url": "pdfs\/98.pdf"
+            },
+            {
+                "name": "Notice d'utilisation Simple 3221",
+                "url": "pdfs\/99.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "35",
+            "49",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:42:01.775732",
+        "updated_at": "2025-04-04T07:42:01.775732"
+    },
+    {
+        "id": 33,
+        "name": "Machine à coudre Tradition 2250",
+        "slug": "machine-a-coudre-tradition-2250",
+        "category_id": 6,
+        "price": 199,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Compacte et légère, la Tradition 2250 est parfaite pour les débutants en couture.<\/p>",
+        "sku": "041160",
+        "gtin": "3700394500892",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_tradition_2250-0.jpg",
+            "machine_à_coudre_tradition_2250-1.jpg",
+            "machine_à_coudre_tradition_2250-2.jpg",
+            "machine_à_coudre_tradition_2250-3.jpg",
+            "machine_à_coudre_tradition_2250-4.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "10 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Enfilage simplifié",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 38,4*19,3*29,6"
+        ],
+        "documents": [
+            {
+                "name": "Comparateur MAC mécaniques",
+                "url": "pdfs\/40.pdf"
+            },
+            {
+                "name": "Fiche produit Tradition 2250",
+                "url": "pdfs\/69.pdf"
+            },
+            {
+                "name": "Notice Tradition 2250",
+                "url": "pdfs\/70.pdf"
+            },
+            {
+                "name": "Catalogue des accessoires",
+                "url": "pdfs\/73.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "35",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:42:03.467704",
+        "updated_at": "2025-04-04T07:42:03.467704"
+    },
+    {
+        "id": 114,
+        "name": "Machine à coudre Decorative 2",
+        "slug": "machine-a-coudre-decorative-2",
+        "category_id": 6,
+        "price": 259,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Compacte et légère à transporter, adoptez la Decorative 2 ! Une trousse de couture est offerte avec la machine, elle contient tous les essentiels pour les couturières débutantes. Ce kit couture contient 10 accessoires : jauge de couture, épingles, coussins à épingles, aiguilles, dé, enfileur, pince, crayon de marquage, 2 ciseaux.<\/p>",
+        "sku": "423110",
+        "gtin": "7393033151140",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_decorative_2-0.jpg",
+            "machine_à_coudre_decorative_2-1.jpg",
+            "machine_à_coudre_decorative_2-2.jpg",
+            "machine_à_coudre_decorative_2-3.jpg",
+            "machine_à_coudre_decorative_2-4.jpg",
+            "machine_à_coudre_decorative_2-5.jpg",
+            "machine_à_coudre_decorative_2-6.jpg",
+            "machine_à_coudre_decorative_2-7.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "12 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Enfilage simplifié",
+            "Règlage de la tension du fil",
+            "Puissance du moteur : 70 Watts",
+            "Éclairage LED",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 38,4*18,6*27,7"
+        ],
+        "documents": [
+            {
+                "name": "Fiche produit Decorative 2",
+                "url": "pdfs\/89.pdf"
+            }
+        ],
+        "related_products": [
+            "34",
+            "35",
+            "47",
+            "61"
+        ],
+        "created_at": "2025-04-04T07:42:06.587235",
+        "updated_at": "2025-04-04T07:42:06.587235"
+    },
+    {
+        "id": 123,
+        "name": "Machine à coudre Initiale",
+        "slug": "machine-a-coudre-initiale",
+        "category_id": 6,
+        "price": 229,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Vous démarrez la couture ? La machine mécanique Initiale est parfaitement adaptée ! Elle possède 8 programmes de points et une boutonnière automatique en 4 temps. Une boite d'accessoire est incluse pour utiliser votre machine directement (canettes, aiguilles, etc.).<\/p>",
+        "sku": "041200",
+        "gtin": "3700394502339",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "machine_à_coudre_initiale-0.jpg",
+            "machine_à_coudre_initiale-1.jpg",
+            "machine_à_coudre_initiale-2.jpg",
+            "machine_à_coudre_initiale-3.jpg",
+            "machine_à_coudre_initiale-4.jpg",
+            "machine_à_coudre_initiale-5.jpg"
+        ],
+        "features": [
+            "Débutant",
+            "Moins de 300€",
+            "8 programmes de points",
+            "Système de canette verticale \"front load\"",
+            "Longueur de point ajustable",
+            "Enfilage simplifié",
+            "Bras libre",
+            "Boîte d'accéssoires incluse",
+            "Châssis en métal",
+            "1 boutonnière en 4 temps",
+            "Dimensions (L*l*H) cm : 38,4*19,3*29,6"
+        ],
+        "documents": [],
+        "related_products": [
+            "34",
+            "35",
+            "61",
+            "63"
+        ],
+        "created_at": "2025-04-04T07:42:08.345960",
+        "updated_at": "2025-04-04T07:42:08.345960"
+    },
+    {
+        "id": 74,
+        "name": "Aspirateur balais Sonic VC 250",
+        "slug": "aspirateur-balais-sonic-vc-250",
+        "category_id": 8,
+        "price": 149,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Nettoyez votre sol devient un vrai jeu d'enfant avec notre aspirateur balai sans fil VC250, 3 en 1. Un aspirateur multifonctions et silencieux, qui s'utilise sans sac ! Aspirateur équipé de deux vitesses: « Standard », pour le nettoyage rapide au quotidien et « Plus », pour obtenir le maximum de puissance disponible.<br\/>La batterie au lithium de 18,5V (2200 mAh) est non seulement amovible (garantissant une recharge aisée et autonome par rapport au corps de l’appareil) et a une autonomie de 35 minutes en mode d’utilisation standard. Une led installée sur la partie supérieure du balai, près du manche, indique l’état de charge.<br\/>La brosse motorisée permet de nettoyer tout type de sol : carrelages, parquets, moquettes, tapis..<\/p>",
+        "sku": "273105",
+        "gtin": "3700394500908",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "aspirateur_balais_sonic_vc_250-0.jpg",
+            "aspirateur_balais_sonic_vc_250-1.jpg",
+            "aspirateur_balais_sonic_vc_250-2.jpg",
+            "aspirateur_balais_sonic_vc_250-3.jpg",
+            "aspirateur_balais_sonic_vc_250-4.jpg",
+            "aspirateur_balais_sonic_vc_250-5.jpg",
+            "aspirateur_balais_sonic_vc_250-6.jpg",
+            "aspirateur_balais_sonic_vc_250-7.jpg",
+            "aspirateur_balais_sonic_vc_250-8.jpg",
+            "aspirateur_balais_sonic_vc_250-9.jpg",
+            "aspirateur_balais_sonic_vc_250-10.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "65",
+            "71",
+            "75",
+            "77"
+        ],
+        "created_at": "2025-04-04T07:42:12.499591",
+        "updated_at": "2025-04-04T07:42:12.499591"
+    },
+    {
+        "id": 75,
+        "name": "Aspirateur balais Sonic VC 300",
+        "slug": "aspirateur-balais-sonic-vc-300",
+        "category_id": 8,
+        "price": 149,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>L'aspirateur Sonic VC300 sans fil, rechargeable 2 en 1, est silencieux et ultra compact. Il a été développé pour garantir le maximum de fiabilité, maniabilité et exhaustivité. Les endroits les plus sombres seront éclairés par sa lumière LED placée devant la brosse et vous indique quels sont les coins encore à nettoyer, tandis que le pivot à 180° donnera le maximum de versatilité d’utilisation à la brosse pour arriver partout agilement et avec précision.<br\/>La batterie au lithium de 22.2V (2200 mAh), est non seulement amovible (garantissant une recharge aisée et autonome par rapport au corps de l’appareil) mais aussi une autonomie jusqu’à 40 minutes en modalité standard.<\/p>",
+        "sku": "273110",
+        "gtin": "8006012367157",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "aspirateur_balais_sonic_vc_300-0.jpg",
+            "aspirateur_balais_sonic_vc_300-1.jpg",
+            "aspirateur_balais_sonic_vc_300-2.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "65",
+            "66",
+            "74"
+        ],
+        "created_at": "2025-04-04T07:42:14.134279",
+        "updated_at": "2025-04-04T07:42:14.134279"
+    },
+    {
+        "id": 76,
+        "name": "Extracteur de jus SJW-200",
+        "slug": "extracteur-de-jus-sjw-200",
+        "category_id": 7,
+        "price": 399,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Avec ses 60 tours par minute, dégustez vos jus vitaminés faits maison grâce à l'extracteur de jus SJW-200. 3 filtres : jus, smoothie, sorbet<br\/>Moteur à induction plus silencieux, Puissance : 240W.<\/p>",
+        "sku": "292320",
+        "gtin": "3700394501936",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "extracteur_de_jus_sjw-200-0.jpg",
+            "extracteur_de_jus_sjw-200-1.jpg",
+            "extracteur_de_jus_sjw-200-2.jpg",
+            "extracteur_de_jus_sjw-200-3.jpg",
+            "extracteur_de_jus_sjw-200-4.jpg",
+            "extracteur_de_jus_sjw-200-5.jpg",
+            "extracteur_de_jus_sjw-200-6.jpg",
+            "extracteur_de_jus_sjw-200-7.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "65",
+            "71",
+            "77"
+        ],
+        "created_at": "2025-04-04T08:27:00.504758",
+        "updated_at": "2025-04-04T08:27:00.504758"
+    },
+    {
+        "id": 77,
+        "name": "Multicuiseur MC-600D",
+        "slug": "multicuiseur-mc-600d",
+        "category_id": 7,
+        "price": 159,
+        "old_price": null,
+        "eco_part": null,
+        "description": "<p>Equipez-vous de notre multicuiseur MC-600D pour préparer de bons plat savoureux rapidement. D'une puissance de 1350 W, il maintient au chaud de 30 min à 12 h dans sa cuve anti-adhésive en aluminium. Fonctions : cuisson vapeur, sauter, dorer, mijoter, rôtir<br\/>Thermostat de 120°C à 220°C, Couvercle en verre, Écran LED rétro-éclairés bleu, Minuteur programmable, Bouton sélection de cuisson, Accessoire : Grille de cuisson.<\/p>",
+        "sku": "293400",
+        "gtin": "3700394502452",
+        "stock": 10,
+        "featured": true,
+        "level": "débutant",
+        "images": [
+            "multicuiseur_mc-600d-0.jpg",
+            "multicuiseur_mc-600d-1.jpg"
+        ],
+        "features": [],
+        "documents": [],
+        "related_products": [
+            "64",
+            "65",
+            "71",
+            "76"
+        ],
+        "created_at": "2025-04-04T08:27:02.312581",
+        "updated_at": "2025-04-04T08:27:02.312581"
+    }
+]
