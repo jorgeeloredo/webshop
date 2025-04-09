@@ -61,11 +61,11 @@
       <div>
         <h3 class="mb-4 font-semibold text-gray-800">Général</h3>
         <ul class="space-y-2">
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Politique de confidentialité</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Conditions générales de vente</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Mentions légales & CGU</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Nos magasins</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">La marque</a></li>
+          <li><a href="/page/politique-de-confidentialite" class="text-sm text-gray-600 hover:text-red-600">Politique de confidentialité</a></li>
+          <li><a href="/page/conditions-generales-de-vente" class="text-sm text-gray-600 hover:text-red-600">Conditions générales de vente</a></li>
+          <li><a href="/page/mentions-legales" class="text-sm text-gray-600 hover:text-red-600">Mentions légales & CGU</a></li>
+          <li><a href="/page/magasins" class="text-sm text-gray-600 hover:text-red-600">Nos magasins</a></li>
+          <li><a href="/page/la-marque" class="text-sm text-gray-600 hover:text-red-600">La marque</a></li>
         </ul>
       </div>
 
@@ -73,11 +73,11 @@
       <div>
         <h3 class="mb-4 font-semibold text-gray-800">Machines</h3>
         <ul class="space-y-2">
-          <li><a href="/products?category=brodeuses" class="text-sm text-gray-600 hover:text-red-600">Brodeuses</a></li>
-          <li><a href="/products?category=machines-electroniques" class="text-sm text-gray-600 hover:text-red-600">Électroniques</a></li>
-          <li><a href="/products?category=machines-mecaniques" class="text-sm text-gray-600 hover:text-red-600">Mécaniques</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Soin du linge</a></li>
-          <li><a href="/products?category=surjeteuses-recouvreuses" class="text-sm text-gray-600 hover:text-red-600">Surjeteuses & Recouvreuses</a></li>
+          <li><a href="/category/brodeuses" class="text-sm text-gray-600 hover:text-red-600">Brodeuses</a></li>
+          <li><a href="/category/machines-electroniques" class="text-sm text-gray-600 hover:text-red-600">Électroniques</a></li>
+          <li><a href="/category/machines-mecaniques" class="text-sm text-gray-600 hover:text-red-600">Mécaniques</a></li>
+          <li><a href="/category/soin-du-linge" class="text-sm text-gray-600 hover:text-red-600">Soin du linge</a></li>
+          <li><a href="/category/surjeteuses-recouvreuses" class="text-sm text-gray-600 hover:text-red-600">Surjeteuses & Recouvreuses</a></li>
         </ul>
       </div>
 
@@ -85,11 +85,11 @@
       <div>
         <h3 class="mb-4 font-semibold text-gray-800">Aide à l'achat</h3>
         <ul class="mb-6 space-y-2">
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Questions fréquentes</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Vos avantages</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Connaître nos machines</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Nos actualités</a></li>
-          <li><a href="#" class="text-sm text-gray-600 hover:text-red-600">Nous contacter</a></li>
+          <li><a href="/page/questions-frequentes" class="text-sm text-gray-600 hover:text-red-600">Questions fréquentes</a></li>
+          <li><a href="/page/vos-avantages" class="text-sm text-gray-600 hover:text-red-600">Vos avantages</a></li>
+          <li><a href="/page/connaitre-nos-machines" class="text-sm text-gray-600 hover:text-red-600">Connaître nos machines</a></li>
+          <li><a href="/page/nos-actualites" class="text-sm text-gray-600 hover:text-red-600">Nos actualités</a></li>
+          <li><a href="/page/nous-contacter" class="text-sm text-gray-600 hover:text-red-600">Nous contacter</a></li>
         </ul>
       </div>
     </div>
@@ -104,7 +104,7 @@
 
   <!-- Copyright footer -->
   <div class="py-2 text-sm font-medium text-center text-white singer-red">
-    <div class="site-container">© <?= date('Y') ?> Singer · Mentions légales</div>
+    <div class="site-container">© <?= date('Y') ?> Singer · <a href="/page/mentions-legales" class="hover:underline">Mentions légales</div>
   </div>
 </footer>
 

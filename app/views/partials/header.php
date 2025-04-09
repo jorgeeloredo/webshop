@@ -38,7 +38,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <title><?= isset($title) ? $title . ' - Singer Shop' : 'Singer Shop' ?></title>
+  <title><?= isset($title) ? $title . ' | Singer France' : 'Singer France' ?></title>
   <meta name="description" content="<?= htmlspecialchars($metaDescription) ?>">
   <meta name="keywords" content="<?= htmlspecialchars($metaKeywords) ?>">
   <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
@@ -181,6 +181,13 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
     .mobile-submenu {
       background-color: #f9f9f9;
     }
+
+    .pagecontent h3 {
+      font-size: 25px;
+      font-family: La Belle Aurore, cursive;
+      font-weight: 400;
+      line-height: 37px;
+    }
   </style>
 </head>
 
@@ -234,7 +241,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
 
       <!-- Right side controls -->
       <div class="flex items-center">
-        <form action="/search" method="GET" class="flex items-center">
+        <!--<form action="/search" method="GET" class="flex items-center">
           <input
             type="text"
             name="q"
@@ -243,7 +250,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
           <button type="submit" class="flex items-center justify-center w-8 h-8 text-gray-600">
             <i class="fas fa-search"></i>
           </button>
-        </form>
+        </form>-->
         <a href="<?= $isLoggedIn ? '/account' : '/login' ?>" class="flex items-center ml-4">
           <i class="text-gray-600 fas fa-user"></i>
         </a>

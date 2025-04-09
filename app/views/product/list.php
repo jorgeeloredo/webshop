@@ -60,14 +60,14 @@ function getImageUrl($image)
 
               <?php if (isset($product['level'])): ?>
                 <div class="mt-2">
-                  <span class="inline-block px-2 py-1 text-xs text-white rounded bg-green-600">
+                  <span class="inline-block px-2 py-1 text-xs text-white bg-green-600 rounded">
                     Niveau <?= htmlspecialchars($product['level']) ?>
                   </span>
                 </div>
               <?php endif; ?>
             </div>
           </a>
-          <div class="px-4 pb-4">
+          <!--<div class="px-4 pb-4">
             <form action="/cart/buy-now" method="POST">
               <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
               <input type="hidden" name="quantity" value="1">
@@ -78,7 +78,7 @@ function getImageUrl($image)
                 <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'Indisponible' : 'Acheter cet article' ?>
               </button>
             </form>
-          </div>
+          </div>-->
         </div>
       <?php endforeach; ?>
     </div>

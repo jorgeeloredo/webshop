@@ -57,7 +57,7 @@ return [
     ],
     [
       'name' => 'Tutos & conseils',
-      'url' => '/tutos',
+      'url' => '/page/tutos',
       'submenu' => []
     ],
     [
@@ -67,19 +67,13 @@ return [
     ],
     [
       'name' => 'Actualités',
-      'url' => '/actualites',
+      'url' => '/page/actualites',
       'submenu' => []
     ],
     [
       'name' => 'Nos magasins',
-      'url' => '/magasins',
+      'url' => '/page/magasins',
       'submenu' => []
     ],
-    [
-      'name' => 'Reconditionné',
-      'url' => '/reconditionne',
-      'special_class' => 'text-green-600 hover:text-green-800',
-      'submenu' => []
-    ]
   ]
 ];

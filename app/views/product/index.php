@@ -67,7 +67,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
           // Add empty thumbnails if less than 6 images
           for ($i = count($product['images']); $i < 6; $i++):
           ?>
-            <div class="border border-gray-200 rounded cursor-not-allowed bg-gray-100">
+            <div class="bg-gray-100 border border-gray-200 rounded cursor-not-allowed">
               <div style="aspect-ratio: 1 / 1"></div>
             </div>
           <?php endfor; ?>
@@ -134,10 +134,9 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
       </div>
 
       <!-- Add to Cart Form -->
-      <form action="/cart/add" method="POST" class="mb-6">
+      <!--<form action="/cart/add" method="POST" class="mb-6">
         <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
 
-        <!-- Quantity Selector -->
         <div class="flex items-center mb-4">
           <label for="quantity" class="mr-4 text-sm font-medium text-gray-700">Quantité :</label>
           <div class="flex items-center border border-gray-300 rounded">
@@ -151,19 +150,29 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
               value="1"
               min="1"
               max="<?= $product['stock'] ?? 10 ?>"
-              class="w-12 py-1 text-center border-x border-gray-300">
+              class="w-12 py-1 text-center border-gray-300 border-x">
             <button type="button" class="px-3 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="increase">
               <i class="fas fa-plus"></i>
             </button>
           </div>
         </div>
 
-        <!-- Add to Cart Button - fixed width instead of full width -->
         <button
           type="submit"
           class="singer-red singer-red-border w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-red-500"
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'Produit indisponible' : 'Ajouter au panier' ?>
+        </button>
+      </form>-->
+
+      <form action="/cart/buy-now" method="POST">
+        <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+        <input type="hidden" name="quantity" value="1">
+        <button
+          type="submit"
+          class="singer-red singer-red-border w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-red-500"
+          <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
+          <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'Indisponible' : 'Acheter cet article' ?>
         </button>
       </form>
 
@@ -266,7 +275,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
 
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <?php foreach ($relatedProducts as $relatedProduct): ?>
-            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+            <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-sm">
               <a href="/product/<?= $relatedProduct['slug'] ?>" class="block">
                 <!-- Updated image container with fixed aspect ratio -->
                 <div class="relative overflow-hidden bg-gray-100" style="padding-bottom: 100%;">

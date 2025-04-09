@@ -12,7 +12,7 @@
     <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
       <?php foreach ($categories as $category): ?>
         <a href="/category/<?= $category['slug'] ?>" class="group">
-          <div class="overflow-hidden mb-2 border border-gray-200 rounded-lg bg-white aspect-square">
+          <div class="mb-2 overflow-hidden bg-white border border-gray-200 rounded-lg aspect-square">
             <?php if (isset($category['image']) && !empty($category['image'])): ?>
               <img src="/assets/images/products/<?= $category['image'] ?>" alt="<?= htmlspecialchars($category['name']) ?>" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
             <?php else: ?>
@@ -35,7 +35,7 @@
 
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       <?php foreach ($featuredProducts as $product): ?>
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+        <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-sm">
           <a href="/product/<?= $product['slug'] ?>" class="block">
             <!-- Updated image container with fixed aspect ratio -->
             <div class="relative overflow-hidden bg-gray-100" style="padding-bottom: 100%;">
@@ -61,14 +61,14 @@
 
               <?php if (isset($product['level'])): ?>
                 <div class="mt-2">
-                  <span class="inline-block px-2 py-1 text-xs text-white rounded bg-green-600">
+                  <span class="inline-block px-2 py-1 text-xs text-white bg-green-600 rounded">
                     Niveau <?= htmlspecialchars($product['level']) ?>
                   </span>
                 </div>
               <?php endif; ?>
             </div>
           </a>
-          <div class="px-4 pb-4">
+          <!--<div class="px-4 pb-4">
             <form action="/cart/buy-now" method="POST">
               <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
               <input type="hidden" name="quantity" value="1">
@@ -79,13 +79,13 @@
                 <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'Indisponible' : 'Acheter cet article' ?>
               </button>
             </form>
-          </div>
+          </div>-->
         </div>
       <?php endforeach; ?>
     </div>
 
     <div class="mt-8 text-center">
-      <a href="/products" class="px-6 py-3 border transition rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white">Voir tous les produits</a>
+      <a href="/products" class="px-6 py-3 transition border rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white">Voir tous les produits</a>
     </div>
   </div>
 </section>
@@ -165,7 +165,7 @@
     </div>
 
     <div class="mt-8 text-center">
-      <a href="#" class="px-6 py-3 border transition rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white">Tous les tutoriels</a>
+      <a href="#" class="px-6 py-3 transition border rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white">Tous les tutoriels</a>
     </div>
   </div>
 </section>
@@ -179,7 +179,7 @@
 
       <form class="flex flex-col sm:flex-row">
         <input type="email" placeholder="Votre adresse email" class="flex-1 px-4 py-2 mb-2 border border-gray-300 rounded-l sm:mb-0 focus:outline-none focus:ring-2 focus:ring-red-500">
-        <button type="submit" class="px-6 py-2 font-medium text-white transition singer-red rounded-r hover:bg-red-700">S'inscrire</button>
+        <button type="submit" class="px-6 py-2 font-medium text-white transition rounded-r singer-red hover:bg-red-700">S'inscrire</button>
       </form>
     </div>
   </div>

@@ -41,5 +41,5 @@ $router->post('/checkout', 'OrderController', 'checkout');
 $router->get('/checkout/success', 'OrderController', 'success');
 $router->get('/sitemap.xml', 'SitemapController', 'index');
 
-// Content pages
+// Route for static pages
 $router->get('/page/{slug}', 'PageController', 'show');
