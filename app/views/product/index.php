@@ -194,78 +194,80 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
     </div>
   </div>
 
-  <!-- Product Characteristics Section -->
-  <div class="max-w-6xl mx-auto mt-12 mb-16">
-    <!-- Section Header -->
-    <div class="flex items-center mb-8">
-      <h2 class="text-2xl font-normal text-gray-800">Caractéristiques du produit</h2>
-      <a href="#" class="ml-4 text-sm singer-red-text hover:underline">Plus d'infos</a>
-      <div class="flex items-center justify-center w-5 h-5 ml-2 border border-gray-300 rounded-full">
-        <span class="text-sm text-gray-500">?</span>
-      </div>
-    </div>
-
-    <!-- Two-column layout with image -->
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <!-- Left column features -->
-      <div class="md:col-span-1">
-        <ul class="space-y-4">
-          <?php foreach ($featuresFirstColumn as $feature): ?>
-            <li class="flex items-start">
-              <span class="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-gray-300 rounded-full"></span>
-              <span class="text-gray-700"><?= htmlspecialchars($feature) ?></span>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-
-      <!-- Middle column features -->
-      <div class="md:col-span-1">
-        <ul class="space-y-4">
-          <?php foreach ($featuresSecondColumn as $feature): ?>
-            <li class="flex items-start">
-              <span class="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-gray-300 rounded-full"></span>
-              <span class="text-gray-700"><?= htmlspecialchars($feature) ?></span>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-
-      <!-- Right column (Image and download links) -->
-      <div class="md:col-span-1">
-        <!-- Image -->
-        <div class="p-2 mb-4 border border-gray-200 rounded-lg">
-          <img
-            src="<?= isset($product['images'][1]) ? getImageUrl($product['images'][1]) : getImageUrl($product['images'][0]) ?>"
-            alt="<?= htmlspecialchars($product['name']) ?> Caractéristiques"
-            class="object-contain w-full h-auto rounded" />
+  <?php if ($featuresCount > 0): ?>
+    <!-- Product Characteristics Section -->
+    <div class="max-w-6xl mx-auto mt-12 mb-16">
+      <!-- Section Header -->
+      <div class="flex items-center mb-8">
+        <h2 class="text-2xl font-normal text-gray-800">Caractéristiques du produit</h2>
+        <a href="#" class="ml-4 text-sm singer-red-text hover:underline">Plus d'infos</a>
+        <div class="flex items-center justify-center w-5 h-5 ml-2 border border-gray-300 rounded-full">
+          <span class="text-sm text-gray-500">?</span>
         </div>
+      </div>
 
-        <!-- Download links under the image -->
-        <div class="space-y-3">
-          <?php if (isset($product['documents']) && !empty($product['documents'])): ?>
-            <?php foreach ($product['documents'] as $document): ?>
-              <a href="<?= htmlspecialchars($document['url']) ?>" class="flex items-center text-sm singer-red-text hover:underline">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5 mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                <?= htmlspecialchars($document['name']) ?>
-              </a>
+      <!-- Two-column layout with image -->
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <!-- Left column features -->
+        <div class="md:col-span-1">
+          <ul class="space-y-4">
+            <?php foreach ($featuresFirstColumn as $feature): ?>
+              <li class="flex items-start">
+                <span class="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-gray-300 rounded-full"></span>
+                <span class="text-gray-700"><?= htmlspecialchars($feature) ?></span>
+              </li>
             <?php endforeach; ?>
-          <?php endif; ?>
+          </ul>
+        </div>
+
+        <!-- Middle column features -->
+        <div class="md:col-span-1">
+          <ul class="space-y-4">
+            <?php foreach ($featuresSecondColumn as $feature): ?>
+              <li class="flex items-start">
+                <span class="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-gray-300 rounded-full"></span>
+                <span class="text-gray-700"><?= htmlspecialchars($feature) ?></span>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+
+        <!-- Right column (Image and download links) -->
+        <div class="md:col-span-1">
+          <!-- Image -->
+          <div class="p-2 mb-4 border border-gray-200 rounded-lg">
+            <img
+              src="<?= isset($product['images'][1]) ? getImageUrl($product['images'][1]) : getImageUrl($product['images'][0]) ?>"
+              alt="<?= htmlspecialchars($product['name']) ?> Caractéristiques"
+              class="object-contain w-full h-auto rounded" />
+          </div>
+
+          <!-- Download links under the image -->
+          <div class="space-y-3">
+            <?php if (isset($product['documents']) && !empty($product['documents'])): ?>
+              <?php foreach ($product['documents'] as $document): ?>
+                <a href="/assets/pdfs/<?= htmlspecialchars($document['url']) ?>" class="flex items-center text-sm singer-red-text hover:underline">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  <?= htmlspecialchars($document['name']) ?>
+                </a>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
 
   <!-- Related Products Section (if any) -->
   <?php if (isset($relatedProducts) && !empty($relatedProducts)): ?>

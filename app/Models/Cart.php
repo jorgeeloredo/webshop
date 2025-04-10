@@ -56,7 +56,8 @@ class Cart
         'price' => $product['price'],
         'quantity' => $quantity,
         'attributes' => $attributes,
-        'image' => $product['image'] ?? null,
+        // Store the first image from the product's images array
+        'image' => isset($product['images']) && !empty($product['images']) ? $product['images'][0] : null,
         'slug' => $product['slug'] ?? null,
       ];
     }

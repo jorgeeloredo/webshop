@@ -36,7 +36,7 @@ return [
     ],
     [
       'name' => 'Autres produits',
-      'url' => '/products?category=autres-produits',
+      'url' => '#',
       'submenu' => [
         [
           'name' => 'Soin du linge',
@@ -68,11 +68,6 @@ return [
     [
       'name' => 'Actualités',
       'url' => '/page/actualites',
-      'submenu' => []
-    ],
-    [
-      'name' => 'Nos magasins',
-      'url' => '/page/magasins',
       'submenu' => []
     ],
   ]

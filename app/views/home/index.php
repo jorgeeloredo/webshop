@@ -98,7 +98,7 @@
         <h2 class="mb-4 text-2xl font-normal text-gray-800">Singer, une marque emblématique depuis 1851</h2>
         <p class="mb-4 text-gray-700">Depuis plus de 170 ans, Singer accompagne les couturiers du monde entier. Notre histoire riche et notre engagement envers l'innovation ont fait de nous une référence incontournable dans l'univers de la couture.</p>
         <p class="mb-6 text-gray-700">Nos machines sont conçues pour répondre aux besoins de tous les niveaux, du débutant à l'expert, en offrant une qualité supérieure et une facilité d'utilisation incomparable.</p>
-        <a href="#" class="inline-flex items-center text-sm singer-red-text hover:underline">
+        <a href="/page/la-marque" class="inline-flex items-center text-sm singer-red-text hover:underline">
           Découvrir notre histoire
           <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>

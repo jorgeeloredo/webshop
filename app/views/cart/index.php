@@ -9,6 +9,9 @@ $totalQuantity = $cart->getTotalQuantity();
 // Function to generate image URL
 function getImageUrl($image)
 {
+  if (empty($image)) {
+    return '';
+  }
   return '/assets/images/products/' . $image;
 }
 ?>
@@ -72,7 +75,7 @@ function getImageUrl($image)
                         type="number"
                         value="<?= $item['quantity'] ?>"
                         min="1"
-                        class="w-10 py-1 text-center border-x border-gray-300 quantity-input"
+                        class="w-10 py-1 text-center border-gray-300 border-x quantity-input"
                         data-item-id="<?= $itemId ?>">
                       <button type="button" class="px-2 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="increase" data-item-id="<?= $itemId ?>">
                         <i class="fas fa-plus"></i>
@@ -90,7 +93,7 @@ function getImageUrl($image)
 
               <!-- Desktop: Product info -->
               <div class="items-center hidden col-span-7 sm:flex">
-                <div class="w-20 h-20 mr-4 overflow-hidden bg-gray-100 rounded flex-shrink-0">
+                <div class="flex-shrink-0 w-20 h-20 mr-4 overflow-hidden bg-gray-100 rounded">
                   <?php if (isset($item['image']) && !empty($item['image'])): ?>
                     <img src="<?= getImageUrl($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" class="object-contain w-full h-full">
                   <?php else: ?>
@@ -125,7 +128,7 @@ function getImageUrl($image)
                     type="number"
                     value="<?= $item['quantity'] ?>"
                     min="1"
-                    class="w-10 py-1 text-center border-x border-gray-300 quantity-input"
+                    class="w-10 py-1 text-center border-gray-300 border-x quantity-input"
                     data-item-id="<?= $itemId ?>">
                   <button type="button" class="px-2 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="increase" data-item-id="<?= $itemId ?>">
                     <i class="fas fa-plus"></i>
@@ -199,9 +202,8 @@ function getImageUrl($image)
 
           <div class="flex flex-col mt-4 space-y-2">
             <div class="flex items-center">
-              <img src="/assets/images/payments/visa.svg" alt="Visa" class="h-6 mr-2">
-              <img src="/assets/images/payments/mastercard.svg" alt="Mastercard" class="h-6 mr-2">
-              <img src="/assets/images/payments/paypal.svg" alt="PayPal" class="h-6 mr-2">
+              <img src="/assets/images/visa.png" alt="Visa" class="h-6 mr-2">
+              <img src="/assets/images/mastercard.png" alt="Mastercard" class="h-6 mr-2">
               <span class="text-xs text-gray-500">et plus...</span>
             </div>
             <div class="flex items-center">
