@@ -1,1 +1,106 @@
-
+[
+  {
+    "id": 1,
+    "name": "Surjeteuses & Recouvreuses",
+    "slug": "surjeteuses-recouvreuses",
+    "description": "Découvrez notre sélection de surjeteuses et recouvreuses pour des finitions professionnelles sur tous vos projets de couture. Idéales pour les vêtements, les accessoires et la décoration.",
+    "image": "surjeteuse_s0555-0.jpg",
+    "parent_id": null,
+    "order": 1,
+    "meta_title": "Surjeteuses & Recouvreuses Singer - Finitions professionnelles",
+    "meta_description": "Découvrez les surjeteuses et recouvreuses Singer pour des finitions professionnelles. Livraison gratuite dès 300€ d'achat !",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  },
+  {
+    "id": 2,
+    "name": "Soin du linge",
+    "slug": "soin-du-linge",
+    "description": "Trouvez la machine à coudre Singer adaptée à vos besoins et à votre niveau. Des modèles mécaniques et électroniques pour tous les projets créatifs.",
+    "image": "fer_à_repasser_steamcraft-0.jpg",
+    "parent_id": null,
+    "order": 2,
+    "meta_title": "Machines à coudre Singer - Pour tous les niveaux",
+    "meta_description": "Explorez notre gamme de machines à coudre Singer. Du niveau débutant au niveau expert, trouvez le modèle parfait pour vos créations.",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  },
+  {
+    "id": 3,
+    "name": "Brodeuses",
+    "slug": "brodeuses",
+    "description": "Personnalisez vos créations avec nos brodeuses Singer. Une large gamme de modèles pour donner vie à vos idées les plus créatives.",
+    "image": "brodeuse_em_9305-0.jpg",
+    "parent_id": null,
+    "order": 3,
+    "meta_title": "Brodeuses Singer - Personnalisez vos créations",
+    "meta_description": "Explorez notre collection de brodeuses Singer et donnez vie à vos idées créatives. Brodez vos vêtements, accessoires et projets de décoration.",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  },
+  {
+    "id": 4,
+    "name": "Accessoires",
+    "slug": "accessoires",
+    "description": "Complétez votre équipement avec nos accessoires Singer. Pieds presseurs, fils, aiguilles et bien plus pour optimiser votre expérience de couture.",
+    "image": "valise_de_transport_pour_machine_%C3%A0_coudre-1.jpg",
+    "parent_id": null,
+    "order": 4,
+    "meta_title": "Accessoires de couture Singer - L'essentiel pour vos projets",
+    "meta_description": "Trouvez tous les accessoires Singer pour vos machines à coudre, surjeteuses et brodeuses. Qualité garantie pour des résultats professionnels.",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  },
+  {
+    "id": 5,
+    "name": "Machines électroniques",
+    "slug": "machines-electroniques",
+    "description": "Découvrez nos machines à coudre électroniques Singer. Précision, simplicité et fonctionnalités avancées pour tous vos projets.",
+    "image": "machine_%C3%A0_coudre_supera_f687c-0.jpg",
+    "parent_id": 2,
+    "order": 1,
+    "meta_title": "Machines à coudre électroniques Singer - Haute précision",
+    "meta_description": "Les machines à coudre électroniques Singer combinent facilité d'utilisation et fonctionnalités avancées. Idéales pour tous vos projets.",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  },
+  {
+    "id": 6,
+    "name": "Machines mécaniques",
+    "slug": "machines-mecaniques",
+    "description": "Les machines mécaniques Singer, fiables et robustes. Des modèles simples à utiliser, parfaits pour l'apprentissage et les projets quotidiens.",
+    "image": "machine_%C3%A0_coudre_madam_2-0.jpg",
+    "parent_id": 2,
+    "order": 2,
+    "meta_title": "Machines à coudre mécaniques Singer - Fiables et robustes",
+    "meta_description": "Optez pour une machine à coudre mécanique Singer, fiable et facile à utiliser. Idéale pour débuter et pour les projets simples du quotidien.",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  },
+  {
+    "id": 7,
+    "name": "Électroménager",
+    "slug": "electromenager",
+    "description": "De l’extracteur de jus au cuiseur multifonctions, découvrez notre gamme d’électroménager Singer ! Ils deviendront vos indispensables du quotidien.",
+    "image": "extracteur_de_jus_sjw-200-0.jpg",
+    "parent_id": 2,
+    "order": 2,
+    "meta_title": "Électroménager Singer",
+    "meta_description": "De l’extracteur de jus au cuiseur multifonctions, découvrez notre gamme d’électroménager Singer ! Ils deviendront vos indispensables du quotidien.",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  },
+  {
+    "id": 8,
+    "name": "Soin du sol",
+    "slug": "soin-du-sol",
+    "description": "Nos aspirateurs sans sac sont silencieux, efficaces et ergonomiques à la fois. Grâce à une technologie avancée le ménage de votre maison deviendra simple et rapide !",
+    "image": "aspirateur_balais_sonic_vc_250-0.jpg",
+    "parent_id": 2,
+    "order": 2,
+    "meta_title": "Soin du sol Singer",
+    "meta_description": "Nos aspirateurs sans sac sont silencieux, efficaces et ergonomiques à la fois. Grâce à une technologie avancée le ménage de votre maison deviendra simple et rapide !",
+    "created_at": "2024-03-28T10:00:00+00:00",
+    "updated_at": "2024-03-28T10:00:00+00:00"
+  }
+]
