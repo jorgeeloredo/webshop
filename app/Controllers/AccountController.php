@@ -326,4 +326,109 @@ class AccountController extends Controller
     $_SESSION['success'] = 'Votre profil a été mis à jour avec succès';
     $this->redirect('/account/profile');
   }
+  public function addresses()
+  {
+    // Check if user is logged in
+    if (!Auth::check()) {
+      $_SESSION['intended_url'] = '/account/addresses';
+      $this->redirect('/login');
+      return;
+    }
+
+    $user = Auth::user();
+
+    // Normally we would load addresses from the database
+    // For now, we'll use placeholder data
+    $addresses = [
+      [
+        'id' => 1,
+        'type' => 'shipping',
+        'is_default' => true,
+        'first_name' => $user['first_name'],
+        'last_name' => $user['last_name'],
+        'address' => '123 rue Principale',
+        'address2' => 'Appartement 4B',
+        'city' => 'Paris',
+        'postal_code' => '75001',
+        'country' => 'France',
+        'phone' => '01 23 45 67 89'
+      ],
+      [
+        'id' => 2,
+        'type' => 'billing',
+        'is_default' => true,
+        'first_name' => $user['first_name'],
+        'last_name' => $user['last_name'],
+        'address' => '456 rue Secondaire',
+        'address2' => '',
+        'city' => 'Lyon',
+        'postal_code' => '69001',
+        'country' => 'France',
+        'phone' => '01 98 76 54 32'
+      ]
+    ];
+
+    $this->view('account/addresses', [
+      'title' => 'Mes adresses',
+      'user' => $user,
+      'addresses' => $addresses
+    ]);
+  }
+
+  public function addAddress()
+  {
+    // Check if user is logged in
+    if (!Auth::check()) {
+      $this->redirect('/login');
+      return;
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      $this->redirect('/account/addresses');
+      return;
+    }
+
+    // Process the form data here
+    // For now, we'll just redirect with a success message
+    $_SESSION['success'] = 'Adresse ajoutée avec succès.';
+    $this->redirect('/account/addresses');
+  }
+
+  public function updateAddress()
+  {
+    // Check if user is logged in
+    if (!Auth::check()) {
+      $this->redirect('/login');
+      return;
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      $this->redirect('/account/addresses');
+      return;
+    }
+
+    // Process the form data here
+    // For now, we'll just redirect with a success message
+    $_SESSION['success'] = 'Adresse mise à jour avec succès.';
+    $this->redirect('/account/addresses');
+  }
+
+  public function deleteAddress()
+  {
+    // Check if user is logged in
+    if (!Auth::check()) {
+      $this->redirect('/login');
+      return;
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      $this->redirect('/account/addresses');
+      return;
+    }
+
+    // Process the deletion here
+    // For now, we'll just redirect with a success message
+    $_SESSION['success'] = 'Adresse supprimée avec succès.';
+    $this->redirect('/account/addresses');
+  }
 }

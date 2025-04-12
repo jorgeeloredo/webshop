@@ -64,7 +64,6 @@
           <li><a href="/page/politique-de-confidentialite" class="text-sm text-gray-600 hover:text-red-600">Politique de confidentialité</a></li>
           <li><a href="/page/conditions-generales-de-vente" class="text-sm text-gray-600 hover:text-red-600">Conditions générales de vente</a></li>
           <li><a href="/page/mentions-legales" class="text-sm text-gray-600 hover:text-red-600">Mentions légales & CGU</a></li>
-          <li><a href="/page/magasins" class="text-sm text-gray-600 hover:text-red-600">Nos magasins</a></li>
           <li><a href="/page/la-marque" class="text-sm text-gray-600 hover:text-red-600">La marque</a></li>
         </ul>
       </div>
@@ -87,8 +86,8 @@
         <ul class="mb-6 space-y-2">
           <li><a href="/page/questions-frequentes" class="text-sm text-gray-600 hover:text-red-600">Questions fréquentes</a></li>
           <li><a href="/page/vos-avantages" class="text-sm text-gray-600 hover:text-red-600">Vos avantages</a></li>
-          <li><a href="/page/connaitre-nos-machines" class="text-sm text-gray-600 hover:text-red-600">Connaître nos machines</a></li>
-          <li><a href="/page/nos-actualites" class="text-sm text-gray-600 hover:text-red-600">Nos actualités</a></li>
+          <li><a href="/page/tutos" class="text-sm text-gray-600 hover:text-red-600">Tutos & conseils</a></li>
+          <li><a href="/page/actualites" class="text-sm text-gray-600 hover:text-red-600">Nos actualités</a></li>
           <li><a href="/page/nous-contacter" class="text-sm text-gray-600 hover:text-red-600">Nous contacter</a></li>
         </ul>
       </div>

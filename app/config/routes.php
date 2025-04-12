@@ -34,10 +34,17 @@ $router->get('/account', 'AccountController', 'dashboard');
 $router->get('/account/profile', 'AccountController', 'profile');
 $router->post('/account/profile', 'AccountController', 'updateProfile');
 
+// Account addresses routes
+$router->get('/account/addresses', 'AccountController', 'addresses');
+$router->post('/account/addresses/add', 'AccountController', 'addAddress');
+$router->post('/account/addresses/update', 'AccountController', 'updateAddress');
+$router->post('/account/addresses/delete', 'AccountController', 'deleteAddress');
+
 // Order routes
 $router->get('/account/orders', 'OrderController', 'index');
 $router->get('/account/orders/{id}', 'OrderController', 'show');
 $router->post('/checkout', 'OrderController', 'checkout');
+$router->get('/checkout', 'OrderController', 'checkout');
 $router->get('/checkout/success', 'OrderController', 'success');
 $router->get('/sitemap.xml', 'SitemapController', 'index');
 

@@ -7,16 +7,16 @@ $pageContent = <<<HTML
 <h3 class="page-subheading">Article 1 : Objet</h3>
 <p class="bottom-indent">
   Les présentes « conditions générales d’utilisation » ont pour objet l’encadrement juridique des modalités de mise à
-  disposition du contenu et des services du site SINGER France https://www.singerfrance.com (ci-après désigné « le Site
+  disposition du contenu et des services du site SINGER France https://www.singer-fr.com (ci-après désigné « le Site
   ») et leur utilisation par « l’Utilisateur » désignant toute personne qui utilise le Site ou l’un des services
   proposés par le Site.<br />L’accès au Site par l’Utilisateur signifie son acceptation des présentes conditions
   générales d’utilisation. En cas de non-acceptation des conditions générales d’utilisation stipulées dans les
-  présentes, l’Utilisateur se doit de renoncer à l’accès aux services proposés par le Site https://www.singerfrance.com
+  présentes, l’Utilisateur se doit de renoncer à l’accès aux services proposés par le Site https://www.singer-fr.com
 </p>
 <h3 class="page-subheading"></h3>
 <h3 class="page-subheading">Article 2 : Mentions légales</h3>
 <p class="bottom-indent">
-  L’édition du Site https://www.singerfrance.com est assurée par la Société SINGER France SAS au capital de<br />1 000
+  L’édition du Site https://www.singer-fr.com est assurée par la Société SINGER France SAS au capital de<br />1 000
   000 € dont le siège social est situé au 88 avenue des Ternes 75017 PARIS, Bureaux Administratifs 27/31 rue d’Arras
   92022 NANTERRE, enregistrée au RCS de PARIS sous le numéro 451 690 085. Numéro de TVA intracommunautaire : FR55 451
   690 085 ci-après « l’Editeur ».<br />Le Directeur de la publication est Monsieur Philippe LERUTH.
@@ -28,7 +28,7 @@ $pageContent = <<<HTML
   >.
 </p>
 <p class="bottom-indent">
-  L’hébergeur du Site https://www.singerfrance.com est la Société Digital Ocean LLC : 101 Avenue of the Americas, New
+  L’hébergeur du Site https://www.singer-fr.com est la Société Digital Ocean LLC : 101 Avenue of the Americas, New
   York 10013 United States of America (Etats-Unis)<br />Téléphone : +33 (0)8 203 203 63
   <a href="https://www.digitalocean.com">https://www.digitalocean.com</a>
 </p>

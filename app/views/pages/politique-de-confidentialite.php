@@ -8,7 +8,7 @@ $pageContent = <<<HTML
   La société SINGER France s’attache au respect des libertés et droits fondamentaux de chacun.<br /><br />La présente
   politique de confidentialité (ci-après « Politique ») vous informe sur le type de données personnelles que nous
   collectons, la manière dont nous les traitons, les mesures que nous prenons pour assurer leur sécurité et la nature de
-  vos droits. &nbsp;<br /><br />En utilisant notre site internet https://www.singerfrance.com/ (ci-après dénommé « Site
+  vos droits. &nbsp;<br /><br />En utilisant notre site internet https://www.singer-fr.com/ (ci-après dénommé « Site
   »), vous déclarez accepter les termes de la présente Politique et consentez à ce que nous collections, utilisions et
   divulguions vos données personnelles conformément à la Politique. Cette Politique s’applique à toutes les données
   personnelles que vous nous fournissez directement ou indirectement. En cas de désaccord avec les termes de la

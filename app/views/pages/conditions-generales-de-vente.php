@@ -13,7 +13,7 @@ $pageContent = <<<HTML
   juridique pour contracter (ci-après « l’acheteur »).<br />L’acheteur est donc réputé les accepter sans réserve. Les
   présentes conditions générales de vente s’appliquent à l’exclusion de toutes autres conditions, et notamment celles
   applicables pour les ventes en magasin ou au moyen d’autres circuits de distribution et de commercialisation.<br />Elles
-  sont accessibles sur le site internet : https://www.singerfrance.com (ci-après le « Site ») et prévaudront, le cas
+  sont accessibles sur le site internet : https://www.singer-fr.com (ci-après le « Site ») et prévaudront, le cas
   échéant, sur toute autre version ou tout autre document contradictoire.<br />Singer France et l’acheteur conviennent
   que les présentes conditions générales régissent exclusivement leur relation. Singer France se réserve le droit de
   modifier ponctuellement ses conditions générales. Elles seront applicables dès leur mise en ligne.<br /><br />
@@ -21,7 +21,7 @@ $pageContent = <<<HTML
 <h3>Article 2 – Objet</h3>
 <p>
   Les présentes conditions générales ont pour objet de définir les droits et obligations des parties dans le cadre de la
-  vente en ligne de biens proposés par Singer France à l’acheteur, à partir du Site https://www.singerfrance.com<br /><br />
+  vente en ligne de biens proposés par Singer France à l’acheteur, à partir du Site https://www.singer-fr.com<br /><br />
 </p>
 <h3>Article 3 – Informations précontractuelles</h3>
 <p>
@@ -253,7 +253,7 @@ $pageContent = <<<HTML
 <p>
   La Politique de Confidentialité fait partie intégrante des présentes CGV.<br />Les données à caractère personnel
   seront collectées et traitées dans le respect de la Politique de Confidentialité de Singer France accessible à
-  l’adresse suivante : https://www.singerfrance.com/<br />Les données nominatives fournies par l’acheteur sont
+  l’adresse suivante : https://www.singer-fr.com/<br />Les données nominatives fournies par l’acheteur sont
   nécessaires au traitement de sa commande et à l’établissement des factures.<br />Elles peuvent être communiquées aux
   partenaires du vendeur chargés de l’exécution, du traitement, de la gestion et du paiement des commandes.<br />L’acheteur
   dispose d’un droit d’accès permanent, de modification, de rectification et d’opposition s’agissant des informations le

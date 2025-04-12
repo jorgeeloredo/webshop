@@ -341,7 +341,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
                   Auprès de qui / Comment puis-je faire valoir ma garantie ?
                 </h3>
                 <p class="mb-1 text-sm font-medium text-gray-700">
-                  Vous avez acheté votre machine sur notre site www.singerfrance.com
+                  Vous avez acheté votre machine sur notre site www.singer-fr.com
                 </p>
                 <p class="mb-2 text-sm text-gray-700">
                   Si vous rencontrez un problème ou une panne dans les 2 ans à partir de la date de votre achat,
@@ -350,7 +350,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
 
                 <p class="mb-1 text-sm font-medium text-gray-700">
                   Vous avez acheté votre machine sur un autre site Internet
-                  <span class="font-normal">que www.singerfrance.com, dans la grande distribution ou chez un revendeur agréé (magasin ou
+                  <span class="font-normal">que www.singer-fr.com, dans la grande distribution ou chez un revendeur agréé (magasin ou
                     corner Singer)</span>
                 </p>
                 <p class="text-sm text-gray-700">

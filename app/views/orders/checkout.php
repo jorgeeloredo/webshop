@@ -281,12 +281,12 @@ function getImageUrl($image)
                 Carte bancaire
               </label>
               <div class="flex items-center ml-auto space-x-2">
-                <img src="/assets/images/payments/visa.svg" alt="Visa" class="h-6">
-                <img src="/assets/images/payments/mastercard.svg" alt="Mastercard" class="h-6">
+                <img src="/assets/images/visa.png" alt="Visa" class="h-6">
+                <img src="/assets/images/mastercard.png" alt="Mastercard" class="h-6">
               </div>
             </div>
 
-            <div class="flex items-center p-3 border border-gray-200 rounded">
+            <!--<div class="flex items-center p-3 border border-gray-200 rounded">
               <input
                 type="radio"
                 id="payment_paypal"
@@ -299,7 +299,7 @@ function getImageUrl($image)
               <div class="ml-auto">
                 <img src="/assets/images/payments/paypal.svg" alt="PayPal" class="h-6">
               </div>
-            </div>
+            </div>-->
           </div>
 
           <p class="flex items-center mt-4 text-sm text-gray-600">
