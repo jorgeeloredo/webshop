@@ -22,8 +22,9 @@ return [
     'username' => $_ENV['MAIL_USERNAME'] ?? '',
     'password' => $_ENV['MAIL_PASSWORD'] ?? '',
     'encryption' => $_ENV['MAIL_ENCRYPTION'] ?? 'tls',
-    'from_address' => $_ENV['MAIL_FROM_ADDRESS'] ?? 'hello@singer-shop.com',
-    'from_name' => $_ENV['MAIL_FROM_NAME'] ?? 'Singer Shop',
+    'from_address' => $_ENV['MAIL_FROM_ADDRESS'] ?? 'noreply@singer-fr.com',
+    'from_name' => $_ENV['MAIL_FROM_NAME'] ?? 'Singer France',
+    'zeptomail_api_key' => $_ENV['ZEPTOMAIL_API_KEY'] ?? 'Zoho-enczapikey yA6KbHtZ7Qmjlj8EFhJu0MOO8I80+K9viXy05yq3fsFxf9To3qFp3hRvK4OzJzKL3IXQs/1QP90TI9i47NpXdsI8ZtMHLJTGTuv4P2uV48xh8ciEYNYih56pAbcUGq5PeRklDyQzRvht',
   ],
 
   'session' => [

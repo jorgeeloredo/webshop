@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Cart;
 use App\Helpers\Auth;
 use App\Helpers\Utilities;
+use App\Helpers\EmailService;
 
 class OrderController extends Controller
 {
@@ -66,13 +67,6 @@ class OrderController extends Controller
 
   public function checkout()
   {
-    // Check if user is logged in
-    if (!Auth::check()) {
-      $_SESSION['intended_url'] = '/checkout';
-      $this->redirect('/login');
-      return;
-    }
-
     // Check if cart is empty
     if ($this->cartModel->getTotalQuantity() === 0) {
       $this->redirect('/cart');
@@ -80,16 +74,74 @@ class OrderController extends Controller
     }
 
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-      $this->view('orders/checkout', [
+      // Just display the checkout page without requiring login
+      $this->view('orders/checkout_redesigned', [
         'title' => 'Finaliser la commande',
-        'cart' => $this->cartModel  // Make sure this is initialized
+        'cart' => $this->cartModel
       ]);
       return;
     }
 
     // Process checkout form
-    $userId = Auth::id();
     $cartItems = $this->cartModel->getItems();
+    $isLoggedIn = \App\Helpers\Auth::check();
+    $userId = null;
+
+    // Guest checkout with option to create account
+    if (!$isLoggedIn) {
+      $email = $_POST['email'] ?? '';
+      $createAccount = isset($_POST['create_account']) && $_POST['create_account'] === 'on';
+      $password = $_POST['password'] ?? '';
+      $passwordConfirm = $_POST['password_confirm'] ?? '';
+      $firstName = $_POST['first_name'] ?? '';
+      $lastName = $_POST['last_name'] ?? '';
+
+      // Validate email
+      $errors = [];
+      if (empty($email)) {
+        $errors['email'] = 'L\'email est requis';
+      } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = 'Email invalide';
+      }
+
+      // If creating account, validate password
+      if ($createAccount) {
+        if (empty($password)) {
+          $errors['password'] = 'Le mot de passe est requis pour créer un compte';
+        } elseif (strlen($password) < 8) {
+          $errors['password'] = 'Le mot de passe doit contenir au moins 8 caractères';
+        }
+
+        if ($password !== $passwordConfirm) {
+          $errors['password_confirm'] = 'Les mots de passe ne correspondent pas';
+        }
+
+        // Check if email is already registered
+        $userModel = new \App\Models\User();
+        if ($userModel->findByEmail($email)) {
+          $errors['email'] = 'Cet email est déjà utilisé. Veuillez vous connecter.';
+        }
+      }
+
+      // If no errors and creating account, create user
+      if (empty($errors) && $createAccount) {
+        $userModel = new \App\Models\User();
+        $userId = $userModel->create([
+          'first_name' => $firstName,
+          'last_name' => $lastName,
+          'email' => $email,
+          'password' => $password,
+          'role' => 'customer'
+        ]);
+
+        // Log the user in
+        $user = $userModel->find($userId);
+        \App\Helpers\Auth::login($user);
+      }
+    } else {
+      // User is already logged in
+      $userId = \App\Helpers\Auth::id();
+    }
 
     // Get shipping and billing information from the form
     $shippingAddress = [
@@ -124,10 +176,7 @@ class OrderController extends Controller
     // Get payment information
     $paymentMethod = $_POST['payment_method'] ?? 'card';
 
-    // Basic validation
-    $errors = [];
-
-    // Check required shipping fields
+    // Basic validation for shipping address
     if (empty($shippingAddress['first_name'])) {
       $errors['shipping_first_name'] = 'Le prénom est requis';
     }
@@ -189,7 +238,7 @@ class OrderController extends Controller
 
     // If validation fails, return to checkout form with errors
     if (!empty($errors)) {
-      $this->view('orders/checkout', [
+      $this->view('orders/checkout_redesigned', [
         'title' => 'Finaliser la commande',
         'cart' => $this->cartModel,
         'errors' => $errors,
@@ -198,18 +247,36 @@ class OrderController extends Controller
       return;
     }
 
-    // Create the order
+    // Create the order (works for both guest and logged-in users)
     $orderData = [
-      'user_id' => $userId,
+      'user_id' => $userId, // Can be null for guest checkout
       'total' => $this->cartModel->getTotalPrice(),
       'shipping_address' => json_encode($shippingAddress),
       'billing_address' => json_encode($billingAddress),
       'payment_method' => $paymentMethod,
-      'status' => 'pending' // Set initial status to pending
+      'status' => 'pending', // Set initial status to pending
+      'email' => $isLoggedIn ? \App\Helpers\Auth::user()['email'] : ($_POST['email'] ?? ''),
+      'guest_checkout' => !$isLoggedIn && !$createAccount ? 1 : 0  // Ensure this is an integer, not a string
     ];
 
     // Create order in database and get order ID
     $orderId = $this->orderModel->create($orderData, $cartItems);
+
+    // Get the created order with its items
+    $order = $this->orderModel->find($orderId);
+    $orderItems = isset($order['items']) ? $order['items'] : [];
+
+    // Get user data (if logged in)
+    $user = [];
+    if ($userId) {
+      $userModel = new \App\Models\User();
+      $user = $userModel->find($userId);
+    }
+
+    // Send order confirmation email
+    // Then when initializing the EmailService:
+    $emailService = new EmailService();
+    $emailService->sendOrderConfirmationEmail($order, $orderItems, $user);
 
     // Clear the cart
     $this->cartModel->clear();
@@ -221,22 +288,37 @@ class OrderController extends Controller
   public function success()
   {
     $orderId = $_GET['order_id'] ?? 0;
-
-    // Check if order exists and belongs to the user
-    if (!Auth::check()) {
-      $this->redirect('/login');
-      return;
-    }
-
-    $userId = Auth::id();
     $order = $this->orderModel->find($orderId);
 
-    if (!$order || $order['user_id'] != $userId) {
+    // Check if order exists
+    if (!$order) {
       $this->view('error/404', [
         'message' => 'Commande non trouvée',
         'title' => '404 - Commande non trouvée'
       ]);
       return;
+    }
+
+    // For logged-in users, check if the order belongs to them
+    if (Auth::check()) {
+      $userId = Auth::id();
+      if ($order['user_id'] && $order['user_id'] != $userId) {
+        $this->view('error/404', [
+          'message' => 'Commande non trouvée',
+          'title' => '404 - Commande non trouvée'
+        ]);
+        return;
+      }
+    } else {
+      // For guests, store the order ID in session to allow them to view it
+      if (!isset($_SESSION['guest_orders'])) {
+        $_SESSION['guest_orders'] = [];
+      }
+
+      // Add the order to the guest orders if it's not already there
+      if (!in_array($orderId, $_SESSION['guest_orders'])) {
+        $_SESSION['guest_orders'][] = $orderId;
+      }
     }
 
     $this->view('orders/success', [

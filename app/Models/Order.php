@@ -61,6 +61,22 @@ class Order
         $data['status'] = 'pending';
       }
 
+      // Handle guest checkout - ensure we have all required fields
+      if (empty($data['user_id'])) {
+        // For guest checkout, make sure we have at least an email
+        if (empty($data['email'])) {
+          throw new \Exception('Email is required for guest checkout');
+        }
+
+        // Set guest_checkout flag if not explicitly set or ensure it's an integer
+        if (!isset($data['guest_checkout'])) {
+          $data['guest_checkout'] = 1; // Default to 1 (true) for guests
+        } else {
+          // Make sure it's an integer
+          $data['guest_checkout'] = (int)$data['guest_checkout'];
+        }
+      }
+
       // Insert order
       $orderId = $this->db->create('orders', $data);
 
@@ -82,6 +98,17 @@ class Order
       $this->db->rollback();
       throw $e;
     }
+  }
+
+  // Add this method to get orders by email (for guest users)
+  public function findByEmail($email)
+  {
+    $this->db->query(
+      "SELECT * FROM orders WHERE email = ? ORDER BY created_at DESC",
+      [$email]
+    );
+
+    return $this->db->get();
   }
 
   public function updateStatus($id, $status)

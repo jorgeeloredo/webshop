@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bienvenue - Création de compte</title>
+
+    <style>
+      /* Basic resets and inline-friendly styles for emails */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: 'Noto Sans', Arial, sans-serif;
+        color: #333333;
+      }
+      a {
+        color: #ec4249; 
+        text-decoration: none;
+      }
+      .full-width {
+        width: 100%;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .header,
+      .footer {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .header img {
+        max-width: 180px;
+        height: auto;
+      }
+      .nav-links a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+      .banner {
+        background-color: #f2f2f2;
+        padding: 10px;
+        font-size: 14px;
+        color: #484848;
+      }
+      .content {
+        background-color: #ffffff;
+        padding: 20px 0;
+      }
+      h1, h2, h3, h4 {
+        color: #333333;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #ec4249;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 2px;
+        font-size: 14px;
+      }
+      /* Footer styles */
+      .footer p {
+        margin: 5px 0;
+        color: #666666;
+        font-size: 13px;
+      }
+      .footer a {
+        color: #ec4249;
+      }
+      .social-icons img {
+        width: 24px; 
+        height: 24px; 
+        margin: 0 4px;
+      }
+      @media only screen and (max-width: 600px) {
+        .container {
+          padding: 0 10px !important;
+        }
+        .banner,
+        .header,
+        .content,
+        .footer {
+          text-align: center !important;
+          padding: 10px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <table class="full-width" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td>
+          <div class="header">
+            <!-- Logo -->
+            <a href="{{WEBSITE_URL}}">
+              <img 
+                src="https://www.singerfrance.com/img/logo-1675784066.jpg" 
+                alt="Singer France Logo" 
+              />
+            </a>
+            <div class="banner">Votre nouveau compte sur Singer France est prêt !</div>
+
+            <!-- Optional nav links (remove or update if needed) -->
+            <div class="nav-links" style="margin-top:10px;">
+              <a href="{{LINK_1}}">Nos machines</a> |
+              <a href="{{LINK_2}}">Tutos & Conseils</a> |
+              <a href="{{LINK_3}}">Nous contacter</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- MAIN CONTENT -->
+    <table class="full-width" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td>
+          <div class="container content">
+            <h2>Bienvenue, {{USER_FIRSTNAME}}!</h2>
+
+            <p>
+              Nous sommes ravis de vous compter parmi nos clients. Votre compte Singer France a été créé avec succès.
+              Vous pouvez désormais accéder à votre espace client, suivre vos commandes et gérer vos informations personnelles.
+            </p>
+            
+            <h3>Vos identifiants</h3>
+            <p>
+              <strong>Adresse e-mail :</strong> {{USER_EMAIL}}<br/>
+              <strong>Mot de passe :</strong> {{USER_PASSWORD}}  
+            </p>
+            <p style="font-size: 13px; color: #777777;">
+              (Pour votre sécurité, nous vous recommandons de <strong>modifier votre mot de passe</strong> dès votre première connexion.)
+            </p>
+            
+            <p style="margin-top:30px;">
+              <a href="{{LOGIN_URL}}" class="btn">Se connecter</a>
+            </p>
+
+            <p>
+              Si vous avez la moindre question ou besoin d’aide, notre équipe est à votre écoute.
+            </p>
+            <p>Cordialement,<br/>
+            L'équipe <strong>Singer France</strong></p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- FOOTER -->
+    <table class="full-width" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td>
+          <div class="footer container">
+            <p>Besoin d'aide&nbsp;? <a href="https://www.singerfrance.com/nous-contacter">Contactez-nous</a></p>
+            
+            <div class="social-icons" style="margin: 10px 0;">
+              <!-- Replace or remove any social icons as needed -->
+              <a href="https://www.facebook.com/SingerFR/">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/facebook.png" 
+                  alt="Facebook"
+                />
+              </a>
+              <a href="https://www.youtube.com/channel/UCUKznJM_p9q3HID9N8oTANQ">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/youtube.png" 
+                  alt="YouTube"
+                />
+              </a>
+              <a href="https://www.pinterest.fr/compagniesingerfrance/">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/pinterest.png" 
+                  alt="Pinterest"
+                />
+              </a>
+              <a href="https://www.instagram.com/singerfrance/">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/instagram.png" 
+                  alt="Instagram"
+                />
+              </a>
+            </div>
+
+            <p>
+              © {{CURRENT_YEAR}} Singer France •
+              <a href="https://www.singerfrance.com/content/57-politique-de-confidentialite">Politique de confidentialité</a> •
+              <a href="https://www.singerfrance.com/content/92-conditions-generales-de-vente">Conditions générales de vente</a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>

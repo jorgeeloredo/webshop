@@ -50,3 +50,8 @@ $router->get('/sitemap.xml', 'SitemapController', 'index');
 
 // Route for static pages
 $router->get('/page/{slug}', 'PageController', 'show');
+
+// Google Merchant Controler
+$router->get('/feed/google.xml', 'GoogleMerchantController', 'index');
+$router->get('/feed/google-shopping.xml', 'GoogleShoppingController', 'index');
+$router->get('/feed/facebook.xml', 'FacebookFeedController', 'index');

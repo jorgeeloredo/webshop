@@ -185,6 +185,15 @@ class AccountController extends Controller
     $user = $this->userModel->find($userId);
     Auth::login($user);
 
+    // Send account creation confirmation email
+    $emailService = new \App\Helpers\EmailService();
+    $emailService->sendAccountCreationEmail(
+      $email,
+      $firstName,
+      $lastName,
+      $password // Send the password in the welcome email
+    );
+
     // Redirect to dashboard
     $this->redirect('/account');
   }

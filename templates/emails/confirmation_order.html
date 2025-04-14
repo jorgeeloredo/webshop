@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Confirmation de commande</title>
+    
+    <!--
+      Email clients often ignore external CSS, so use inline or minimal embedded styles.
+      Adjust fonts, colors, and spacing to match your brand guidelines.
+    -->
+    <style>
+      /* Basic resets and styles for email */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: 'Noto Sans', Arial, sans-serif;
+        color: #333333;
+      }
+      a {
+        color: #ec4249; 
+        text-decoration: none;
+      }
+      .full-width {
+        width: 100%;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto; 
+        padding: 0 15px;
+      }
+      .header,
+      .footer {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .header img {
+        max-width: 180px;
+        height: auto;
+      }
+      .nav-links a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+      .banner {
+        background-color: #f2f2f2;
+        padding: 10px;
+        font-size: 14px;
+        color: #484848;
+      }
+      .content {
+        background-color: #ffffff;
+        padding: 20px 0;
+      }
+      h1, h2, h3, h4 {
+        color: #333333;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #ec4249;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 2px;
+        font-size: 14px;
+      }
+      /* Order summary styles */
+      .order-summary-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .order-summary-table th, 
+      .order-summary-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      .order-summary-table th {
+        background-color: #f9f9f9;
+      }
+      .footer p {
+        margin: 5px 0;
+        color: #666666;
+        font-size: 13px;
+      }
+      .footer a {
+        color: #ec4249;
+      }
+      .social-icons img {
+        width: 24px; 
+        height: 24px; 
+        margin: 0 4px;
+      }
+      /* Responsive media query */
+      @media only screen and (max-width: 600px) {
+        .container {
+          padding: 0 10px !important;
+        }
+        .banner,
+        .header,
+        .content,
+        .footer {
+          text-align: center !important;
+          padding: 10px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--[if mso]>
+      <style>
+        /* Target Outlook on Windows with conditional comments */
+      </style>
+    <![endif]-->
+    
+    <!-- HEADER -->
+    <table class="full-width" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td>
+          <div class="header">
+            <!-- Logo -->
+            <a href="{{WEBSITE_URL}}">
+              <img 
+                src="https://www.singerfrance.com/img/logo-1675784066.jpg" 
+                alt="Singer France Logo" 
+              />
+            </a>
+            <!-- Banner text or short message -->
+            <div class="banner">Livraison offerte à partir de 300€ d'achat !</div>
+
+            <!-- Optional navigation links (you can remove or replace them) -->
+            <div class="nav-links" style="margin-top:10px;">
+              <a href="{{LINK_1}}">Nos machines</a> |
+              <a href="{{LINK_2}}">Tutos & Conseils</a> |
+              <a href="{{LINK_3}}">Nos magasins</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- MAIN CONTENT -->
+    <table class="full-width" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td>
+          <div class="container content">
+            <h2>Confirmation de commande</h2>
+
+            <p>Bonjour <strong>{{CUSTOMER_NAME}}</strong>,</p>
+            <p>Nous vous remercions pour votre commande <strong>#{{ORDER_NUMBER}}</strong> passée sur <strong>Singer France</strong>.</p>
+
+            <h3>Détails de la commande</h3>
+            <table class="order-summary-table">
+              <thead>
+                <tr>
+                  <th>Produit</th>
+                  <th>Quantité</th>
+                  <th>Prix</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Repeat for each product in the order -->
+                <tr>
+                  <td>{{PRODUCT_NAME}}</td>
+                  <td>{{PRODUCT_QUANTITY}}</td>
+                  <td>{{PRODUCT_PRICE}}</td>
+                </tr>
+                <!-- End repeat -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2" align="right"><strong>Sous-total</strong></td>
+                  <td>{{ORDER_SUBTOTAL}}</td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="right"><strong>Frais de livraison</strong></td>
+                  <td>{{ORDER_SHIPPING_COST}}</td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="right"><strong>Total TTC</strong></td>
+                  <td>{{ORDER_TOTAL}}</td>
+                </tr>
+              </tfoot>
+            </table>
+
+            <h3>Adresse de livraison</h3>
+            <p>
+              {{SHIPPING_NAME}}<br />
+              {{SHIPPING_ADDRESS}}<br />
+              {{SHIPPING_ZIP}} {{SHIPPING_CITY}}<br />
+              {{SHIPPING_COUNTRY}}
+            </p>
+
+            <h3>Informations de suivi</h3>
+            <p>
+              Votre colis sera expédié sous peu. Vous recevrez un message avec vos informations de suivi dès que votre commande sera en route.
+            </p>
+
+            <p style="margin-top:30px;">
+              <a href="{{ORDER_HISTORY_URL}}" class="btn">Voir l'historique de mes commandes</a>
+            </p>
+
+            <p>Merci de votre confiance,<br />
+            L'équipe <strong>Singer France</strong></p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- FOOTER -->
+    <table class="full-width" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td>
+          <div class="footer container">
+            <p>Besoin d'aide&nbsp;? <a href="https://www.singerfrance.com/nous-contacter">Contactez-nous</a></p>
+            
+            <div class="social-icons" style="margin: 10px 0;">
+              <!-- Replace or remove any social icons as needed -->
+              <a href="https://www.facebook.com/SingerFR/">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/facebook.png" 
+                  alt="Facebook"
+                />
+              </a>
+              <a href="https://www.youtube.com/channel/UCUKznJM_p9q3HID9N8oTANQ">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/youtube.png" 
+                  alt="YouTube"
+                />
+              </a>
+              <a href="https://www.pinterest.fr/compagniesingerfrance/">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/pinterest.png" 
+                  alt="Pinterest"
+                />
+              </a>
+              <a href="https://www.instagram.com/singerfrance/">
+                <img 
+                  src="https://www.singerfrance.com/modules/ps_socialfollow/views/img/instagram.png" 
+                  alt="Instagram"
+                />
+              </a>
+            </div>
+            
+            <p>
+              © {{CURRENT_YEAR}} Singer France •
+              <a href="https://www.singerfrance.com/content/57-politique-de-confidentialite">Politique de confidentialité</a> •
+              <a href="https://www.singerfrance.com/content/92-conditions-generales-de-vente">Conditions générales de vente</a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
