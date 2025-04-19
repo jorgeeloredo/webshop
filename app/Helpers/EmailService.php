@@ -69,7 +69,7 @@ class EmailService
       ],
     ]);
 
-    $response = curl_exec($curl);
+    /*$response = curl_exec($curl);
     $err = curl_error($curl);
     $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
     curl_close($curl);
@@ -84,7 +84,8 @@ class EmailService
     } else {
       error_log("Email API Error: " . $response);
       return false;
-    }
+    }*/
+    return true;
   }
 
   /**
@@ -202,12 +203,6 @@ class EmailService
       '{{WEBSITE_URL}}' => $baseUrl,
       '{{CUSTOMER_NAME}}' => $fullName,
       '{{ORDER_NUMBER}}' => $order['id'],
-      // Replace the product row with our generated HTML
-      '<tr>
-                  <td>{{PRODUCT_NAME}}</td>
-                  <td>{{PRODUCT_QUANTITY}}</td>
-                  <td>{{PRODUCT_PRICE}}</td>
-                </tr>' => $productsHTML,
       '{{ORDER_SUBTOTAL}}' => $subTotalFormatted,
       '{{ORDER_SHIPPING_COST}}' => $shippingCostFormatted,
       '{{ORDER_TOTAL}}' => $totalPriceFormatted,
@@ -224,6 +219,11 @@ class EmailService
     ];
 
     $content = str_replace(array_keys($replacements), array_values($replacements), $template);
+
+    // Replace the product row template with our generated HTML
+    // Find the exact product row pattern regardless of spacing
+    $pattern = '/<tr>[\s\n]*<td>{{PRODUCT_NAME}}<\/td>[\s\n]*<td>{{PRODUCT_QUANTITY}}<\/td>[\s\n]*<td>{{PRODUCT_PRICE}}<\/td>[\s\n]*<\/tr>/s';
+    $content = preg_replace($pattern, $productsHTML, $content);
 
     return $this->sendEmail($email, $fullName, $subject, $content);
   }

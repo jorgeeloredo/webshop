@@ -189,6 +189,24 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
       line-height: 37px;
     }
   </style>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-P4GLVBPJ');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body class="bg-white">
@@ -227,10 +245,10 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
 
                 <div class="submenu-links">
                   <a href="<?= $item['url'] ?>" class="text-sm singer-red-text hover:underline">
-                    Nos bestsellers <i class="fas fa-arrow-right ml-1"></i>
+                    Nos bestsellers <i class="ml-1 fas fa-arrow-right"></i>
                   </a>
                   <a href="<?= $item['url'] ?>?level=debutant" class="text-sm singer-red-text hover:underline">
-                    Recherche par niveau <i class="fas fa-arrow-right ml-1"></i>
+                    Recherche par niveau <i class="ml-1 fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -300,7 +318,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
                     <span class="font-medium text-gray-800 <?= isset($item['special_class']) ? $item['special_class'] : '' ?>">
                       <?= htmlspecialchars($item['name']) ?>
                     </span>
-                    <i class="fas fa-chevron-right text-gray-500"></i>
+                    <i class="text-gray-500 fas fa-chevron-right"></i>
                   </div>
                 </div>
               <?php else: ?>
@@ -320,17 +338,17 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
             <?php if (!empty($item['submenu'])): ?>
               <!-- Submenu container (hidden initially) -->
               <div id="submenu-<?= $index ?>" class="hidden">
-                <div class="flex items-center py-4 border-b border-gray-200 mb-2">
-                  <button class="back-to-main mr-2">
-                    <i class="fas fa-chevron-left text-gray-500"></i>
+                <div class="flex items-center py-4 mb-2 border-b border-gray-200">
+                  <button class="mr-2 back-to-main">
+                    <i class="text-gray-500 fas fa-chevron-left"></i>
                   </button>
                   <span class="font-medium text-gray-800"><?= htmlspecialchars($item['name']) ?></span>
                 </div>
 
                 <?php foreach ($item['submenu'] as $subitem): ?>
                   <a href="<?= $subitem['url'] ?>" class="flex items-center py-3">
-                    <div class="w-12 h-12 mr-3 rounded overflow-hidden flex-shrink-0">
-                      <img src="<?= $subitem['image'] ?>" alt="<?= htmlspecialchars($subitem['name']) ?>" class="w-full h-full object-contain bg-gray-50">
+                    <div class="flex-shrink-0 w-12 h-12 mr-3 overflow-hidden rounded">
+                      <img src="<?= $subitem['image'] ?>" alt="<?= htmlspecialchars($subitem['name']) ?>" class="object-contain w-full h-full bg-gray-50">
                     </div>
                     <span class="text-gray-800"><?= htmlspecialchars($subitem['name']) ?></span>
                   </a>
