@@ -6,7 +6,8 @@ public/favicon.ico
 public/robots.txt
 pages/*.php
 data/
-
+apply_discount.php
+fix-slugs.php
 
 # Environment variables
 .env
