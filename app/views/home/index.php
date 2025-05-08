@@ -5,7 +5,7 @@
 
 
 <!-- Category Navigation -->
-<section class="py-12 singer-bg-light">
+<section class="py-12 bg-secondary-light">
   <div class="px-4 site-container">
     <h2 class="mb-8 text-2xl font-normal text-center text-gray-800"><?= __('home.categories_title') ?></h2>
 
@@ -21,7 +21,7 @@
               </div>
             <?php endif; ?>
           </div>
-          <p class="text-sm font-medium text-center text-gray-800 group-hover:text-red-600"><?= htmlspecialchars($category['name']) ?></p>
+          <p class="text-sm font-medium text-center text-gray-800 group-hover:text-primary"><?= htmlspecialchars($category['name']) ?></p>
         </a>
       <?php endforeach; ?>
     </div>
@@ -74,7 +74,7 @@
               <input type="hidden" name="quantity" value="1">
               <button
                 type="submit"
-                class="w-full py-2 text-sm text-white transition rounded-full singer-red hover:bg-red-700"
+                class="w-full py-2 text-sm text-white transition rounded-full bg-primary hover:bg-primary-hover"
                 <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
                 <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('general.unavailable') : __('listing.buy_now') ?>
               </button>
@@ -85,7 +85,7 @@
     </div>
 
     <div class="mt-8 text-center">
-      <a href="/products" class="px-6 py-3 transition border rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white"><?= __('listing.all_products') ?></a>
+      <a href="/products" class="px-6 py-3 transition border rounded-full singer-red-text border-primary hover:bg-primary hover:text-white"><?= __('listing.all_products') ?></a>
     </div>
   </div>
 </section>
@@ -113,7 +113,7 @@
 </section>
 
 <!-- Tutorials and Tips Section -->
-<section class="w-full py-12 mt-0 bg-[#fff4ee]">
+<section class="w-full py-12 mt-0 bg-[<?= get_color('secondary_light') ?>]">
   <div class="px-4 site-container">
     <h2 class="mb-8 text-2xl font-normal text-center text-gray-800"><?= __('home.tutorials_title') ?></h2>
 
@@ -165,7 +165,7 @@
     </div>
 
     <div class="mt-8 text-center">
-      <a href="#" class="px-6 py-3 transition border rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white"><?= __('home.all_tutorials') ?></a>
+      <a href="#" class="px-6 py-3 transition border rounded-full singer-red-text border-primary hover:bg-primary hover:text-white"><?= __('home.all_tutorials') ?></a>
     </div>
   </div>
 </section>
@@ -178,8 +178,8 @@
       <p class="mb-6 text-gray-700"><?= __('home.newsletter_desc') ?></p>
 
       <form class="flex flex-col sm:flex-row">
-        <input type="email" placeholder="<?= __('home.email_placeholder') ?>" class="flex-1 px-4 py-2 mb-2 border border-gray-300 rounded-l sm:mb-0 focus:outline-none focus:ring-2 focus:ring-red-500">
-        <button type="submit" class="px-6 py-2 font-medium text-white transition rounded-r singer-red hover:bg-red-700"><?= __('home.subscribe') ?></button>
+        <input type="email" placeholder="<?= __('home.email_placeholder') ?>" class="flex-1 px-4 py-2 mb-2 border border-gray-300 rounded-l sm:mb-0 focus:outline-none focus:ring-2 focus:ring-primary">
+        <button type="submit" class="px-6 py-2 font-medium text-white transition rounded-r bg-primary hover:bg-primary-hover"><?= __('home.subscribe') ?></button>
       </form>
     </div>
   </div>

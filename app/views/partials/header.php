@@ -55,7 +55,24 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
     <meta property="og:image" content="/assets/images/logo.png">
   <?php endif; ?>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Add this after the Tailwind CDN script
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': 'var(--color-primary)',
+            'primary-hover': 'var(--color-primary-hover)',
+            'secondary': 'var(--color-secondary)',
+            'secondary-light': 'var(--color-secondary-light)',
+            'price': 'var(--color-price)',
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/css/theme.php">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -63,47 +80,11 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
       font-family: 'Poppins', Arial, sans-serif;
     }
 
-    .singer-red {
-      background-color: #c63437;
-    }
-
-    .singer-red-text {
-      color: #c63437;
-    }
-
-    .singer-red-border {
-      border-color: #c63437;
-    }
-
-    .singer-bg-light {
-      background-color: #fff9f5;
-    }
-
-    .price-color {
-      color: #b86c49;
-      /* Brownish-orange color for the price */
-      background-color: #fdf7f1;
-      padding: 1px 5px 2px;
-    }
-
-    .custom-input:focus {
-      outline: none;
-      border-color: #c63437;
-    }
-
     .site-container {
       max-width: 2300px;
       margin-left: auto;
       margin-right: auto;
       width: 100%;
-    }
-
-    .product-image-bg {
-      background-color: #fff4ee;
-    }
-
-    .thumbnail-active {
-      border-color: #c63437;
     }
 
     .green-badge {
@@ -211,7 +192,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
 
 <body class="bg-white">
   <!-- Non-fixed promotional bar at the top (full-width background) -->
-  <div class="singer-red text-white text-center text-sm font-medium py-1.5">
+  <div class="bg-primary text-white text-center text-sm font-medium py-1.5">
     <div class="site-container"><?= __('general.top_text', ['amount' => '300']) ?></div>
   </div>
 
@@ -229,7 +210,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
           <div class="desktop-menu-item">
             <a
               href="<?= $item['url'] ?>"
-              class="font-normal text-gray-800 hover:text-red-600 <?= isset($item['special_class']) ? $item['special_class'] : '' ?> <?= strpos($currentUrl, $item['url']) === 0 ? 'text-red-600' : '' ?>">
+              class="font-normal text-gray-800 hover:text-primary <?= isset($item['special_class']) ? $item['special_class'] : '' ?> <?= strpos($currentUrl, $item['url']) === 0 ? 'text-[' . get_color('primary') . ']' : '' ?>">
               <?= htmlspecialchars($item['name']) ?>
             </a>
             <?php if (!empty($item['submenu'])): ?>
@@ -293,7 +274,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
               name="q"
               placeholder="<?= __('general.search') ?>"
               class="flex-1 h-10 px-3 border border-gray-300 rounded-l custom-input" />
-            <button type="submit" class="flex items-center justify-center w-10 text-white rounded-r singer-red">
+            <button type="submit" class="flex items-center justify-center w-10 text-white rounded-r bg-primary">
               <i class="fas fa-search"></i>
             </button>
           </form>

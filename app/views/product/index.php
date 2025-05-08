@@ -21,7 +21,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
     <div class="relative p-4 rounded-lg product-image-bg">
       <!-- Navigation Buttons positioned inside the product image -->
       <div class="absolute z-10 top-4 left-4">
-        <a href="javascript:history.back()" class="flex items-center text-sm text-gray-600 hover:text-red-600">
+        <a href="javascript:history.back()" class="flex items-center text-sm text-gray-600 hover:text-primary">
           <i class="mr-1 text-xs fas fa-chevron-left"></i> <?= __('product.back') ?>
         </a>
       </div>
@@ -58,7 +58,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <!-- Thumbnails -->
         <div class="grid grid-cols-6 gap-2 mt-4">
           <?php foreach ($product['images'] as $index => $image): ?>
-            <div class="border-2 <?= $index === 0 ? 'border-red-600 thumbnail-active' : 'border-gray-200' ?> rounded cursor-pointer thumbnail" data-index="<?= $index ?>">
+            <div class="border-2 <?= $index === 0 ? 'border-[' . get_color('primary') . '] thumbnail-active' : 'border-gray-200' ?> rounded cursor-pointer thumbnail" data-index="<?= $index ?>">
               <img src="<?= getImageUrl($image) ?>" alt="Vue <?= $index + 1 ?>" class="object-cover w-full" />
             </div>
           <?php endforeach; ?>
@@ -126,7 +126,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
             <?php endif; ?>
           </div>
         <?php else: ?>
-          <div class="flex items-center text-red-600">
+          <div class="flex items-center text-primary">
             <i class="mr-2 fas fa-times-circle"></i>
             <span class="text-sm font-medium"><?= __('product.out_of_stock') ?></span>
           </div>
@@ -140,7 +140,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <div class="flex items-center mb-4">
           <label for="quantity" class="mr-4 text-sm font-medium text-gray-700"><?= __('product.quantity') ?></label>
           <div class="flex items-center border border-gray-300 rounded">
-            <button type="button" class="px-3 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="decrease">
+            <button type="button" class="px-3 py-1 text-gray-600 hover:text-primary quantity-btn" data-action="decrease">
               <i class="fas fa-minus"></i>
             </button>
             <input
@@ -151,7 +151,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
               min="1"
               max="<?= $product['stock'] ?? 10 ?>"
               class="w-12 py-1 text-center border-gray-300 border-x">
-            <button type="button" class="px-3 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="increase">
+            <button type="button" class="px-3 py-1 text-gray-600 hover:text-primary quantity-btn" data-action="increase">
               <i class="fas fa-plus"></i>
             </button>
           </div>
@@ -159,7 +159,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
 
         <button
           type="submit"
-          class="singer-red singer-red-border w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-red-500"
+          class="bg-primary border-primary w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-primary"
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('product.unavailable') : __('product.add_to_cart') ?>
         </button>
@@ -170,7 +170,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <input type="hidden" name="quantity" value="1">
         <button
           type="submit"
-          class="singer-red singer-red-border w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-red-500"
+          class="bg-primary border-primary w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-primary"
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('product.unavailable') : __('product.buy_now') ?>
         </button>
@@ -487,11 +487,11 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
 
       // Update active thumbnail
       thumbnails.forEach(thumb => {
-        thumb.classList.remove('thumbnail-active', 'border-red-600');
+        thumb.classList.remove('thumbnail-active', 'border-primary');
         thumb.classList.add('border-gray-200');
       });
 
-      thumbnails[index].classList.add('thumbnail-active', 'border-red-600');
+      thumbnails[index].classList.add('thumbnail-active', 'border-primary');
       thumbnails[index].classList.remove('border-gray-200');
 
       currentIndex = index;

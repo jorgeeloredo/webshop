@@ -119,7 +119,7 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
         <h2 class="mb-4 text-lg font-medium text-gray-800"><?= __('success.next_steps') ?></h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div class="p-4 border border-gray-200 rounded-lg">
-            <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full singer-red">
+            <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full bg-primary">
               <i class="fas fa-shipping-fast"></i>
             </div>
             <h3 class="mb-1 text-sm font-medium text-gray-800"><?= __('success.order_preparation') ?></h3>
@@ -129,7 +129,7 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
           </div>
 
           <div class="p-4 border border-gray-200 rounded-lg">
-            <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full singer-red">
+            <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full bg-primary">
               <i class="fas fa-truck"></i>
             </div>
             <h3 class="mb-1 text-sm font-medium text-gray-800"><?= __('success.shipping') ?></h3>
@@ -139,7 +139,7 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
           </div>
 
           <div class="p-4 border border-gray-200 rounded-lg">
-            <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full singer-red">
+            <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full bg-primary">
               <i class="fas fa-box-open"></i>
             </div>
             <h3 class="mb-1 text-sm font-medium text-gray-800"><?= __('success.delivery') ?></h3>
@@ -152,10 +152,10 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
 
       <!-- Action buttons -->
       <div class="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
-        <a href="/account/orders" class="flex-1 px-6 py-3 font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
+        <a href="/account/orders" class="flex-1 px-6 py-3 font-medium text-center text-white transition rounded-full bg-primary hover:bg-primary-hover">
           <?= __('success.view_orders') ?>
         </a>
-        <a href="/products" class="flex-1 px-6 py-3 font-medium text-center transition border rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white">
+        <a href="/products" class="flex-1 px-6 py-3 font-medium text-center transition border rounded-full singer-red-text border-primary hover:bg-primary hover:text-white">
           <?= __('success.continue_shopping') ?>
         </a>
       </div>

@@ -4,21 +4,27 @@
 return [
   'app' => [
     'name' => 'Singer Shop',
-    'url' => $_ENV['APP_URL'],
+    'url' => $_ENV['APP_URL'] ?? '',
     'env' => $_ENV['APP_ENV'] ?? 'development',
     'debug' => $_ENV['APP_DEBUG'] ?? false,
+    'colors' => [
+      'primary' => $_ENV['APP_COLOR_PRIMARY'] ?? '',
+      'secondary' => $_ENV['APP_COLOR_SECONDARY'] ?? '',
+      'secondary_light' => $_ENV['APP_COLOR_SECONDARY_LIGHT'] ?? '',
+      'price' => $_ENV['APP_COLOR_PRICE'] ?? '',
+    ],
   ],
 
   'language' => [
-    'default' => 'en',     // Default language (fr or en)
+    'default' => 'fr',     // Default language (fr or en)
     'available' => ['fr', 'en'], // Available languages
   ],
 
   'database' => [
-    'host' => $_ENV['DB_HOST'],
-    'name' => $_ENV['DB_NAME'],
-    'user' => $_ENV['DB_USER'],
-    'password' => $_ENV['DB_PASSWORD'],
+    'host' => $_ENV['DB_HOST'] ?? '',
+    'name' => $_ENV['DB_NAME'] ?? '',
+    'user' => $_ENV['DB_USER'] ?? '',
+    'password' => $_ENV['DB_PASSWORD'] ?? '',
   ],
 
   'mail' => [

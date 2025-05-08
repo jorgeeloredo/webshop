@@ -19,11 +19,11 @@ $errors = $errors ?? [];
             type="text"
             id="first_name"
             name="first_name"
-            class="w-full px-3 py-2 border <?= isset($errors['first_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+            class="w-full px-3 py-2 border <?= isset($errors['first_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
             value="<?= htmlspecialchars($old['first_name'] ?? '') ?>"
             required>
           <?php if (isset($errors['first_name'])): ?>
-            <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['first_name']) ?></p>
+            <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['first_name']) ?></p>
           <?php endif; ?>
         </div>
 
@@ -34,11 +34,11 @@ $errors = $errors ?? [];
             type="text"
             id="last_name"
             name="last_name"
-            class="w-full px-3 py-2 border <?= isset($errors['last_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+            class="w-full px-3 py-2 border <?= isset($errors['last_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
             value="<?= htmlspecialchars($old['last_name'] ?? '') ?>"
             required>
           <?php if (isset($errors['last_name'])): ?>
-            <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['last_name']) ?></p>
+            <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['last_name']) ?></p>
           <?php endif; ?>
         </div>
 
@@ -49,11 +49,11 @@ $errors = $errors ?? [];
             type="email"
             id="email"
             name="email"
-            class="w-full px-3 py-2 border <?= isset($errors['email']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+            class="w-full px-3 py-2 border <?= isset($errors['email']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
             value="<?= htmlspecialchars($old['email'] ?? '') ?>"
             required>
           <?php if (isset($errors['email'])): ?>
-            <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['email']) ?></p>
+            <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['email']) ?></p>
           <?php endif; ?>
         </div>
 
@@ -64,11 +64,11 @@ $errors = $errors ?? [];
             type="password"
             id="password"
             name="password"
-            class="w-full px-3 py-2 border <?= isset($errors['password']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+            class="w-full px-3 py-2 border <?= isset($errors['password']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
             required>
           <p class="mt-1 text-xs text-gray-500"><?= __('account.min_password') ?></p>
           <?php if (isset($errors['password'])): ?>
-            <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['password']) ?></p>
+            <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['password']) ?></p>
           <?php endif; ?>
         </div>
 
@@ -79,10 +79,10 @@ $errors = $errors ?? [];
             type="password"
             id="password_confirm"
             name="password_confirm"
-            class="w-full px-3 py-2 border <?= isset($errors['password_confirm']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+            class="w-full px-3 py-2 border <?= isset($errors['password_confirm']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
             required>
           <?php if (isset($errors['password_confirm'])): ?>
-            <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['password_confirm']) ?></p>
+            <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['password_confirm']) ?></p>
           <?php endif; ?>
         </div>
 
@@ -93,7 +93,7 @@ $errors = $errors ?? [];
               type="checkbox"
               id="agreement"
               name="agreement"
-              class="w-4 h-4 mt-1 text-red-600 border-gray-300 rounded focus:ring-red-500"
+              class="w-4 h-4 mt-1 text-primary border-gray-300 rounded focus:ring-primary"
               required>
             <label for="agreement" class="block ml-2 text-sm text-gray-700">
               <?= __('account.agree_terms') ?>
@@ -102,7 +102,7 @@ $errors = $errors ?? [];
         </div>
 
         <!-- Submit button -->
-        <button type="submit" class="w-full py-2 text-white transition rounded-full singer-red hover:bg-red-700">
+        <button type="submit" class="w-full py-2 text-white transition rounded-full bg-primary hover:bg-primary-hover">
           <?= __('account.register_button') ?>
         </button>
       </form>

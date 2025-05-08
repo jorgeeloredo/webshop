@@ -20,24 +20,24 @@ $recentOrders = $recentOrders ?? [];
       <div class="md:col-span-1">
         <div class="sticky p-4 bg-white border border-gray-200 rounded-lg shadow-sm top-20">
           <nav class="space-y-1">
-            <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md singer-red">
+            <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md bg-primary">
               <i class="w-5 mr-2 fas fa-tachometer-alt"></i>
               <?= __('dashboard.dashboard') ?>
             </a>
-            <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-shopping-bag"></i>
               <?= __('account.my_orders') ?>
             </a>
-            <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-user"></i>
               <?= __('account.profile') ?>
             </a>
-            <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-map-marker-alt"></i>
               <?= __('account.addresses') ?>
             </a>
             <div class="pt-4 mt-4 border-t border-gray-200">
-              <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+              <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
                 <i class="w-5 mr-2 fas fa-sign-out-alt"></i>
                 <?= __('account.logout') ?>
               </a>
@@ -98,7 +98,7 @@ $recentOrders = $recentOrders ?? [];
             <div class="p-6 text-center bg-white border border-gray-200 rounded-lg">
               <i class="mb-2 text-3xl text-gray-300 fas fa-shopping-bag"></i>
               <p class="text-gray-600"><?= __('dashboard.no_orders') ?></p>
-              <a href="/products" class="inline-block px-4 py-2 mt-4 text-sm text-white transition rounded-full singer-red hover:bg-red-700">
+              <a href="/products" class="inline-block px-4 py-2 mt-4 text-sm text-white transition rounded-full bg-primary hover:bg-primary-hover">
                 <?= __('dashboard.discover_products') ?>
               </a>
             </div>
@@ -203,25 +203,25 @@ $recentOrders = $recentOrders ?? [];
             <h3 class="mb-3 text-base font-medium text-gray-800"><?= __('dashboard.quick_links') ?></h3>
             <ul class="space-y-2">
               <li>
-                <a href="/account/orders" class="flex items-center text-sm text-gray-600 hover:text-red-600">
+                <a href="/account/orders" class="flex items-center text-sm text-gray-600 hover:text-primary">
                   <i class="w-5 mr-2 fas fa-shopping-bag"></i>
                   <?= __('dashboard.order_history') ?>
                 </a>
               </li>
               <li>
-                <a href="/account/addresses" class="flex items-center text-sm text-gray-600 hover:text-red-600">
+                <a href="/account/addresses" class="flex items-center text-sm text-gray-600 hover:text-primary">
                   <i class="w-5 mr-2 fas fa-map-marker-alt"></i>
                   <?= __('dashboard.manage_addresses') ?>
                 </a>
               </li>
               <li>
-                <a href="#" class="flex items-center text-sm text-gray-600 hover:text-red-600">
+                <a href="#" class="flex items-center text-sm text-gray-600 hover:text-primary">
                   <i class="w-5 mr-2 fas fa-heart"></i>
                   <?= __('dashboard.wishlist') ?>
                 </a>
               </li>
               <li>
-                <a href="#" class="flex items-center text-sm text-gray-600 hover:text-red-600">
+                <a href="#" class="flex items-center text-sm text-gray-600 hover:text-primary">
                   <i class="w-5 mr-2 fas fa-gift"></i>
                   <?= __('dashboard.my_coupons') ?>
                 </a>

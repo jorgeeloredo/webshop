@@ -62,7 +62,7 @@ function getImageUrl($image)
                 <div class="flex-1">
                   <h3 class="mb-1 text-sm font-medium text-gray-800">
                     <?php if (isset($item['slug']) && !empty($item['slug'])): ?>
-                      <a href="/product/<?= $item['slug'] ?>" class="hover:text-red-600">
+                      <a href="/product/<?= $item['slug'] ?>" class="hover:text-primary">
                         <?= htmlspecialchars($item['name']) ?>
                       </a>
                     <?php else: ?>
@@ -71,7 +71,7 @@ function getImageUrl($image)
                   </h3>
                   <div class="flex items-center justify-between">
                     <div class="flex items-center border border-gray-300 rounded">
-                      <button type="button" class="px-2 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="decrease" data-item-id="<?= $itemId ?>">
+                      <button type="button" class="px-2 py-1 text-gray-600 hover:text-primary quantity-btn" data-action="decrease" data-item-id="<?= $itemId ?>">
                         <i class="fas fa-minus"></i>
                       </button>
                       <input
@@ -80,14 +80,14 @@ function getImageUrl($image)
                         min="1"
                         class="w-10 py-1 text-center border-gray-300 border-x quantity-input"
                         data-item-id="<?= $itemId ?>">
-                      <button type="button" class="px-2 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="increase" data-item-id="<?= $itemId ?>">
+                      <button type="button" class="px-2 py-1 text-gray-600 hover:text-primary quantity-btn" data-action="increase" data-item-id="<?= $itemId ?>">
                         <i class="fas fa-plus"></i>
                       </button>
                     </div>
                     <span class="text-sm font-medium price-color"><?= number_format($item['price'] * $item['quantity'], 2, ',', ' ') ?> €</span>
                   </div>
                   <div class="mt-2">
-                    <button type="button" class="text-xs text-gray-500 hover:text-red-600 remove-item" data-item-id="<?= $itemId ?>">
+                    <button type="button" class="text-xs text-gray-500 hover:text-primary remove-item" data-item-id="<?= $itemId ?>">
                       <i class="mr-1 fas fa-trash-alt"></i> <?= __('cart.remove') ?>
                     </button>
                   </div>
@@ -108,14 +108,14 @@ function getImageUrl($image)
                 <div>
                   <h3 class="mb-1 text-sm font-medium text-gray-800">
                     <?php if (isset($item['slug']) && !empty($item['slug'])): ?>
-                      <a href="/product/<?= $item['slug'] ?>" class="hover:text-red-600">
+                      <a href="/product/<?= $item['slug'] ?>" class="hover:text-primary">
                         <?= htmlspecialchars($item['name']) ?>
                       </a>
                     <?php else: ?>
                       <?= htmlspecialchars($item['name']) ?>
                     <?php endif; ?>
                   </h3>
-                  <button type="button" class="text-xs text-gray-500 hover:text-red-600 remove-item" data-item-id="<?= $itemId ?>">
+                  <button type="button" class="text-xs text-gray-500 hover:text-primary remove-item" data-item-id="<?= $itemId ?>">
                     <i class="mr-1 fas fa-trash-alt"></i> <?= __('cart.remove') ?>
                   </button>
                 </div>
@@ -124,7 +124,7 @@ function getImageUrl($image)
               <!-- Desktop: Quantity selector -->
               <div class="items-center justify-center hidden col-span-2 sm:flex">
                 <div class="flex items-center border border-gray-300 rounded">
-                  <button type="button" class="px-2 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="decrease" data-item-id="<?= $itemId ?>">
+                  <button type="button" class="px-2 py-1 text-gray-600 hover:text-primary quantity-btn" data-action="decrease" data-item-id="<?= $itemId ?>">
                     <i class="fas fa-minus"></i>
                   </button>
                   <input
@@ -133,7 +133,7 @@ function getImageUrl($image)
                     min="1"
                     class="w-10 py-1 text-center border-gray-300 border-x quantity-input"
                     data-item-id="<?= $itemId ?>">
-                  <button type="button" class="px-2 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="increase" data-item-id="<?= $itemId ?>">
+                  <button type="button" class="px-2 py-1 text-gray-600 hover:text-primary quantity-btn" data-action="increase" data-item-id="<?= $itemId ?>">
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
@@ -149,7 +149,7 @@ function getImageUrl($image)
 
         <!-- Continue Shopping button -->
         <div class="mt-6">
-          <a href="/products" class="inline-flex items-center text-sm text-gray-600 hover:text-red-600">
+          <a href="/products" class="inline-flex items-center text-sm text-gray-600 hover:text-primary">
             <i class="mr-2 fas fa-chevron-left"></i>
             <?= __('cart.continue_shopping') ?>
           </a>
@@ -173,7 +173,7 @@ function getImageUrl($image)
                     name="shipping_method"
                     id="shipping_<?= $code ?>"
                     value="<?= $code ?>"
-                    class="w-4 h-4 text-red-600 border-gray-300 shipping-method-radio"
+                    class="w-4 h-4 text-primary border-gray-300 shipping-method-radio"
                     <?= $currentShippingMethod === $code ? 'checked' : '' ?>>
                   <label for="shipping_<?= $code ?>" class="flex flex-col flex-1 ml-3">
                     <span class="text-sm font-medium text-gray-700"><?= htmlspecialchars($method['name']) ?></span>
@@ -221,7 +221,7 @@ function getImageUrl($image)
 
 
           <a href="/checkout"
-            class="block w-full py-3 text-base font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
+            class="block w-full py-3 text-base font-medium text-center text-white transition rounded-full bg-primary hover:bg-primary-hover">
             <?= __('cart.checkout') ?>
           </a>
 
@@ -262,7 +262,7 @@ function getImageUrl($image)
       </div>
       <h2 class="mb-2 text-xl font-medium text-gray-800"><?= __('cart.empty_cart') ?></h2>
       <p class="mb-6 text-gray-600"><?= __('cart.empty_cart_message') ?></p>
-      <a href="/products" class="px-6 py-3 text-white transition rounded-full singer-red hover:bg-red-700">
+      <a href="/products" class="px-6 py-3 text-white transition rounded-full bg-primary hover:bg-primary-hover">
         <?= __('cart.discover_products') ?>
       </a>
     </div>

@@ -25,7 +25,7 @@ function getImageUrl($image)
       </div>
       <h2 class="mb-2 text-xl font-medium text-gray-800"><?= __('listing.no_products_found') ?></h2>
       <p class="mb-6 text-gray-600"><?= __('listing.no_products_in_category') ?></p>
-      <a href="/products" class="px-6 py-3 text-white transition rounded-full singer-red hover:bg-red-700">
+      <a href="/products" class="px-6 py-3 text-white transition rounded-full bg-primary hover:bg-primary-hover">
         <?= __('listing.view_all_products') ?>
       </a>
     </div>
@@ -73,7 +73,7 @@ function getImageUrl($image)
               <input type="hidden" name="quantity" value="1">
               <button
                 type="submit"
-                class="w-full py-2 text-sm text-white transition rounded-full singer-red hover:bg-red-700"
+                class="w-full py-2 text-sm text-white transition rounded-full bg-primary hover:bg-primary-hover"
                 <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
                 <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('general.unavailable') : __('listing.buy_now') ?>
               </button>

@@ -36,3 +36,15 @@ function get_language()
 {
   return Language::getInstance()->getLanguage();
 }
+
+/**
+ * Get a color from the app configuration
+ * 
+ * @param string $key The color key (primary, secondary, etc.)
+ * @return string The hex color code
+ */
+function get_color($key)
+{
+  $config = require __DIR__ . '/../config/config.php';
+  return $config['app']['colors'][$key] ?? null;
+}

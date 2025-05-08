@@ -26,24 +26,24 @@ if (isset($_SESSION['success'])) {
       <div class="md:col-span-1">
         <div class="sticky p-4 bg-white border border-gray-200 rounded-lg shadow-sm top-20">
           <nav class="space-y-1">
-            <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-tachometer-alt"></i>
               <?= __('dashboard.dashboard') ?>
             </a>
-            <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-shopping-bag"></i>
               <?= __('account.my_orders') ?>
             </a>
-            <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md singer-red">
+            <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md bg-primary">
               <i class="w-5 mr-2 fas fa-user"></i>
               <?= __('account.profile') ?>
             </a>
-            <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-map-marker-alt"></i>
               <?= __('account.addresses') ?>
             </a>
             <div class="pt-4 mt-4 border-t border-gray-200">
-              <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+              <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
                 <i class="w-5 mr-2 fas fa-sign-out-alt"></i>
                 <?= __('account.logout') ?>
               </a>
@@ -72,11 +72,11 @@ if (isset($_SESSION['success'])) {
                   type="text"
                   id="first_name"
                   name="first_name"
-                  class="w-full px-3 py-2 border <?= isset($errors['first_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                  class="w-full px-3 py-2 border <?= isset($errors['first_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($user['first_name'] ?? '') ?>"
                   required>
                 <?php if (isset($errors['first_name'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['first_name']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['first_name']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -87,11 +87,11 @@ if (isset($_SESSION['success'])) {
                   type="text"
                   id="last_name"
                   name="last_name"
-                  class="w-full px-3 py-2 border <?= isset($errors['last_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                  class="w-full px-3 py-2 border <?= isset($errors['last_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($user['last_name'] ?? '') ?>"
                   required>
                 <?php if (isset($errors['last_name'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['last_name']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['last_name']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -102,11 +102,11 @@ if (isset($_SESSION['success'])) {
                   type="email"
                   id="email"
                   name="email"
-                  class="w-full px-3 py-2 border <?= isset($errors['email']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                  class="w-full px-3 py-2 border <?= isset($errors['email']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($user['email'] ?? '') ?>"
                   required>
                 <?php if (isset($errors['email'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['email']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['email']) ?></p>
                 <?php endif; ?>
               </div>
             </div>
@@ -121,9 +121,9 @@ if (isset($_SESSION['success'])) {
                     type="password"
                     id="current_password"
                     name="current_password"
-                    class="w-full px-3 py-2 border <?= isset($errors['current_password']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
+                    class="w-full px-3 py-2 border <?= isset($errors['current_password']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
                   <?php if (isset($errors['current_password'])): ?>
-                    <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['current_password']) ?></p>
+                    <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['current_password']) ?></p>
                   <?php endif; ?>
                 </div>
 
@@ -137,9 +137,9 @@ if (isset($_SESSION['success'])) {
                     type="password"
                     id="new_password"
                     name="new_password"
-                    class="w-full px-3 py-2 border <?= isset($errors['new_password']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
+                    class="w-full px-3 py-2 border <?= isset($errors['new_password']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
                   <?php if (isset($errors['new_password'])): ?>
-                    <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['new_password']) ?></p>
+                    <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['new_password']) ?></p>
                   <?php endif; ?>
                   <p class="mt-1 text-xs text-gray-500"><?= __('profile.min_char') ?></p>
                 </div>
@@ -151,16 +151,16 @@ if (isset($_SESSION['success'])) {
                     type="password"
                     id="new_password_confirm"
                     name="new_password_confirm"
-                    class="w-full px-3 py-2 border <?= isset($errors['new_password_confirm']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
+                    class="w-full px-3 py-2 border <?= isset($errors['new_password_confirm']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
                   <?php if (isset($errors['new_password_confirm'])): ?>
-                    <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['new_password_confirm']) ?></p>
+                    <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['new_password_confirm']) ?></p>
                   <?php endif; ?>
                 </div>
               </div>
             </div>
 
             <div class="flex justify-end mt-6">
-              <button type="submit" class="px-6 py-2 text-white transition rounded-full singer-red hover:bg-red-700">
+              <button type="submit" class="px-6 py-2 text-white transition rounded-full bg-primary hover:bg-primary-hover">
                 <?= __('profile.update_profile') ?>
               </button>
             </div>

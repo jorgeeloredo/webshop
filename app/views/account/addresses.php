@@ -27,24 +27,24 @@ if (isset($_SESSION['success'])) {
       <div class="md:col-span-1">
         <div class="sticky p-4 bg-white border border-gray-200 rounded-lg shadow-sm top-20">
           <nav class="space-y-1">
-            <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-tachometer-alt"></i>
               <?= __('dashboard.dashboard') ?>
             </a>
-            <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-shopping-bag"></i>
               <?= __('account.my_orders') ?>
             </a>
-            <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+            <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
               <i class="w-5 mr-2 fas fa-user"></i>
               <?= __('account.profile') ?>
             </a>
-            <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md singer-red">
+            <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md bg-primary">
               <i class="w-5 mr-2 fas fa-map-marker-alt"></i>
               <?= __('account.addresses') ?>
             </a>
             <div class="pt-4 mt-4 border-t border-gray-200">
-              <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
+              <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-primary">
                 <i class="w-5 mr-2 fas fa-sign-out-alt"></i>
                 <?= __('account.logout') ?>
               </a>
@@ -77,11 +77,11 @@ if (isset($_SESSION['success'])) {
                     <?= isset($address['is_default']) && $address['is_default'] ? ' (' . __('addresses.default') . ')' : '' ?>
                   </h3>
                   <div class="flex space-x-2">
-                    <button type="button" class="text-gray-500 hover:text-red-600"
+                    <button type="button" class="text-gray-500 hover:text-primary"
                       onclick="openEditModal(<?= $index ?>)">
                       <i class="fas fa-edit"></i>
                     </button>
-                    <button type="button" class="text-gray-500 hover:text-red-600"
+                    <button type="button" class="text-gray-500 hover:text-primary"
                       onclick="confirmDeleteAddress(<?= $index ?>)">
                       <i class="fas fa-trash-alt"></i>
                     </button>
@@ -105,7 +105,7 @@ if (isset($_SESSION['success'])) {
 
           <!-- Add New Address Card -->
           <div class="p-5 text-center border border-gray-300 border-dashed rounded-lg bg-gray-50">
-            <button type="button" onclick="openAddModal()" class="flex flex-col items-center justify-center w-full h-full text-gray-600 hover:text-red-600">
+            <button type="button" onclick="openAddModal()" class="flex flex-col items-center justify-center w-full h-full text-gray-600 hover:text-primary">
               <i class="mb-2 text-2xl fas fa-plus-circle"></i>
               <span class="text-sm font-medium"><?= __('addresses.add_new') ?></span>
             </button>
@@ -117,7 +117,7 @@ if (isset($_SESSION['success'])) {
 
           <div class="mb-4">
             <label class="flex items-center">
-              <input type="checkbox" class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500" checked>
+              <input type="checkbox" class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary" checked>
               <span class="ml-2 text-sm text-gray-700"><?= __('addresses.use_same_address') ?></span>
             </label>
           </div>
@@ -146,11 +146,11 @@ if (isset($_SESSION['success'])) {
           <label class="block mb-1 text-sm font-medium text-gray-700"><?= __('addresses.type') ?></label>
           <div class="flex space-x-4">
             <label class="flex items-center">
-              <input type="radio" name="address_type" value="shipping" class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500" checked>
+              <input type="radio" name="address_type" value="shipping" class="w-4 h-4 border-gray-300 text-primary focus:ring-primary" checked>
               <span class="ml-2 text-sm text-gray-700"><?= __('addresses.shipping') ?></span>
             </label>
             <label class="flex items-center">
-              <input type="radio" name="address_type" value="billing" class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+              <input type="radio" name="address_type" value="billing" class="w-4 h-4 border-gray-300 text-primary focus:ring-primary">
               <span class="ml-2 text-sm text-gray-700"><?= __('addresses.billing') ?></span>
             </label>
           </div>
@@ -212,7 +212,7 @@ if (isset($_SESSION['success'])) {
         <!-- Set as Default -->
         <div class="sm:col-span-2">
           <label class="flex items-center">
-            <input type="checkbox" name="is_default" value="1" class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
+            <input type="checkbox" name="is_default" value="1" class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary">
             <span class="ml-2 text-sm text-gray-700"><?= __('addresses.set_default') ?></span>
           </label>
         </div>
@@ -222,7 +222,7 @@ if (isset($_SESSION['success'])) {
         <button type="button" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200" onclick="closeAddModal()">
           <?= __('addresses.cancel') ?>
         </button>
-        <button type="submit" class="px-4 py-2 text-sm font-medium text-white rounded-md singer-red hover:bg-red-700">
+        <button type="submit" class="px-4 py-2 text-sm font-medium text-white rounded-md bg-primary hover:bg-primary-hover">
           <?= __('addresses.add') ?>
         </button>
       </div>
@@ -247,11 +247,11 @@ if (isset($_SESSION['success'])) {
           <label class="block mb-1 text-sm font-medium text-gray-700"><?= __('addresses.type') ?></label>
           <div class="flex space-x-4">
             <label class="flex items-center">
-              <input type="radio" id="edit_type_shipping" name="address_type" value="shipping" class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+              <input type="radio" id="edit_type_shipping" name="address_type" value="shipping" class="w-4 h-4 border-gray-300 text-primary focus:ring-primary">
               <span class="ml-2 text-sm text-gray-700"><?= __('addresses.shipping') ?></span>
             </label>
             <label class="flex items-center">
-              <input type="radio" id="edit_type_billing" name="address_type" value="billing" class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
+              <input type="radio" id="edit_type_billing" name="address_type" value="billing" class="w-4 h-4 border-gray-300 text-primary focus:ring-primary">
               <span class="ml-2 text-sm text-gray-700"><?= __('addresses.billing') ?></span>
             </label>
           </div>
@@ -313,7 +313,7 @@ if (isset($_SESSION['success'])) {
         <!-- Set as Default -->
         <div class="sm:col-span-2">
           <label class="flex items-center">
-            <input type="checkbox" id="edit_is_default" name="is_default" value="1" class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
+            <input type="checkbox" id="edit_is_default" name="is_default" value="1" class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary">
             <span class="ml-2 text-sm text-gray-700"><?= __('addresses.set_default') ?></span>
           </label>
         </div>
@@ -323,7 +323,7 @@ if (isset($_SESSION['success'])) {
         <button type="button" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200" onclick="closeEditModal()">
           <?= __('addresses.cancel') ?>
         </button>
-        <button type="submit" class="px-4 py-2 text-sm font-medium text-white rounded-md singer-red hover:bg-red-700">
+        <button type="submit" class="px-4 py-2 text-sm font-medium text-white rounded-md bg-primary hover:bg-primary-hover">
           <?= __('addresses.update') ?>
         </button>
       </div>
@@ -345,7 +345,7 @@ if (isset($_SESSION['success'])) {
         <button type="button" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200" onclick="closeDeleteModal()">
           <?= __('addresses.cancel') ?>
         </button>
-        <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700">
+        <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-hover">
           <?= __('addresses.delete') ?>
         </button>
       </div>

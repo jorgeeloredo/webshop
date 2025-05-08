@@ -30,7 +30,7 @@ if (isset($_SESSION['error'])) {
     <?php endif; ?>
 
     <?php if ($error): ?>
-      <div class="p-4 mb-6 text-red-700 bg-red-100 border border-red-200 rounded-lg">
+      <div class="p-4 mb-6 text-primary-hover bg-red-100 border border-red-200 rounded-lg">
         <?= htmlspecialchars($error) ?>
       </div>
     <?php endif; ?>
@@ -46,7 +46,7 @@ if (isset($_SESSION['error'])) {
               <option value="<?= $statusKey ?>"><?= $statusLabel ?></option>
             <?php endforeach; ?>
           </select>
-          <button id="applyFilter" class="px-4 py-2 text-white transition rounded-md singer-red hover:bg-red-700">
+          <button id="applyFilter" class="px-4 py-2 text-white transition rounded-md bg-primary hover:bg-primary-hover">
             <?= __('admin.filter') ?>
           </button>
         </div>

@@ -41,7 +41,7 @@ function getImageUrl($image)
   </div>
 
   <?php if (!empty($errors)): ?>
-    <div class="p-4 mb-6 text-red-700 bg-red-100 border border-red-200 rounded-lg">
+    <div class="p-4 mb-6 text-primary-hover bg-red-100 border border-red-200 rounded-lg">
       <p class="font-medium"><?= __('checkout.correct_errors') ?></p>
       <ul class="ml-4 list-disc">
         <?php foreach ($errors as $error): ?>
@@ -72,17 +72,17 @@ function getImageUrl($image)
                 type="email"
                 id="email"
                 name="email"
-                class="w-full px-3 py-2 border <?= isset($errors['email']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['email']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['email'] ?? '') ?>"
                 required>
               <?php if (isset($errors['email'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['email']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['email']) ?></p>
               <?php endif; ?>
             </div>
 
             <div class="mb-4">
               <label class="flex items-center">
-                <input type="checkbox" id="create_account" name="create_account" class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500" <?= isset($old['create_account']) && $old['create_account'] ? 'checked' : '' ?>>
+                <input type="checkbox" id="create_account" name="create_account" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" <?= isset($old['create_account']) && $old['create_account'] ? 'checked' : '' ?>>
                 <span class="ml-2 text-sm text-gray-700"><?= __('checkout.create_account') ?></span>
               </label>
             </div>
@@ -94,9 +94,9 @@ function getImageUrl($image)
                   type="password"
                   id="password"
                   name="password"
-                  class="w-full px-3 py-2 border <?= isset($errors['password']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
+                  class="w-full px-3 py-2 border <?= isset($errors['password']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
                 <?php if (isset($errors['password'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['password']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['password']) ?></p>
                 <?php else: ?>
                   <p class="mt-1 text-xs text-gray-500"><?= __('checkout.min_password') ?></p>
                 <?php endif; ?>
@@ -108,9 +108,9 @@ function getImageUrl($image)
                   type="password"
                   id="password_confirm"
                   name="password_confirm"
-                  class="w-full px-3 py-2 border <?= isset($errors['password_confirm']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
+                  class="w-full px-3 py-2 border <?= isset($errors['password_confirm']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200">
                 <?php if (isset($errors['password_confirm'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['password_confirm']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['password_confirm']) ?></p>
                 <?php endif; ?>
               </div>
             </div>
@@ -129,11 +129,11 @@ function getImageUrl($image)
                 type="text"
                 id="first_name"
                 name="first_name"
-                class="w-full px-3 py-2 border <?= isset($errors['first_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['first_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['first_name'] ?? ($isLoggedIn ? $user['first_name'] : '')) ?>"
                 required>
               <?php if (isset($errors['first_name'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['first_name']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['first_name']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -144,11 +144,11 @@ function getImageUrl($image)
                 type="text"
                 id="last_name"
                 name="last_name"
-                class="w-full px-3 py-2 border <?= isset($errors['last_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['last_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['last_name'] ?? ($isLoggedIn ? $user['last_name'] : '')) ?>"
                 required>
               <?php if (isset($errors['last_name'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['last_name']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['last_name']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -159,11 +159,11 @@ function getImageUrl($image)
                 type="tel"
                 id="phone"
                 name="phone"
-                class="w-full px-3 py-2 border <?= isset($errors['phone']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['phone']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['phone'] ?? '') ?>"
                 required>
               <?php if (isset($errors['phone'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['phone']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['phone']) ?></p>
               <?php endif; ?>
             </div>
           </div>
@@ -181,11 +181,11 @@ function getImageUrl($image)
                 type="text"
                 id="shipping_first_name"
                 name="shipping_first_name"
-                class="w-full px-3 py-2 border <?= isset($errors['shipping_first_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['shipping_first_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['shipping_first_name'] ?? ($isLoggedIn ? $user['first_name'] : '')) ?>"
                 required>
               <?php if (isset($errors['shipping_first_name'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['shipping_first_name']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['shipping_first_name']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -196,11 +196,11 @@ function getImageUrl($image)
                 type="text"
                 id="shipping_last_name"
                 name="shipping_last_name"
-                class="w-full px-3 py-2 border <?= isset($errors['shipping_last_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['shipping_last_name']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['shipping_last_name'] ?? ($isLoggedIn ? $user['last_name'] : '')) ?>"
                 required>
               <?php if (isset($errors['shipping_last_name'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['shipping_last_name']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['shipping_last_name']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -211,11 +211,11 @@ function getImageUrl($image)
                 type="text"
                 id="shipping_address"
                 name="shipping_address"
-                class="w-full px-3 py-2 border <?= isset($errors['shipping_address']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['shipping_address']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['shipping_address'] ?? '') ?>"
                 required>
               <?php if (isset($errors['shipping_address'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['shipping_address']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['shipping_address']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -237,11 +237,11 @@ function getImageUrl($image)
                 type="text"
                 id="shipping_postal_code"
                 name="shipping_postal_code"
-                class="w-full px-3 py-2 border <?= isset($errors['shipping_postal_code']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['shipping_postal_code']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['shipping_postal_code'] ?? '') ?>"
                 required>
               <?php if (isset($errors['shipping_postal_code'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['shipping_postal_code']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['shipping_postal_code']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -252,11 +252,11 @@ function getImageUrl($image)
                 type="text"
                 id="shipping_city"
                 name="shipping_city"
-                class="w-full px-3 py-2 border <?= isset($errors['shipping_city']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['shipping_city']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['shipping_city'] ?? '') ?>"
                 required>
               <?php if (isset($errors['shipping_city'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['shipping_city']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['shipping_city']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -266,7 +266,7 @@ function getImageUrl($image)
               <select
                 id="shipping_country"
                 name="shipping_country"
-                class="w-full px-3 py-2 border <?= isset($errors['shipping_country']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['shipping_country']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 required>
                 <option value="France" <?= (isset($old['shipping_country']) && $old['shipping_country'] === 'France') ? 'selected' : '' ?>>France</option>
                 <option value="Belgique" <?= (isset($old['shipping_country']) && $old['shipping_country'] === 'Belgique') ? 'selected' : '' ?>>Belgique</option>
@@ -274,7 +274,7 @@ function getImageUrl($image)
                 <option value="Luxembourg" <?= (isset($old['shipping_country']) && $old['shipping_country'] === 'Luxembourg') ? 'selected' : '' ?>>Luxembourg</option>
               </select>
               <?php if (isset($errors['shipping_country'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['shipping_country']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['shipping_country']) ?></p>
               <?php endif; ?>
             </div>
 
@@ -285,11 +285,11 @@ function getImageUrl($image)
                 type="tel"
                 id="shipping_phone"
                 name="shipping_phone"
-                class="w-full px-3 py-2 border <?= isset($errors['shipping_phone']) ? 'border-red-500' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
+                class="w-full px-3 py-2 border <?= isset($errors['shipping_phone']) ? 'border-primary' : 'border-gray-300' ?> rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                 value="<?= htmlspecialchars($old['shipping_phone'] ?? $old['phone'] ?? '') ?>"
                 required>
               <?php if (isset($errors['shipping_phone'])): ?>
-                <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['shipping_phone']) ?></p>
+                <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['shipping_phone']) ?></p>
               <?php endif; ?>
             </div>
           </div>
@@ -306,7 +306,7 @@ function getImageUrl($image)
                     name="shipping_method"
                     id="shipping_<?= $code ?>"
                     value="<?= $code ?>"
-                    class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500"
+                    class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
                     <?= $currentShippingMethod === $code ? 'checked' : '' ?>>
                   <label for="shipping_<?= $code ?>" class="flex flex-col flex-1 ml-3">
                     <span class="text-sm font-medium text-gray-700"><?= htmlspecialchars($method['name']) ?></span>
@@ -332,7 +332,7 @@ function getImageUrl($image)
               type="checkbox"
               id="same_as_billing"
               name="same_as_billing"
-              class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500"
+              class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
               checked>
             <label for="same_as_billing" class="block ml-2 text-sm font-medium text-gray-700">
               <?= __('checkout.same_billing') ?>
@@ -353,7 +353,7 @@ function getImageUrl($image)
                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($old['billing_first_name'] ?? '') ?>">
                 <?php if (isset($errors['billing_first_name'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['billing_first_name']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['billing_first_name']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -367,7 +367,7 @@ function getImageUrl($image)
                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($old['billing_last_name'] ?? '') ?>">
                 <?php if (isset($errors['billing_last_name'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['billing_last_name']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['billing_last_name']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -381,7 +381,7 @@ function getImageUrl($image)
                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($old['billing_address'] ?? '') ?>">
                 <?php if (isset($errors['billing_address'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['billing_address']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['billing_address']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -406,7 +406,7 @@ function getImageUrl($image)
                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($old['billing_postal_code'] ?? '') ?>">
                 <?php if (isset($errors['billing_postal_code'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['billing_postal_code']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['billing_postal_code']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -420,7 +420,7 @@ function getImageUrl($image)
                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($old['billing_city'] ?? '') ?>">
                 <?php if (isset($errors['billing_city'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['billing_city']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['billing_city']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -437,7 +437,7 @@ function getImageUrl($image)
                   <option value="Luxembourg" <?= (isset($old['billing_country']) && $old['billing_country'] === 'Luxembourg') ? 'selected' : '' ?>>Luxembourg</option>
                 </select>
                 <?php if (isset($errors['billing_country'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['billing_country']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['billing_country']) ?></p>
                 <?php endif; ?>
               </div>
 
@@ -451,7 +451,7 @@ function getImageUrl($image)
                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200"
                   value="<?= htmlspecialchars($old['billing_phone'] ?? '') ?>">
                 <?php if (isset($errors['billing_phone'])): ?>
-                  <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['billing_phone']) ?></p>
+                  <p class="mt-1 text-xs text-primary"><?= htmlspecialchars($errors['billing_phone']) ?></p>
                 <?php endif; ?>
               </div>
             </div>
@@ -469,7 +469,7 @@ function getImageUrl($image)
                 id="payment_card"
                 name="payment_method"
                 value="card"
-                class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500"
+                class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
                 checked>
               <label for="payment_card" class="block ml-3 text-sm font-medium text-gray-700">
                 <?= __('checkout.card') ?>
@@ -556,7 +556,7 @@ function getImageUrl($image)
             <?php endif; ?>
           </div>
 
-          <button type="submit" class="w-full py-3 text-base font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
+          <button type="submit" class="w-full py-3 text-base font-medium text-center text-white transition rounded-full bg-primary hover:bg-primary-hover">
             <?= __('checkout.place_order') ?>
           </button>
 

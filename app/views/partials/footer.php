@@ -26,7 +26,7 @@
       <div class="flex flex-col items-center text-center">
         <img src="/assets/images/footer4.png" alt="<?= __('general.need_help') ?>" />
         <p class="font-medium text-gray-800"><?= __('general.need_help') ?></p>
-        <p class="text-sm text-gray-600"><?= __('general.contact_us') ?> <a href="#" class="text-red-600 hover:underline"><?= __('general.here') ?></a></p>
+        <p class="text-sm text-gray-600"><?= __('general.contact_us') ?> <a href="#" class="text-primary hover:underline"><?= __('general.here') ?></a></p>
       </div>
     </div>
   </div>
@@ -44,16 +44,16 @@
         </p>
 
         <div class="flex mt-4 space-x-4">
-          <a href="#" class="text-gray-600 hover:text-red-600">
+          <a href="#" class="text-gray-600 hover:text-primary">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-red-600">
+          <a href="#" class="text-gray-600 hover:text-primary">
             <i class="fab fa-youtube"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-red-600">
+          <a href="#" class="text-gray-600 hover:text-primary">
             <i class="fab fa-pinterest-p"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-red-600">
+          <a href="#" class="text-gray-600 hover:text-primary">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -63,10 +63,10 @@
       <div>
         <h3 class="mb-4 font-semibold text-gray-800"><?= __('general.general') ?></h3>
         <ul class="space-y-2">
-          <li><a href="/page/politique-de-confidentialite" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.privacy_policy') ?></a></li>
-          <li><a href="/page/conditions-generales-de-vente" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.terms_of_sale') ?></a></li>
-          <li><a href="/page/mentions-legales" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.legal_notice') ?></a></li>
-          <li><a href="/page/la-marque" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.the_brand') ?></a></li>
+          <li><a href="/page/politique-de-confidentialite" class="text-sm text-gray-600 hover:text-primary"><?= __('general.privacy_policy') ?></a></li>
+          <li><a href="/page/conditions-generales-de-vente" class="text-sm text-gray-600 hover:text-primary"><?= __('general.terms_of_sale') ?></a></li>
+          <li><a href="/page/mentions-legales" class="text-sm text-gray-600 hover:text-primary"><?= __('general.legal_notice') ?></a></li>
+          <li><a href="/page/la-marque" class="text-sm text-gray-600 hover:text-primary"><?= __('general.the_brand') ?></a></li>
         </ul>
       </div>
 
@@ -74,11 +74,11 @@
       <div>
         <h3 class="mb-4 font-semibold text-gray-800"><?= __('general.machines') ?></h3>
         <ul class="space-y-2">
-          <li><a href="/category/brodeuses" class="text-sm text-gray-600 hover:text-red-600">Brodeuses</a></li>
-          <li><a href="/category/machines-electroniques" class="text-sm text-gray-600 hover:text-red-600">Électroniques</a></li>
-          <li><a href="/category/machines-mecaniques" class="text-sm text-gray-600 hover:text-red-600">Mécaniques</a></li>
-          <li><a href="/category/soin-du-linge" class="text-sm text-gray-600 hover:text-red-600">Soin du linge</a></li>
-          <li><a href="/category/surjeteuses-recouvreuses" class="text-sm text-gray-600 hover:text-red-600">Surjeteuses & Recouvreuses</a></li>
+          <li><a href="/category/brodeuses" class="text-sm text-gray-600 hover:text-primary">Brodeuses</a></li>
+          <li><a href="/category/machines-electroniques" class="text-sm text-gray-600 hover:text-primary">Électroniques</a></li>
+          <li><a href="/category/machines-mecaniques" class="text-sm text-gray-600 hover:text-primary">Mécaniques</a></li>
+          <li><a href="/category/soin-du-linge" class="text-sm text-gray-600 hover:text-primary">Soin du linge</a></li>
+          <li><a href="/category/surjeteuses-recouvreuses" class="text-sm text-gray-600 hover:text-primary">Surjeteuses & Recouvreuses</a></li>
         </ul>
       </div>
 
@@ -86,11 +86,11 @@
       <div>
         <h3 class="mb-4 font-semibold text-gray-800"><?= __('general.purchase_help') ?></h3>
         <ul class="mb-6 space-y-2">
-          <li><a href="/page/questions-frequentes" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.faq') ?></a></li>
-          <li><a href="/page/vos-avantages" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.your_advantages') ?></a></li>
-          <li><a href="/page/tutos" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.tutorials') ?></a></li>
-          <li><a href="/page/actualites" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.news') ?></a></li>
-          <li><a href="/page/nous-contacter" class="text-sm text-gray-600 hover:text-red-600"><?= __('general.contact_us_page') ?></a></li>
+          <li><a href="/page/questions-frequentes" class="text-sm text-gray-600 hover:text-primary"><?= __('general.faq') ?></a></li>
+          <li><a href="/page/vos-avantages" class="text-sm text-gray-600 hover:text-primary"><?= __('general.your_advantages') ?></a></li>
+          <li><a href="/page/tutos" class="text-sm text-gray-600 hover:text-primary"><?= __('general.tutorials') ?></a></li>
+          <li><a href="/page/actualites" class="text-sm text-gray-600 hover:text-primary"><?= __('general.news') ?></a></li>
+          <li><a href="/page/nous-contacter" class="text-sm text-gray-600 hover:text-primary"><?= __('general.contact_us_page') ?></a></li>
         </ul>
       </div>
     </div>
@@ -98,13 +98,13 @@
 
   <!-- Scroll to top button -->
   <div class="fixed z-30 bottom-6 right-6">
-    <button id="scroll-to-top" class="flex items-center justify-center w-10 h-10 text-white shadow-lg singer-red">
+    <button id="scroll-to-top" class="flex items-center justify-center w-10 h-10 text-white shadow-lg bg-primary">
       <i class="fas fa-arrow-up"></i>
     </button>
   </div>
 
   <!-- Copyright footer -->
-  <div class="py-2 text-sm font-medium text-center text-white singer-red">
+  <div class="py-2 text-sm font-medium text-center text-white bg-primary">
     <div class="site-container"><?= __('general.copyright', ['year' => date('Y')]) ?></div>
   </div>
 </footer>
