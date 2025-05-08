@@ -28,6 +28,13 @@ return [
   'same_billing' => 'Utiliser la même adresse pour la facturation',
   'billing_address' => 'Adresse de facturation',
 
+  // Address fields
+  'address' => 'Adresse',
+  'address2' => 'Complément d\'adresse',
+  'postal_code' => 'Code postal',
+  'city' => 'Ville',
+  'country' => 'Pays',
+
   // Payment method
   'payment_method' => 'Méthode de paiement',
   'card' => 'Carte bancaire',

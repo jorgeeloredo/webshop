@@ -129,7 +129,7 @@ $shippingCost = isset($order['shipping_cost']) ? $order['shipping_cost'] : 0;
                 <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('order.payment_method') ?></h3>
                 <p class="text-sm text-gray-600">
                   <?php
-                  $paymentMethod = __('general.not_specified');
+                  $paymentMethod = __('order.not_specified');
                   if (isset($order['payment_method'])) {
                     switch ($order['payment_method']) {
                       case 'card':
@@ -220,7 +220,7 @@ $shippingCost = isset($order['shipping_cost']) ? $order['shipping_cost'] : 0;
                   <?= htmlspecialchars($shippingAddress['postal_code'] . ' ' . $shippingAddress['city']) ?><br>
                   <?= htmlspecialchars($shippingAddress['country']) ?><br>
                   <?php if (!empty($shippingAddress['phone'])): ?>
-                    Tél: <?= htmlspecialchars($shippingAddress['phone']) ?>
+                    <?= __('checkout.phone') ?>: <?= htmlspecialchars($shippingAddress['phone']) ?>
                   <?php endif; ?>
                 </p>
               </div>
@@ -238,7 +238,7 @@ $shippingCost = isset($order['shipping_cost']) ? $order['shipping_cost'] : 0;
                   <?= htmlspecialchars($billingAddress['postal_code'] . ' ' . $billingAddress['city']) ?><br>
                   <?= htmlspecialchars($billingAddress['country']) ?><br>
                   <?php if (!empty($billingAddress['phone'])): ?>
-                    Tél: <?= htmlspecialchars($billingAddress['phone']) ?>
+                    <?= __('checkout.phone') ?>: <?= htmlspecialchars($billingAddress['phone']) ?>
                   <?php endif; ?>
                 </p>
               </div>

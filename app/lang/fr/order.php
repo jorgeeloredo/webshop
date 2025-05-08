@@ -26,4 +26,11 @@ return [
   'status_shipped' => 'Expédié',
   'status_delivered' => 'Livré',
   'status_cancelled' => 'Annulé',
+
+  // Order details page
+  'date' => 'Date',
+  'status' => 'Statut',
+  'details' => 'Détails',
+  'actions' => 'Actions',
+  'not_specified' => 'Non spécifié',
 ];

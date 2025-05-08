@@ -34,15 +34,15 @@ function getImageUrl($image)
 
 <div class="px-4 py-8 site-container">
   <div class="mb-6">
-    <h1 class="text-2xl font-normal text-gray-800">Finaliser la commande</h1>
+    <h1 class="text-2xl font-normal text-gray-800"><?= __('checkout.finalize_order') ?></h1>
     <p class="text-sm text-gray-600">
-      Veuillez remplir les informations ci-dessous pour finaliser votre commande
+      <?= __('checkout.fill_information') ?>
     </p>
   </div>
 
   <?php if (!empty($errors)): ?>
     <div class="p-4 mb-6 text-red-700 bg-red-100 border border-red-200 rounded-lg">
-      <p class="font-medium">Veuillez corriger les erreurs suivantes :</p>
+      <p class="font-medium"><?= __('checkout.correct_errors') ?></p>
       <ul class="ml-4 list-disc">
         <?php foreach ($errors as $error): ?>
           <li><?= htmlspecialchars($error) ?></li>
@@ -60,14 +60,14 @@ function getImageUrl($image)
         <?php if (!$isLoggedIn): ?>
           <div class="p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-sm">
             <div class="flex items-center justify-between mb-4">
-              <h2 class="text-xl font-medium text-gray-800">Mon compte</h2>
+              <h2 class="text-xl font-medium text-gray-800"><?= __('checkout.my_account') ?></h2>
               <a href="/login" class="text-sm singer-red-text hover:underline">
-                Déjà un compte ? Se connecter
+                <?= __('checkout.already_account') ?>
               </a>
             </div>
 
             <div class="mb-4">
-              <label for="email" class="block mb-1 text-sm font-medium text-gray-700">Email *</label>
+              <label for="email" class="block mb-1 text-sm font-medium text-gray-700"><?= __('account.email') ?> *</label>
               <input
                 type="email"
                 id="email"
@@ -83,13 +83,13 @@ function getImageUrl($image)
             <div class="mb-4">
               <label class="flex items-center">
                 <input type="checkbox" id="create_account" name="create_account" class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500" <?= isset($old['create_account']) && $old['create_account'] ? 'checked' : '' ?>>
-                <span class="ml-2 text-sm text-gray-700">Créer un compte avec ce mail</span>
+                <span class="ml-2 text-sm text-gray-700"><?= __('checkout.create_account') ?></span>
               </label>
             </div>
 
             <div id="account_password_fields" class="<?= isset($old['create_account']) && $old['create_account'] ? '' : 'hidden' ?> space-y-4">
               <div>
-                <label for="password" class="block mb-1 text-sm font-medium text-gray-700">Mot de passe</label>
+                <label for="password" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.password') ?></label>
                 <input
                   type="password"
                   id="password"
@@ -98,12 +98,12 @@ function getImageUrl($image)
                 <?php if (isset($errors['password'])): ?>
                   <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['password']) ?></p>
                 <?php else: ?>
-                  <p class="mt-1 text-xs text-gray-500">Minimum 8 caractères</p>
+                  <p class="mt-1 text-xs text-gray-500"><?= __('checkout.min_password') ?></p>
                 <?php endif; ?>
               </div>
 
               <div>
-                <label for="password_confirm" class="block mb-1 text-sm font-medium text-gray-700">Confirmer le mot de passe</label>
+                <label for="password_confirm" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.confirm_password') ?></label>
                 <input
                   type="password"
                   id="password_confirm"
@@ -119,12 +119,12 @@ function getImageUrl($image)
 
         <!-- Customer Information Section -->
         <div class="p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h2 class="mb-4 text-xl font-medium text-gray-800">Informations personnelles</h2>
+          <h2 class="mb-4 text-xl font-medium text-gray-800"><?= __('checkout.personal_info') ?></h2>
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <!-- First Name -->
             <div>
-              <label for="first_name" class="block mb-1 text-sm font-medium text-gray-700">Prénom *</label>
+              <label for="first_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.first_name') ?> *</label>
               <input
                 type="text"
                 id="first_name"
@@ -139,7 +139,7 @@ function getImageUrl($image)
 
             <!-- Last Name -->
             <div>
-              <label for="last_name" class="block mb-1 text-sm font-medium text-gray-700">Nom *</label>
+              <label for="last_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.last_name') ?> *</label>
               <input
                 type="text"
                 id="last_name"
@@ -154,7 +154,7 @@ function getImageUrl($image)
 
             <!-- Phone -->
             <div class="sm:col-span-2">
-              <label for="phone" class="block mb-1 text-sm font-medium text-gray-700">Téléphone *</label>
+              <label for="phone" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.phone') ?> *</label>
               <input
                 type="tel"
                 id="phone"
@@ -171,12 +171,12 @@ function getImageUrl($image)
 
         <!-- Shipping Information Section -->
         <div class="p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h2 class="mb-4 text-xl font-medium text-gray-800">Adresse de livraison</h2>
+          <h2 class="mb-4 text-xl font-medium text-gray-800"><?= __('checkout.shipping_address') ?></h2>
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <!-- First Name -->
             <div>
-              <label for="shipping_first_name" class="block mb-1 text-sm font-medium text-gray-700">Prénom *</label>
+              <label for="shipping_first_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.first_name') ?> *</label>
               <input
                 type="text"
                 id="shipping_first_name"
@@ -191,7 +191,7 @@ function getImageUrl($image)
 
             <!-- Last Name -->
             <div>
-              <label for="shipping_last_name" class="block mb-1 text-sm font-medium text-gray-700">Nom *</label>
+              <label for="shipping_last_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.last_name') ?> *</label>
               <input
                 type="text"
                 id="shipping_last_name"
@@ -206,7 +206,7 @@ function getImageUrl($image)
 
             <!-- Address -->
             <div class="sm:col-span-2">
-              <label for="shipping_address" class="block mb-1 text-sm font-medium text-gray-700">Adresse *</label>
+              <label for="shipping_address" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.address') ?> *</label>
               <input
                 type="text"
                 id="shipping_address"
@@ -221,7 +221,7 @@ function getImageUrl($image)
 
             <!-- Address 2 (optional) -->
             <div class="sm:col-span-2">
-              <label for="shipping_address2" class="block mb-1 text-sm font-medium text-gray-700">Complément d'adresse</label>
+              <label for="shipping_address2" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.address2') ?></label>
               <input
                 type="text"
                 id="shipping_address2"
@@ -232,7 +232,7 @@ function getImageUrl($image)
 
             <!-- Postal Code -->
             <div>
-              <label for="shipping_postal_code" class="block mb-1 text-sm font-medium text-gray-700">Code postal *</label>
+              <label for="shipping_postal_code" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.postal_code') ?> *</label>
               <input
                 type="text"
                 id="shipping_postal_code"
@@ -247,7 +247,7 @@ function getImageUrl($image)
 
             <!-- City -->
             <div>
-              <label for="shipping_city" class="block mb-1 text-sm font-medium text-gray-700">Ville *</label>
+              <label for="shipping_city" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.city') ?> *</label>
               <input
                 type="text"
                 id="shipping_city"
@@ -262,7 +262,7 @@ function getImageUrl($image)
 
             <!-- Country -->
             <div>
-              <label for="shipping_country" class="block mb-1 text-sm font-medium text-gray-700">Pays *</label>
+              <label for="shipping_country" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.country') ?> *</label>
               <select
                 id="shipping_country"
                 name="shipping_country"
@@ -280,7 +280,7 @@ function getImageUrl($image)
 
             <!-- Phone -->
             <div>
-              <label for="shipping_phone" class="block mb-1 text-sm font-medium text-gray-700">Téléphone *</label>
+              <label for="shipping_phone" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.phone') ?> *</label>
               <input
                 type="tel"
                 id="shipping_phone"
@@ -296,7 +296,7 @@ function getImageUrl($image)
 
           <!-- Shipping Method Selection -->
           <div class="mt-6">
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Mode de livraison *</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('checkout.shipping_method') ?> *</h3>
 
             <div class="space-y-2">
               <?php foreach ($shippingMethods as $code => $method): ?>
@@ -316,7 +316,7 @@ function getImageUrl($image)
                   <span class="text-sm font-medium">
                     <?php
                     $methodCost = \App\Helpers\Shipping::calculateCost($code, $totalPrice);
-                    echo $methodCost > 0 ? number_format($methodCost, 2, ',', ' ') . ' €' : 'Gratuit';
+                    echo $methodCost > 0 ? number_format($methodCost, 2, ',', ' ') . ' €' : __('checkout.free');
                     ?>
                   </span>
                 </div>
@@ -335,17 +335,17 @@ function getImageUrl($image)
               class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500"
               checked>
             <label for="same_as_billing" class="block ml-2 text-sm font-medium text-gray-700">
-              Utiliser la même adresse pour la facturation
+              <?= __('checkout.same_billing') ?>
             </label>
           </div>
 
           <div id="billing_form" class="hidden">
-            <h3 class="mb-4 text-lg font-medium text-gray-800">Adresse de facturation</h3>
+            <h3 class="mb-4 text-lg font-medium text-gray-800"><?= __('checkout.billing_address') ?></h3>
 
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <!-- First Name -->
               <div>
-                <label for="billing_first_name" class="block mb-1 text-sm font-medium text-gray-700">Prénom *</label>
+                <label for="billing_first_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.first_name') ?> *</label>
                 <input
                   type="text"
                   id="billing_first_name"
@@ -359,7 +359,7 @@ function getImageUrl($image)
 
               <!-- Last Name -->
               <div>
-                <label for="billing_last_name" class="block mb-1 text-sm font-medium text-gray-700">Nom *</label>
+                <label for="billing_last_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.last_name') ?> *</label>
                 <input
                   type="text"
                   id="billing_last_name"
@@ -373,7 +373,7 @@ function getImageUrl($image)
 
               <!-- Address -->
               <div class="sm:col-span-2">
-                <label for="billing_address" class="block mb-1 text-sm font-medium text-gray-700">Adresse *</label>
+                <label for="billing_address" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.address') ?> *</label>
                 <input
                   type="text"
                   id="billing_address"
@@ -387,7 +387,7 @@ function getImageUrl($image)
 
               <!-- Address 2 (optional) -->
               <div class="sm:col-span-2">
-                <label for="billing_address2" class="block mb-1 text-sm font-medium text-gray-700">Complément d'adresse</label>
+                <label for="billing_address2" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.address2') ?></label>
                 <input
                   type="text"
                   id="billing_address2"
@@ -398,7 +398,7 @@ function getImageUrl($image)
 
               <!-- Postal Code -->
               <div>
-                <label for="billing_postal_code" class="block mb-1 text-sm font-medium text-gray-700">Code postal *</label>
+                <label for="billing_postal_code" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.postal_code') ?> *</label>
                 <input
                   type="text"
                   id="billing_postal_code"
@@ -412,7 +412,7 @@ function getImageUrl($image)
 
               <!-- City -->
               <div>
-                <label for="billing_city" class="block mb-1 text-sm font-medium text-gray-700">Ville *</label>
+                <label for="billing_city" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.city') ?> *</label>
                 <input
                   type="text"
                   id="billing_city"
@@ -426,7 +426,7 @@ function getImageUrl($image)
 
               <!-- Country -->
               <div>
-                <label for="billing_country" class="block mb-1 text-sm font-medium text-gray-700">Pays *</label>
+                <label for="billing_country" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.country') ?> *</label>
                 <select
                   id="billing_country"
                   name="billing_country"
@@ -443,7 +443,7 @@ function getImageUrl($image)
 
               <!-- Phone -->
               <div>
-                <label for="billing_phone" class="block mb-1 text-sm font-medium text-gray-700">Téléphone *</label>
+                <label for="billing_phone" class="block mb-1 text-sm font-medium text-gray-700"><?= __('checkout.phone') ?> *</label>
                 <input
                   type="tel"
                   id="billing_phone"
@@ -460,7 +460,7 @@ function getImageUrl($image)
 
         <!-- Payment Method Section -->
         <div class="p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h2 class="mb-4 text-xl font-medium text-gray-800">Méthode de paiement</h2>
+          <h2 class="mb-4 text-xl font-medium text-gray-800"><?= __('checkout.payment_method') ?></h2>
 
           <div class="space-y-3">
             <div class="flex items-center p-3 border border-gray-200 rounded">
@@ -472,33 +472,18 @@ function getImageUrl($image)
                 class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500"
                 checked>
               <label for="payment_card" class="block ml-3 text-sm font-medium text-gray-700">
-                Carte bancaire
+                <?= __('checkout.card') ?>
               </label>
               <div class="flex items-center ml-auto space-x-2">
                 <img src="/assets/images/visa.png" alt="Visa" class="h-6">
                 <img src="/assets/images/mastercard.png" alt="Mastercard" class="h-6">
               </div>
             </div>
-
-            <!--<div class="flex items-center p-3 border border-gray-200 rounded">
-              <input
-                type="radio"
-                id="payment_paypal"
-                name="payment_method"
-                value="paypal"
-                class="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-500">
-              <label for="payment_paypal" class="block ml-3 text-sm font-medium text-gray-700">
-                PayPal
-              </label>
-              <div class="ml-auto">
-                <img src="/assets/images/payments/paypal.svg" alt="PayPal" class="h-6">
-              </div>
-            </div>-->
           </div>
 
           <p class="flex items-center mt-4 text-sm text-gray-600">
             <i class="mr-2 text-green-600 fas fa-lock"></i>
-            Paiement 100% sécurisé
+            <?= __('checkout.secure_payment') ?>
           </p>
         </div>
       </div>
@@ -506,7 +491,7 @@ function getImageUrl($image)
       <!-- Right Side: Order Summary -->
       <div class="lg:col-span-5">
         <div class="sticky p-6 bg-white border border-gray-200 rounded-lg shadow-sm top-20">
-          <h2 class="mb-4 text-xl font-medium text-gray-800">Récapitulatif de la commande</h2>
+          <h2 class="mb-4 text-xl font-medium text-gray-800"><?= __('checkout.order_summary') ?></h2>
 
           <!-- Products List -->
           <div class="mb-4 space-y-4">
@@ -527,7 +512,7 @@ function getImageUrl($image)
                     <span class="text-sm font-medium price-color"><?= number_format($item['price'] * $item['quantity'], 2, ',', ' ') ?> €</span>
                   </div>
                   <div class="mt-1 text-sm text-gray-600">
-                    <span>Quantité: <?= $item['quantity'] ?></span>
+                    <span><?= __('cart.quantity') ?>: <?= $item['quantity'] ?></span>
                     <?php if (!empty($item['attributes'])): ?>
                       <div class="mt-1">
                         <?php foreach ($item['attributes'] as $attribute => $value): ?>
@@ -544,39 +529,39 @@ function getImageUrl($image)
           <!-- Price Summary -->
           <div class="pt-4 mb-6 space-y-2 border-t border-gray-200">
             <div class="flex justify-between text-sm">
-              <span class="text-gray-600">Sous-total</span>
+              <span class="text-gray-600"><?= __('checkout.subtotal') ?></span>
               <span class="font-medium text-gray-800"><?= number_format($totalPrice, 2, ',', ' ') ?> €</span>
             </div>
             <div class="flex justify-between text-sm">
-              <span class="text-gray-600">Frais de livraison (<?= htmlspecialchars(\App\Helpers\Shipping::getMethodName($currentShippingMethod)) ?>)</span>
+              <span class="text-gray-600"><?= __('checkout.shipping_cost') ?> (<?= htmlspecialchars(\App\Helpers\Shipping::getMethodName($currentShippingMethod)) ?>)</span>
               <span class="font-medium text-gray-800">
-                <?= $cart ? $cart->getFormattedShippingCost() : 'Gratuit' ?>
+                <?= $cart ? $cart->getFormattedShippingCost() : __('checkout.free') ?>
               </span>
             </div>
           </div>
 
           <div class="pt-4 mb-6 border-t border-gray-200">
             <div class="flex justify-between">
-              <span class="text-base font-medium text-gray-800">Total</span>
+              <span class="text-base font-medium text-gray-800"><?= __('checkout.total') ?></span>
               <span class="text-base font-bold text-gray-800">
                 <?= number_format($finalTotal, 2, ',', ' ') ?> €
               </span>
             </div>
             <?php if ($cart && $cart->getRemainingForFreeShipping() > 0): ?>
               <p class="mt-2 text-xs text-gray-500">
-                Plus que <?= number_format($cart->getRemainingForFreeShipping(), 2, ',', ' ') ?> € d'achat pour bénéficier de la livraison gratuite
+                <?= __('checkout.free_shipping_remaining', ['amount' => number_format($cart->getRemainingForFreeShipping(), 2, ',', ' ')]) ?>
               </p>
             <?php else: ?>
-              <p class="mt-2 text-xs text-green-600">Vous bénéficiez de la livraison gratuite!</p>
+              <p class="mt-2 text-xs text-green-600"><?= __('checkout.free_shipping_achieved') ?></p>
             <?php endif; ?>
           </div>
 
           <button type="submit" class="w-full py-3 text-base font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
-            Commander
+            <?= __('checkout.place_order') ?>
           </button>
 
           <p class="mt-4 text-xs text-center text-gray-500">
-            En passant votre commande, vous acceptez nos <a href="/page/conditions-generales-de-vente" class="singer-red-text hover:underline">conditions générales de vente</a>
+            <?= __('checkout.agree_terms') ?> <a href="/page/conditions-generales-de-vente" class="singer-red-text hover:underline"><?= __('checkout.terms_of_sale') ?></a>
           </p>
         </div>
       </div>
