@@ -12,6 +12,7 @@ return [
   'create_account' => 'Créer un compte',
   'login_error' => 'Email ou mot de passe incorrect',
   'login_required' => 'Vous devez être connecté pour accéder à cette page',
+  'login_button' => 'Se connecter',
 
   // Register
   'register' => 'Créer un compte',
@@ -20,8 +21,11 @@ return [
   'confirm_password' => 'Confirmer le mot de passe',
   'min_password' => 'Au moins 8 caractères',
   'agree_terms' => 'J\'accepte les conditions générales et la politique de confidentialité',
+  'terms_and_conditions' => 'conditions générales',
+  'privacy_policy' => 'politique de confidentialité',
   'already_account' => 'Vous avez déjà un compte ?',
   'register_success' => 'Votre compte a été créé avec succès',
+  'register_button' => 'Créer mon compte',
 
   // Dashboard
   'dashboard' => 'Tableau de bord',

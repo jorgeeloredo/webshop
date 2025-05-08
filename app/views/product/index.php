@@ -22,12 +22,12 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
       <!-- Navigation Buttons positioned inside the product image -->
       <div class="absolute z-10 top-4 left-4">
         <a href="javascript:history.back()" class="flex items-center text-sm text-gray-600 hover:text-red-600">
-          <i class="mr-1 text-xs fas fa-chevron-left"></i> Retour
+          <i class="mr-1 text-xs fas fa-chevron-left"></i> <?= __('product.back') ?>
         </a>
       </div>
       <div class="absolute z-10 top-4 right-4">
         <span class="px-3 py-1 text-xs text-white rounded green-badge">
-          Niveau <?= $product['level'] ?? 'débutant' ?>
+          <?= __('product.product_level') ?> <?= $product['level'] ?? __('product.beginner') ?>
         </span>
       </div>
 
@@ -84,7 +84,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <div class="flex items-baseline">
           <span class="mr-2 text-xl font-semibold price-color"><?= number_format($product['price'], 2, ',', ' ') ?> €</span>
           <?php if (isset($product['eco_part']) && $product['eco_part'] > 0): ?>
-            <span class="text-sm text-gray-500">Dont <?= number_format($product['eco_part'], 2, ',', ' ') ?> € <a href="#" class="underline">d'éco-part</a></span>
+            <span class="text-sm text-gray-500"><?= __('product.eco_part', ['amount' => number_format($product['eco_part'], 2, ',', ' ')]) ?></span>
           <?php endif; ?>
         </div>
 
@@ -108,7 +108,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
       <!-- Product identifiers -->
       <div class="mb-6 text-sm text-gray-600">
         <?php if (isset($product['sku'])): ?>
-          <p>Référence : <?= htmlspecialchars($product['sku']) ?></p>
+          <p><?= __('product.reference') ?> : <?= htmlspecialchars($product['sku']) ?></p>
         <?php endif; ?>
         <?php if (isset($product['gtin'])): ?>
           <p>GTIN : <?= htmlspecialchars($product['gtin']) ?></p>
@@ -120,15 +120,15 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <?php if (isset($product['stock']) && $product['stock'] > 0): ?>
           <div class="flex items-center text-green-600">
             <i class="mr-2 fas fa-check-circle"></i>
-            <span class="text-sm font-medium">En stock</span>
+            <span class="text-sm font-medium"><?= __('product.in_stock') ?></span>
             <?php if ($product['stock'] < 5): ?>
-              <span class="ml-2 text-sm">(Plus que <?= $product['stock'] ?> disponibles)</span>
+              <span class="ml-2 text-sm">(<?= __('product.only_left', ['count' => $product['stock']]) ?>)</span>
             <?php endif; ?>
           </div>
         <?php else: ?>
           <div class="flex items-center text-red-600">
             <i class="mr-2 fas fa-times-circle"></i>
-            <span class="text-sm font-medium">Rupture de stock</span>
+            <span class="text-sm font-medium"><?= __('product.out_of_stock') ?></span>
           </div>
         <?php endif; ?>
       </div>
@@ -138,7 +138,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
 
         <div class="flex items-center mb-4">
-          <label for="quantity" class="mr-4 text-sm font-medium text-gray-700">Quantité :</label>
+          <label for="quantity" class="mr-4 text-sm font-medium text-gray-700"><?= __('product.quantity') ?></label>
           <div class="flex items-center border border-gray-300 rounded">
             <button type="button" class="px-3 py-1 text-gray-600 hover:text-red-600 quantity-btn" data-action="decrease">
               <i class="fas fa-minus"></i>
@@ -161,7 +161,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
           type="submit"
           class="singer-red singer-red-border w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-red-500"
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
-          <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'Produit indisponible' : 'Ajouter au panier' ?>
+          <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('product.unavailable') : __('product.add_to_cart') ?>
         </button>
       </form>-->
 
@@ -172,7 +172,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
           type="submit"
           class="singer-red singer-red-border w-full md:w-[365px] py-3 mb-6 text-white transition rounded-3xl border hover:bg-white hover:text-red-500"
           <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
-          <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'Indisponible' : 'Acheter cet article' ?>
+          <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('product.unavailable') : __('product.buy_now') ?>
         </button>
       </form>
 
@@ -180,15 +180,15 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
       <div class="space-y-3">
         <div class="flex items-start">
           <i class="mt-1 mr-2 text-green-600 fas fa-check"></i>
-          <span class="text-sm font-semibold text-gray-700">Machines garanties 2 ans.</span>
+          <span class="text-sm font-semibold text-gray-700"><?= __('product.warranty') ?></span>
         </div>
         <div class="flex items-start">
           <i class="mt-1 mr-2 text-green-600 fas fa-check"></i>
-          <span class="text-sm font-semibold text-gray-700">Retour gratuit sous 30 jours.</span>
+          <span class="text-sm font-semibold text-gray-700"><?= __('product.free_returns_30days') ?></span>
         </div>
         <div class="flex items-start">
           <i class="mt-1 mr-2 text-green-600 fas fa-check"></i>
-          <span class="text-sm font-semibold text-gray-700">Paiement en plusieurs fois avec ALMA.</span>
+          <span class="text-sm font-semibold text-gray-700"><?= __('product.payment_instalments') ?></span>
         </div>
       </div>
     </div>
@@ -199,8 +199,8 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
     <div class="max-w-6xl mx-auto mt-12 mb-16">
       <!-- Section Header -->
       <div class="flex items-center mb-8">
-        <h2 class="text-2xl font-normal text-gray-800">Caractéristiques du produit</h2>
-        <a href="#" class="ml-4 text-sm singer-red-text hover:underline">Plus d'infos</a>
+        <h2 class="text-2xl font-normal text-gray-800"><?= __('product.characteristics') ?></h2>
+        <a href="#" class="ml-4 text-sm singer-red-text hover:underline"><?= __('product.more_info') ?></a>
         <div class="flex items-center justify-center w-5 h-5 ml-2 border border-gray-300 rounded-full">
           <span class="text-sm text-gray-500">?</span>
         </div>
@@ -273,7 +273,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
   <?php if (isset($relatedProducts) && !empty($relatedProducts)): ?>
     <section class="py-12 mt-16 bg-gray-50">
       <div class="px-4 site-container">
-        <h2 class="mb-8 text-2xl font-normal text-gray-800">Produits similaires</h2>
+        <h2 class="mb-8 text-2xl font-normal text-gray-800"><?= __('product.similar_products') ?></h2>
 
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <?php foreach ($relatedProducts as $relatedProduct): ?>
@@ -312,14 +312,14 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
   <!-- FAQ Section -->
   <section class="py-16">
     <div class="max-w-[1140px] mx-auto px-4">
-      <h2 class="mb-10 text-2xl font-normal text-gray-800">Toutes vos questions</h2>
+      <h2 class="mb-10 text-2xl font-normal text-gray-800"><?= __('product.all_questions') ?></h2>
 
       <!-- FAQ Accordion -->
       <div class="border-t border-gray-200">
         <!-- Garanties - Expanded by default -->
         <div class="border-b border-gray-200">
           <button class="flex items-center justify-between w-full py-5 text-left" onclick="toggleFaq('guarantees')">
-            <span class="font-medium text-gray-800">Garanties et service après vente</span>
+            <span class="font-medium text-gray-800"><?= __('product.guarantees') ?></span>
             <span class="text-gray-500">
               <i class="fas fa-plus" id="guarantees-icon"></i>
             </span>
@@ -328,50 +328,34 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
             <div class="space-y-5">
               <!-- First question -->
               <div>
-                <h3 class="mb-1 font-medium text-gray-800">Combien de temps sont garanties nos machines ?</h3>
+                <h3 class="mb-1 font-medium text-gray-800"><?= __('product.warranty_question') ?></h3>
                 <p class="text-sm text-gray-700">
-                  Toutes nos machines à coudre, brodeuses, surjeteuses sont garanties 2 ans pièces et main d'œuvre
-                  inclus.
+                  <?= __('product.warranty_answer') ?>
                 </p>
               </div>
 
               <!-- Second question -->
               <div>
                 <h3 class="mb-1 font-medium text-gray-800">
-                  Auprès de qui / Comment puis-je faire valoir ma garantie ?
+                  <?= __('product.warranty_online') ?>
                 </h3>
-                <p class="mb-1 text-sm font-medium text-gray-700">
-                  Vous avez acheté votre machine sur notre site www.singer-fr.com
-                </p>
-                <p class="mb-2 text-sm text-gray-700">
-                  Si vous rencontrez un problème ou une panne dans les 2 ans à partir de la date de votre achat,
-                  merci d'envoyer un mail à contact@singer-distrib.com.
-                </p>
-
-                <p class="mb-1 text-sm font-medium text-gray-700">
-                  Vous avez acheté votre machine sur un autre site Internet
-                  <span class="font-normal">que www.singer-fr.com, dans la grande distribution ou chez un revendeur agréé (magasin ou
-                    corner Singer)</span>
-                </p>
                 <p class="text-sm text-gray-700">
-                  Vous devez prendre contact directement avec le site ou le magasin dans lequel vous avez effectué
-                  votre achat. Votre facture d'achat faisant preuve de la date d'achat.
+                  <?= __('product.warranty_online_desc') ?>
                 </p>
               </div>
 
               <!-- Third question -->
               <div>
                 <h3 class="mb-1 font-medium text-gray-800">
-                  Où puis-je faire réparer ma machine à coudre si elle n'est plus sous garantie ?
+                  <?= __('product.warranty_expired') ?>
                 </h3>
                 <p class="text-sm text-gray-700">
-                  Auprès du <a href="#" class="singer-red-text">magasin Singer le plus proche de chez vous</a> ou en
-                  prenant rendez-vous auprès de notre SAV : service.consommateurs@singer-distrib.com
+                  <?= __('product.warranty_expired_answer') ?>
                 </p>
               </div>
 
               <div>
-                <a href="#" class="text-sm singer-red-text hover:underline">Consulter l'intégralité de notre FAQ</a>
+                <a href="#" class="text-sm singer-red-text hover:underline"><?= __('product.view_full_faq') ?></a>
               </div>
             </div>
           </div>
@@ -380,7 +364,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <!-- Livraison - Collapsed -->
         <div class="border-b border-gray-200">
           <button class="flex items-center justify-between w-full py-5 text-left" onclick="toggleFaq('delivery')">
-            <span class="font-medium text-gray-800">Livraison</span>
+            <span class="font-medium text-gray-800"><?= __('product.delivery') ?></span>
             <span class="text-gray-500">
               <i class="fas fa-plus" id="delivery-icon"></i>
             </span>
@@ -389,18 +373,16 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
             <div class="space-y-5">
               <div>
                 <h3 class="mb-1 font-medium text-gray-800">
-                  Sous combien de temps ma commande sera-t-elle livrée ?
+                  <?= __('product.delivery_time_question') ?>
                 </h3>
                 <p class="text-sm text-gray-700">
-                  Nous expédions votre commande sous 24 à 48h ouvrées. La livraison s'effectue ensuite sous 2 à 3
-                  jours ouvrés en France métropolitaine.
+                  <?= __('product.delivery_time_answer') ?>
                 </p>
               </div>
               <div>
-                <h3 class="mb-1 font-medium text-gray-800">Comment suivre ma commande ?</h3>
+                <h3 class="mb-1 font-medium text-gray-800"><?= __('product.order_tracking') ?></h3>
                 <p class="text-sm text-gray-700">
-                  Un email de confirmation vous est envoyé à chaque étape du processus d'expédition avec un lien de
-                  suivi de colis.
+                  <?= __('product.order_tracking_answer') ?>
                 </p>
               </div>
             </div>
@@ -410,7 +392,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <!-- Commande - Collapsed -->
         <div class="border-b border-gray-200">
           <button class="flex items-center justify-between w-full py-5 text-left" onclick="toggleFaq('orders')">
-            <span class="font-medium text-gray-800">Commande</span>
+            <span class="font-medium text-gray-800"><?= __('product.order') ?></span>
             <span class="text-gray-500">
               <i class="fas fa-plus" id="orders-icon"></i>
             </span>
@@ -418,17 +400,15 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
           <div id="orders" class="hidden pb-5">
             <div class="space-y-5">
               <div>
-                <h3 class="mb-1 font-medium text-gray-800">Comment modifier ou annuler ma commande ?</h3>
+                <h3 class="mb-1 font-medium text-gray-800"><?= __('product.modify_order') ?></h3>
                 <p class="text-sm text-gray-700">
-                  Vous pouvez modifier ou annuler votre commande en contactant notre service client dans les plus
-                  brefs délais et avant expédition.
+                  <?= __('product.modify_order_answer') ?>
                 </p>
               </div>
               <div>
-                <h3 class="mb-1 font-medium text-gray-800">Puis-je commander si je ne réside pas en France ?</h3>
+                <h3 class="mb-1 font-medium text-gray-800"><?= __('product.international_order') ?></h3>
                 <p class="text-sm text-gray-700">
-                  Nous livrons dans les pays de l'Union Européenne ainsi qu'en Suisse. Les frais de port et délais
-                  peuvent varier selon le pays de destination.
+                  <?= __('product.international_order_answer') ?>
                 </p>
               </div>
             </div>
@@ -438,7 +418,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
         <!-- Paiement - Collapsed -->
         <div class="border-b border-gray-200">
           <button class="flex items-center justify-between w-full py-5 text-left" onclick="toggleFaq('payment')">
-            <span class="font-medium text-gray-800">Paiement</span>
+            <span class="font-medium text-gray-800"><?= __('product.payment') ?></span>
             <span class="text-gray-500">
               <i class="fas fa-plus" id="payment-icon"></i>
             </span>
@@ -446,17 +426,15 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
           <div id="payment" class="hidden pb-5">
             <div class="space-y-5">
               <div>
-                <h3 class="mb-1 font-medium text-gray-800">Quels sont les moyens de paiement acceptés ?</h3>
+                <h3 class="mb-1 font-medium text-gray-800"><?= __('product.payment_methods') ?></h3>
                 <p class="text-sm text-gray-700">
-                  Nous acceptons les cartes bancaires (Visa, Mastercard), PayPal, ainsi que le paiement en plusieurs
-                  fois sans frais avec Alma.
+                  <?= __('product.payment_methods_answer') ?>
                 </p>
               </div>
               <div>
-                <h3 class="mb-1 font-medium text-gray-800">Le paiement sur votre site est-il sécurisé ?</h3>
+                <h3 class="mb-1 font-medium text-gray-800"><?= __('product.payment_security') ?></h3>
                 <p class="text-sm text-gray-700">
-                  Oui, toutes nos transactions sont sécurisées avec un cryptage SSL. Vos données bancaires ne sont
-                  jamais stockées sur nos serveurs.
+                  <?= __('product.payment_security_answer') ?>
                 </p>
               </div>
             </div>

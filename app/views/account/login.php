@@ -9,7 +9,7 @@ $error = $error ?? null;
 
 <div class="px-4 py-8 site-container">
   <div class="max-w-md mx-auto">
-    <h1 class="mb-6 text-2xl font-normal text-center text-gray-800">Connexion</h1>
+    <h1 class="mb-6 text-2xl font-normal text-center text-gray-800"><?= __('account.login') ?></h1>
 
     <?php if ($error): ?>
       <div class="p-4 mb-4 text-red-700 bg-red-100 border border-red-200 rounded-lg">
@@ -21,7 +21,7 @@ $error = $error ?? null;
       <form action="/login" method="POST">
         <!-- Email -->
         <div class="mb-4">
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-700"><?= __('account.email') ?></label>
           <input
             type="email"
             id="email"
@@ -36,7 +36,7 @@ $error = $error ?? null;
 
         <!-- Password -->
         <div class="mb-4">
-          <label for="password" class="block mb-2 text-sm font-medium text-gray-700">Mot de passe</label>
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-700"><?= __('account.password') ?></label>
           <input
             type="password"
             id="password"
@@ -56,22 +56,22 @@ $error = $error ?? null;
             name="remember"
             class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500"
             <?= isset($old['remember']) && $old['remember'] ? 'checked' : '' ?>>
-          <label for="remember" class="block ml-2 text-sm text-gray-700">Se souvenir de moi</label>
+          <label for="remember" class="block ml-2 text-sm text-gray-700"><?= __('account.remember_me') ?></label>
         </div>
 
         <!-- Submit button -->
         <button type="submit" class="w-full py-2 text-white transition rounded-full singer-red hover:bg-red-700">
-          Se connecter
+          <?= __('account.login_button') ?>
         </button>
       </form>
 
       <div class="mt-4 text-center">
-        <a href="#" class="text-sm text-gray-600 hover:text-red-600">Mot de passe oublié ?</a>
+        <a href="#" class="text-sm text-gray-600 hover:text-red-600"><?= __('account.forgot_password') ?></a>
       </div>
 
       <div class="pt-4 mt-6 text-sm text-center border-t border-gray-200">
-        <p class="text-gray-600">Vous n'avez pas de compte ?</p>
-        <a href="/register" class="font-medium singer-red-text hover:underline">Créer un compte</a>
+        <p class="text-gray-600"><?= __('account.no_account') ?></p>
+        <a href="/register" class="font-medium singer-red-text hover:underline"><?= __('account.create_account') ?></a>
       </div>
     </div>
   </div>

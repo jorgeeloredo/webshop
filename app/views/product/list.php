@@ -11,7 +11,7 @@ function getImageUrl($image)
 <div class="px-4 py-8 site-container">
   <div class="mb-6">
     <h1 class="text-2xl font-normal text-gray-800">
-      <?= isset($category) ? htmlspecialchars($category['name']) : 'Tous nos produits' ?>
+      <?= isset($category) ? htmlspecialchars($category['name']) : __('listing.all_products') ?>
     </h1>
     <?php if (isset($category) && !empty($category['description'])): ?>
       <p class="mt-2 text-sm text-gray-600"><?= htmlspecialchars($category['description']) ?></p>
@@ -23,10 +23,10 @@ function getImageUrl($image)
       <div class="flex justify-center mb-4">
         <i class="text-5xl text-gray-300 fas fa-box-open"></i>
       </div>
-      <h2 class="mb-2 text-xl font-medium text-gray-800">Aucun produit trouvé</h2>
-      <p class="mb-6 text-gray-600">Aucun produit n'est disponible dans cette catégorie pour le moment.</p>
+      <h2 class="mb-2 text-xl font-medium text-gray-800"><?= __('listing.no_products_found') ?></h2>
+      <p class="mb-6 text-gray-600"><?= __('listing.no_products_in_category') ?></p>
       <a href="/products" class="px-6 py-3 text-white transition rounded-full singer-red hover:bg-red-700">
-        Voir tous les produits
+        <?= __('listing.view_all_products') ?>
       </a>
     </div>
   <?php else: ?>
@@ -61,7 +61,7 @@ function getImageUrl($image)
               <?php if (isset($product['level'])): ?>
                 <div class="mt-2">
                   <span class="inline-block px-2 py-1 text-xs text-white bg-green-600 rounded">
-                    Niveau <?= htmlspecialchars($product['level']) ?>
+                    <?= __('listing.product_level') ?> <?= htmlspecialchars($product['level']) ?>
                   </span>
                 </div>
               <?php endif; ?>
@@ -75,7 +75,7 @@ function getImageUrl($image)
                 type="submit"
                 class="w-full py-2 text-sm text-white transition rounded-full singer-red hover:bg-red-700"
                 <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
-                <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'Indisponible' : 'Acheter cet article' ?>
+                <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('general.unavailable') : __('listing.buy_now') ?>
               </button>
             </form>
           </div>-->
