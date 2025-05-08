@@ -17,9 +17,9 @@ if (isset($_SESSION['error'])) {
 <div class="px-4 py-8 bg-gray-50">
   <div class="site-container">
     <div class="mb-6">
-      <h1 class="text-2xl font-normal text-gray-800">Administration - Gestion des commandes</h1>
+      <h1 class="text-2xl font-normal text-gray-800"><?= __('admin.admin') ?> - <?= __('admin.manage_orders') ?></h1>
       <p class="text-sm text-gray-600">
-        Gérez toutes les commandes de la boutique
+        <?= __('admin.manage_orders') ?>
       </p>
     </div>
 
@@ -38,16 +38,16 @@ if (isset($_SESSION['error'])) {
     <!-- Orders Table -->
     <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-sm">
       <div class="flex items-center justify-between p-4 border-b border-gray-200">
-        <h2 class="text-lg font-medium text-gray-800">Liste des commandes</h2>
+        <h2 class="text-lg font-medium text-gray-800"><?= __('admin.order_list') ?></h2>
         <div class="flex items-center space-x-2">
           <select id="filterStatus" class="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200">
-            <option value="">Tous les statuts</option>
+            <option value=""><?= __('admin.status') ?></option>
             <?php foreach ($orderStatuses as $statusKey => $statusLabel): ?>
               <option value="<?= $statusKey ?>"><?= $statusLabel ?></option>
             <?php endforeach; ?>
           </select>
           <button id="applyFilter" class="px-4 py-2 text-white transition rounded-md singer-red hover:bg-red-700">
-            Filtrer
+            <?= __('admin.filter') ?>
           </button>
         </div>
       </div>
@@ -56,22 +56,22 @@ if (isset($_SESSION['error'])) {
         <thead class="bg-gray-50">
           <tr>
             <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-              N° commande
+              <?= __('admin.order_number') ?>
             </th>
             <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-              Date
+              <?= __('admin.date') ?>
             </th>
             <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-              Client
+              <?= __('admin.customer') ?>
             </th>
             <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-              Statut
+              <?= __('admin.status') ?>
             </th>
             <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-right text-gray-500 uppercase">
-              Total
+              <?= __('admin.total') ?>
             </th>
             <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-right text-gray-500 uppercase">
-              Actions
+              <?= __('admin.actions') ?>
             </th>
           </tr>
         </thead>
@@ -79,7 +79,7 @@ if (isset($_SESSION['error'])) {
           <?php if (empty($orders)): ?>
             <tr>
               <td colspan="6" class="px-4 py-4 text-center text-gray-500">
-                Aucune commande trouvée.
+                <?= __('admin.no_orders_found') ?>
               </td>
             </tr>
           <?php else: ?>
@@ -96,7 +96,7 @@ if (isset($_SESSION['error'])) {
                 <td class="px-4 py-4 whitespace-nowrap">
                   <?php
                   $email = $order['email'] ?? 'N/A';
-                  $isGuest = isset($order['guest_checkout']) && $order['guest_checkout'] ? ' (Invité)' : '';
+                  $isGuest = isset($order['guest_checkout']) && $order['guest_checkout'] ? ' (' . __('admin.guest') . ')' : '';
                   ?>
                   <span class="text-sm text-gray-500"><?= htmlspecialchars($email) . $isGuest ?></span>
                 </td>
@@ -122,7 +122,7 @@ if (isset($_SESSION['error'])) {
                 </td>
                 <td class="px-4 py-4 text-right whitespace-nowrap">
                   <a href="/admin/orders/<?= $order['id'] ?>" class="text-sm singer-red-text hover:underline">
-                    Détails
+                    <?= __('admin.details') ?>
                   </a>
                 </td>
               </tr>

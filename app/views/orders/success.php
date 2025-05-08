@@ -20,40 +20,40 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
         <i class="text-2xl fas fa-check"></i>
       </div>
 
-      <h1 class="mb-4 text-2xl font-medium text-gray-800">Merci pour votre commande !</h1>
+      <h1 class="mb-4 text-2xl font-medium text-gray-800"><?= __('success.thank_you') ?></h1>
 
       <p class="mb-6 text-gray-600">
-        Votre commande #<?= $order['id'] ?? '---' ?> a été confirmée et est en cours de traitement.
-        Un email de confirmation a été envoyé à votre adresse.
+        <?= __('success.order_confirmed', ['id' => $order['id'] ?? '---']) ?>
+        <?= __('success.confirmation_email') ?>
       </p>
 
       <!-- Order details summary -->
       <div class="p-6 mb-6 text-left rounded-lg bg-gray-50">
-        <h2 class="mb-4 text-lg font-medium text-gray-800">Détails de la commande</h2>
+        <h2 class="mb-4 text-lg font-medium text-gray-800"><?= __('success.order_details') ?></h2>
 
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Date de la commande</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('success.order_date') ?></h3>
             <p class="text-gray-600">
               <?= isset($order['created_at']) ? date('d/m/Y à H:i', strtotime($order['created_at'])) : date('d/m/Y à H:i') ?>
             </p>
           </div>
 
           <div>
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Montant total</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('success.total_amount') ?></h3>
             <p class="text-gray-600">
               <?= isset($order['total']) ? number_format($order['total'], 2, ',', ' ') . ' €' : '---' ?>
             </p>
           </div>
 
           <div>
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Méthode de paiement</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('success.payment_method') ?></h3>
             <p class="text-gray-600">
               <?php
               if (isset($order['payment_method'])) {
                 switch ($order['payment_method']) {
                   case 'card':
-                    echo 'Carte bancaire';
+                    echo __('checkout.card');
                     break;
                   case 'paypal':
                     echo 'PayPal';
@@ -62,31 +62,31 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
                     echo ucfirst($order['payment_method']);
                 }
               } else {
-                echo 'Carte bancaire';
+                echo __('checkout.card');
               }
               ?>
             </p>
           </div>
 
           <div>
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Statut</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('success.status') ?></h3>
             <p>
               <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
-                Confirmée
+                <?= __('success.confirmed') ?>
               </span>
             </p>
           </div>
 
           <div>
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Mode de livraison</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('success.shipping_method') ?></h3>
             <p class="text-gray-600">
               <?= htmlspecialchars($shippingMethodName) ?>
-              (<?= $shippingCost > 0 ? number_format($shippingCost, 2, ',', ' ') . ' €' : 'Gratuit' ?>)
+              (<?= $shippingCost > 0 ? number_format($shippingCost, 2, ',', ' ') . ' €' : __('general.free') ?>)
             </p>
           </div>
 
           <div>
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Délai de livraison estimé</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('success.estimated_delivery') ?></h3>
             <p class="text-gray-600">
               <?= htmlspecialchars($estimatedDelivery) ?>
             </p>
@@ -99,7 +99,7 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
           if ($shippingAddress):
           ?>
             <div class="pt-4 mt-4 border-t border-gray-200">
-              <h3 class="mb-2 text-sm font-medium text-gray-700">Adresse de livraison</h3>
+              <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('success.shipping_address') ?></h3>
               <p class="text-gray-600">
                 <?= htmlspecialchars($shippingAddress['first_name'] . ' ' . $shippingAddress['last_name']) ?><br>
                 <?= htmlspecialchars($shippingAddress['address']) ?><br>
@@ -116,15 +116,15 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
 
       <!-- Next steps -->
       <div class="mb-8 text-left">
-        <h2 class="mb-4 text-lg font-medium text-gray-800">Prochaines étapes</h2>
+        <h2 class="mb-4 text-lg font-medium text-gray-800"><?= __('success.next_steps') ?></h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div class="p-4 border border-gray-200 rounded-lg">
             <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full singer-red">
               <i class="fas fa-shipping-fast"></i>
             </div>
-            <h3 class="mb-1 text-sm font-medium text-gray-800">Préparation de la commande</h3>
+            <h3 class="mb-1 text-sm font-medium text-gray-800"><?= __('success.order_preparation') ?></h3>
             <p class="text-xs text-gray-600">
-              Votre commande est en cours de préparation dans nos entrepôts
+              <?= __('success.order_preparation_message') ?>
             </p>
           </div>
 
@@ -132,9 +132,9 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
             <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full singer-red">
               <i class="fas fa-truck"></i>
             </div>
-            <h3 class="mb-1 text-sm font-medium text-gray-800">Expédition</h3>
+            <h3 class="mb-1 text-sm font-medium text-gray-800"><?= __('success.shipping') ?></h3>
             <p class="text-xs text-gray-600">
-              Vous recevrez un email dès que votre colis sera expédié
+              <?= __('success.shipping_message') ?>
             </p>
           </div>
 
@@ -142,9 +142,9 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
             <div class="flex items-center justify-center w-10 h-10 mb-3 text-white rounded-full singer-red">
               <i class="fas fa-box-open"></i>
             </div>
-            <h3 class="mb-1 text-sm font-medium text-gray-800">Livraison</h3>
+            <h3 class="mb-1 text-sm font-medium text-gray-800"><?= __('success.delivery') ?></h3>
             <p class="text-xs text-gray-600">
-              <?= $shippingMethod ? htmlspecialchars($shippingMethod['estimated_delivery']) : 'Livraison estimée sous 3 à 5 jours ouvrés' ?>
+              <?= $shippingMethod ? htmlspecialchars($shippingMethod['estimated_delivery']) : __('success.delivery_message') ?>
             </p>
           </div>
         </div>
@@ -153,10 +153,10 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
       <!-- Action buttons -->
       <div class="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
         <a href="/account/orders" class="flex-1 px-6 py-3 font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
-          Voir mes commandes
+          <?= __('success.view_orders') ?>
         </a>
         <a href="/products" class="flex-1 px-6 py-3 font-medium text-center transition border rounded-full singer-red-text singer-red-border hover:bg-red-600 hover:text-white">
-          Continuer mes achats
+          <?= __('success.continue_shopping') ?>
         </a>
       </div>
     </div>

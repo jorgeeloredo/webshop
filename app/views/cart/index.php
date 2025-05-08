@@ -21,9 +21,9 @@ function getImageUrl($image)
 
 <div class="px-4 py-8 site-container">
   <div class="mb-6">
-    <h1 class="text-2xl font-normal text-gray-800">Votre panier</h1>
+    <h1 class="text-2xl font-normal text-gray-800"><?= __('cart.your_cart') ?></h1>
     <p class="text-sm text-gray-600">
-      <?= $totalQuantity ?> article<?= $totalQuantity > 1 ? 's' : '' ?> dans votre panier
+      <?= $totalQuantity ?> <?= __('cart.items_in_cart') ?>
     </p>
   </div>
 
@@ -35,13 +35,13 @@ function getImageUrl($image)
           <!-- Table header -->
           <div class="hidden grid-cols-12 gap-4 p-4 border-b border-gray-200 sm:grid">
             <div class="col-span-7">
-              <span class="text-sm font-medium text-gray-700">Produit</span>
+              <span class="text-sm font-medium text-gray-700"><?= __('cart.product') ?></span>
             </div>
             <div class="col-span-2 text-center">
-              <span class="text-sm font-medium text-gray-700">Quantité</span>
+              <span class="text-sm font-medium text-gray-700"><?= __('cart.quantity') ?></span>
             </div>
             <div class="col-span-3 text-right">
-              <span class="text-sm font-medium text-gray-700">Prix</span>
+              <span class="text-sm font-medium text-gray-700"><?= __('cart.price') ?></span>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ function getImageUrl($image)
                   </div>
                   <div class="mt-2">
                     <button type="button" class="text-xs text-gray-500 hover:text-red-600 remove-item" data-item-id="<?= $itemId ?>">
-                      <i class="mr-1 fas fa-trash-alt"></i> Supprimer
+                      <i class="mr-1 fas fa-trash-alt"></i> <?= __('cart.remove') ?>
                     </button>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ function getImageUrl($image)
                     <?php endif; ?>
                   </h3>
                   <button type="button" class="text-xs text-gray-500 hover:text-red-600 remove-item" data-item-id="<?= $itemId ?>">
-                    <i class="mr-1 fas fa-trash-alt"></i> Supprimer
+                    <i class="mr-1 fas fa-trash-alt"></i> <?= __('cart.remove') ?>
                   </button>
                 </div>
               </div>
@@ -151,7 +151,7 @@ function getImageUrl($image)
         <div class="mt-6">
           <a href="/products" class="inline-flex items-center text-sm text-gray-600 hover:text-red-600">
             <i class="mr-2 fas fa-chevron-left"></i>
-            Continuer mes achats
+            <?= __('cart.continue_shopping') ?>
           </a>
         </div>
       </div>
@@ -159,11 +159,11 @@ function getImageUrl($image)
       <!-- Order summary (right side) -->
       <div class="lg:col-span-1">
         <div class="p-6 bg-white border border-gray-200 rounded-lg">
-          <h2 class="mb-4 text-lg font-medium text-gray-800">Récapitulatif</h2>
+          <h2 class="mb-4 text-lg font-medium text-gray-800"><?= __('cart.summary') ?></h2>
 
           <!-- Shipping Methods Selection -->
           <div class="mb-4">
-            <h3 class="mb-2 text-sm font-medium text-gray-700">Mode de livraison</h3>
+            <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('cart.shipping_method') ?></h3>
 
             <div class="space-y-2">
               <?php foreach ($shippingMethods as $code => $method): ?>
@@ -182,7 +182,7 @@ function getImageUrl($image)
                   <span class="text-sm font-medium">
                     <?php
                     $methodCost = \App\Helpers\Shipping::calculateCost($code, $totalPrice);
-                    echo $methodCost > 0 ? number_format($methodCost, 2, ',', ' ') . ' €' : 'Gratuit';
+                    echo $methodCost > 0 ? number_format($methodCost, 2, ',', ' ') . ' €' : __('general.free');
                     ?>
                   </span>
                 </div>
@@ -192,37 +192,37 @@ function getImageUrl($image)
 
           <div class="mb-4 space-y-2">
             <div class="flex justify-between text-sm">
-              <span class="text-gray-600">Sous-total</span>
+              <span class="text-gray-600"><?= __('cart.subtotal') ?></span>
               <span class="font-medium text-gray-800"><?= number_format($totalPrice, 2, ',', ' ') ?> €</span>
             </div>
             <div class="flex justify-between text-sm">
-              <span class="text-gray-600">Frais de livraison</span>
+              <span class="text-gray-600"><?= __('cart.shipping_cost') ?></span>
               <span class="font-medium text-gray-800" id="shipping-cost-display">
-                <?= $shippingCost > 0 ? number_format($shippingCost, 2, ',', ' ') . ' €' : 'Gratuit' ?>
+                <?= $shippingCost > 0 ? number_format($shippingCost, 2, ',', ' ') . ' €' : __('general.free') ?>
               </span>
             </div>
           </div>
 
           <div class="pt-4 mb-6 border-t border-gray-200">
             <div class="flex justify-between">
-              <span class="text-base font-medium text-gray-800">Total</span>
+              <span class="text-base font-medium text-gray-800"><?= __('cart.total') ?></span>
               <span class="text-base font-bold text-gray-800" id="final-total-display">
                 <?= number_format($finalTotal, 2, ',', ' ') ?> €
               </span>
             </div>
             <?php if ($cart->getRemainingForFreeShipping() > 0): ?>
               <p class="mt-2 text-xs text-gray-500" id="free-shipping-message">
-                Plus que <?= number_format($cart->getRemainingForFreeShipping(), 2, ',', ' ') ?> € d'achat pour bénéficier de la livraison gratuite
+                <?= __('cart.free_shipping_remaining', ['amount' => number_format($cart->getRemainingForFreeShipping(), 2, ',', ' ')]) ?>
               </p>
             <?php else: ?>
-              <p class="mt-2 text-xs text-green-600" id="free-shipping-message">Vous bénéficiez de la livraison gratuite!</p>
+              <p class="mt-2 text-xs text-green-600" id="free-shipping-message"><?= __('cart.free_shipping_achieved') ?></p>
             <?php endif; ?>
           </div>
 
-          <a
-            href="/checkout"
-            class="block w-full py-3 text-base font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
-            Passer la commande
+
+          href="/checkout"
+          class="block w-full py-3 text-base font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
+          <?= __('cart.checkout') ?>
           </a>
 
           <div class="flex flex-col mt-4 space-y-2">
@@ -233,7 +233,7 @@ function getImageUrl($image)
             </div>
             <div class="flex items-center">
               <i class="mr-2 text-green-600 fas fa-lock"></i>
-              <span class="text-xs text-gray-500">Paiement 100% sécurisé</span>
+              <span class="text-xs text-gray-500"><?= __('cart.secure_payment') ?></span>
             </div>
           </div>
         </div>
@@ -260,10 +260,10 @@ function getImageUrl($image)
       <div class="flex justify-center mb-4">
         <i class="text-5xl text-gray-300 fas fa-shopping-cart"></i>
       </div>
-      <h2 class="mb-2 text-xl font-medium text-gray-800">Votre panier est vide</h2>
-      <p class="mb-6 text-gray-600">Parcourez notre catalogue et découvrez nos produits.</p>
+      <h2 class="mb-2 text-xl font-medium text-gray-800"><?= __('cart.empty_cart') ?></h2>
+      <p class="mb-6 text-gray-600"><?= __('cart.empty_cart_message') ?></p>
       <a href="/products" class="px-6 py-3 text-white transition rounded-full singer-red hover:bg-red-700">
-        Découvrir nos produits
+        <?= __('cart.discover_products') ?>
       </a>
     </div>
   <?php endif; ?>
