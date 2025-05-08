@@ -79,7 +79,7 @@ class OrderController extends Controller
       $shippingMethods = Shipping::getMethods();
 
       // Just display the checkout page without requiring login
-      $this->view('orders/checkout_redesigned', [
+      $this->view('orders/checkout', [
         'title' => 'Finaliser la commande',
         'cart' => $this->cartModel,
         'shippingMethods' => $shippingMethods
@@ -254,7 +254,7 @@ class OrderController extends Controller
 
     // If validation fails, return to checkout form with errors
     if (!empty($errors)) {
-      $this->view('orders/checkout_redesigned', [
+      $this->view('orders/checkout', [
         'title' => 'Finaliser la commande',
         'cart' => $this->cartModel,
         'errors' => $errors,

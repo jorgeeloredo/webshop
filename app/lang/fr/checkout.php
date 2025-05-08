@@ -22,11 +22,6 @@ return [
 
   // Shipping information
   'shipping_address' => 'Adresse de livraison',
-  'address' => 'Adresse',
-  'address2' => 'Complément d\'adresse',
-  'city' => 'Ville',
-  'postal_code' => 'Code postal',
-  'country' => 'Pays',
   'shipping_method' => 'Mode de livraison',
 
   // Billing information
@@ -40,6 +35,12 @@ return [
 
   // Order summary
   'order_summary' => 'Récapitulatif de la commande',
+  'subtotal' => 'Sous-total',
+  'shipping_cost' => 'Frais de livraison',
+  'free' => 'Gratuit',
+  'total' => 'Total',
+  'free_shipping_remaining' => 'Plus que :amount € d\'achat pour bénéficier de la livraison gratuite',
+  'free_shipping_achieved' => 'Vous bénéficiez de la livraison gratuite!',
   'place_order' => 'Commander',
   'agree_terms' => 'En passant votre commande, vous acceptez nos',
   'terms_of_sale' => 'conditions générales de vente',

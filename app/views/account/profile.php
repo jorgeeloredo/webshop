@@ -15,9 +15,9 @@ if (isset($_SESSION['success'])) {
 <div class="px-4 py-8 bg-gray-50">
   <div class="site-container">
     <div class="mb-6">
-      <h1 class="text-2xl font-normal text-gray-800">Mon profil</h1>
+      <h1 class="text-2xl font-normal text-gray-800"><?= __('profile.my_profile') ?></h1>
       <p class="text-sm text-gray-600">
-        Gérez vos informations personnelles
+        <?= __('profile.manage_info') ?>
       </p>
     </div>
 
@@ -28,24 +28,24 @@ if (isset($_SESSION['success'])) {
           <nav class="space-y-1">
             <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
               <i class="w-5 mr-2 fas fa-tachometer-alt"></i>
-              Tableau de bord
+              <?= __('dashboard.dashboard') ?>
             </a>
             <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
               <i class="w-5 mr-2 fas fa-shopping-bag"></i>
-              Mes commandes
+              <?= __('account.my_orders') ?>
             </a>
             <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md singer-red">
               <i class="w-5 mr-2 fas fa-user"></i>
-              Mon profil
+              <?= __('account.profile') ?>
             </a>
             <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
               <i class="w-5 mr-2 fas fa-map-marker-alt"></i>
-              Mes adresses
+              <?= __('account.addresses') ?>
             </a>
             <div class="pt-4 mt-4 border-t border-gray-200">
               <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
                 <i class="w-5 mr-2 fas fa-sign-out-alt"></i>
-                Déconnexion
+                <?= __('account.logout') ?>
               </a>
             </div>
           </nav>
@@ -61,13 +61,13 @@ if (isset($_SESSION['success'])) {
         <?php endif; ?>
 
         <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h2 class="mb-6 text-lg font-medium text-gray-800">Informations personnelles</h2>
+          <h2 class="mb-6 text-lg font-medium text-gray-800"><?= __('profile.personal_info') ?></h2>
 
           <form action="/account/profile" method="POST">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <!-- First Name -->
               <div>
-                <label for="first_name" class="block mb-1 text-sm font-medium text-gray-700">Prénom</label>
+                <label for="first_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('profile.first_name') ?></label>
                 <input
                   type="text"
                   id="first_name"
@@ -82,7 +82,7 @@ if (isset($_SESSION['success'])) {
 
               <!-- Last Name -->
               <div>
-                <label for="last_name" class="block mb-1 text-sm font-medium text-gray-700">Nom</label>
+                <label for="last_name" class="block mb-1 text-sm font-medium text-gray-700"><?= __('profile.last_name') ?></label>
                 <input
                   type="text"
                   id="last_name"
@@ -97,7 +97,7 @@ if (isset($_SESSION['success'])) {
 
               <!-- Email -->
               <div class="sm:col-span-2">
-                <label for="email" class="block mb-1 text-sm font-medium text-gray-700">Email</label>
+                <label for="email" class="block mb-1 text-sm font-medium text-gray-700"><?= __('profile.email') ?></label>
                 <input
                   type="email"
                   id="email"
@@ -112,11 +112,11 @@ if (isset($_SESSION['success'])) {
             </div>
 
             <div class="pt-6 mt-6 border-t border-gray-200">
-              <h3 class="mb-4 font-medium text-gray-800 text-md">Changer le mot de passe</h3>
+              <h3 class="mb-4 font-medium text-gray-800 text-md"><?= __('profile.change_password') ?></h3>
               <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <!-- Current Password -->
                 <div>
-                  <label for="current_password" class="block mb-1 text-sm font-medium text-gray-700">Mot de passe actuel</label>
+                  <label for="current_password" class="block mb-1 text-sm font-medium text-gray-700"><?= __('profile.current_password') ?></label>
                   <input
                     type="password"
                     id="current_password"
@@ -132,7 +132,7 @@ if (isset($_SESSION['success'])) {
 
                 <!-- New Password -->
                 <div>
-                  <label for="new_password" class="block mb-1 text-sm font-medium text-gray-700">Nouveau mot de passe</label>
+                  <label for="new_password" class="block mb-1 text-sm font-medium text-gray-700"><?= __('profile.new_password') ?></label>
                   <input
                     type="password"
                     id="new_password"
@@ -141,12 +141,12 @@ if (isset($_SESSION['success'])) {
                   <?php if (isset($errors['new_password'])): ?>
                     <p class="mt-1 text-xs text-red-600"><?= htmlspecialchars($errors['new_password']) ?></p>
                   <?php endif; ?>
-                  <p class="mt-1 text-xs text-gray-500">Minimum 8 caractères</p>
+                  <p class="mt-1 text-xs text-gray-500"><?= __('profile.min_char') ?></p>
                 </div>
 
                 <!-- Confirm New Password -->
                 <div>
-                  <label for="new_password_confirm" class="block mb-1 text-sm font-medium text-gray-700">Confirmer le nouveau mot de passe</label>
+                  <label for="new_password_confirm" class="block mb-1 text-sm font-medium text-gray-700"><?= __('profile.confirm_password') ?></label>
                   <input
                     type="password"
                     id="new_password_confirm"
@@ -161,7 +161,7 @@ if (isset($_SESSION['success'])) {
 
             <div class="flex justify-end mt-6">
               <button type="submit" class="px-6 py-2 text-white transition rounded-full singer-red hover:bg-red-700">
-                Mettre à jour le profil
+                <?= __('profile.update_profile') ?>
               </button>
             </div>
           </form>

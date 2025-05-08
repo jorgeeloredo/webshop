@@ -9,9 +9,9 @@ $recentOrders = $recentOrders ?? [];
 <div class="px-4 py-8 bg-gray-50">
   <div class="site-container">
     <div class="mb-6">
-      <h1 class="text-2xl font-normal text-gray-800">Mon compte</h1>
+      <h1 class="text-2xl font-normal text-gray-800"><?= __('dashboard.my_account') ?></h1>
       <p class="text-sm text-gray-600">
-        Bienvenue, <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?>
+        <?= __('dashboard.welcome') ?>, <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?>
       </p>
     </div>
 
@@ -22,24 +22,24 @@ $recentOrders = $recentOrders ?? [];
           <nav class="space-y-1">
             <a href="/account" class="flex items-center px-3 py-2 text-sm font-medium text-white rounded-md singer-red">
               <i class="w-5 mr-2 fas fa-tachometer-alt"></i>
-              Tableau de bord
+              <?= __('dashboard.dashboard') ?>
             </a>
             <a href="/account/orders" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
               <i class="w-5 mr-2 fas fa-shopping-bag"></i>
-              Mes commandes
+              <?= __('account.my_orders') ?>
             </a>
             <a href="/account/profile" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
               <i class="w-5 mr-2 fas fa-user"></i>
-              Mon profil
+              <?= __('account.profile') ?>
             </a>
             <a href="/account/addresses" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
               <i class="w-5 mr-2 fas fa-map-marker-alt"></i>
-              Mes adresses
+              <?= __('account.addresses') ?>
             </a>
             <div class="pt-4 mt-4 border-t border-gray-200">
               <a href="/logout" class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-50 hover:text-red-600">
                 <i class="w-5 mr-2 fas fa-sign-out-alt"></i>
-                Déconnexion
+                <?= __('account.logout') ?>
               </a>
             </div>
           </nav>
@@ -56,7 +56,7 @@ $recentOrders = $recentOrders ?? [];
                 <i class="fas fa-shopping-bag"></i>
               </div>
               <div>
-                <p class="text-sm text-gray-500">Commandes</p>
+                <p class="text-sm text-gray-500"><?= __('dashboard.orders') ?></p>
                 <p class="text-lg font-semibold text-gray-800"><?= count($recentOrders) ?></p>
               </div>
             </div>
@@ -68,7 +68,7 @@ $recentOrders = $recentOrders ?? [];
                 <i class="fas fa-star"></i>
               </div>
               <div>
-                <p class="text-sm text-gray-500">Points fidélité</p>
+                <p class="text-sm text-gray-500"><?= __('dashboard.loyalty_points') ?></p>
                 <p class="text-lg font-semibold text-gray-800">120</p>
               </div>
             </div>
@@ -80,7 +80,7 @@ $recentOrders = $recentOrders ?? [];
                 <i class="fas fa-gift"></i>
               </div>
               <div>
-                <p class="text-sm text-gray-500">Coupons disponibles</p>
+                <p class="text-sm text-gray-500"><?= __('dashboard.available_coupons') ?></p>
                 <p class="text-lg font-semibold text-gray-800">2</p>
               </div>
             </div>
@@ -90,16 +90,16 @@ $recentOrders = $recentOrders ?? [];
         <!-- Recent orders -->
         <div class="mb-6">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-medium text-gray-800">Commandes récentes</h2>
-            <a href="/account/orders" class="text-sm singer-red-text hover:underline">Voir toutes</a>
+            <h2 class="text-lg font-medium text-gray-800"><?= __('dashboard.recent_orders') ?></h2>
+            <a href="/account/orders" class="text-sm singer-red-text hover:underline"><?= __('dashboard.view_all') ?></a>
           </div>
 
           <?php if (empty($recentOrders)): ?>
             <div class="p-6 text-center bg-white border border-gray-200 rounded-lg">
               <i class="mb-2 text-3xl text-gray-300 fas fa-shopping-bag"></i>
-              <p class="text-gray-600">Vous n'avez pas encore passé de commande.</p>
+              <p class="text-gray-600"><?= __('dashboard.no_orders') ?></p>
               <a href="/products" class="inline-block px-4 py-2 mt-4 text-sm text-white transition rounded-full singer-red hover:bg-red-700">
-                Découvrir nos produits
+                <?= __('dashboard.discover_products') ?>
               </a>
             </div>
           <?php else: ?>
@@ -108,19 +108,19 @@ $recentOrders = $recentOrders ?? [];
                 <thead class="bg-gray-50">
                   <tr>
                     <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                      Commande
+                      <?= __('order.order_number') ?>
                     </th>
                     <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                      Date
+                      <?= __('order.date') ?>
                     </th>
                     <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                      Statut
+                      <?= __('order.status') ?>
                     </th>
                     <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-right text-gray-500 uppercase">
-                      Total
+                      <?= __('order.total') ?>
                     </th>
                     <th scope="col" class="px-4 py-3 text-xs font-medium tracking-wider text-right text-gray-500 uppercase">
-                      Action
+                      <?= __('general.actions') ?>
                     </th>
                   </tr>
                 </thead>
@@ -157,7 +157,7 @@ $recentOrders = $recentOrders ?? [];
                         }
                         ?>
                         <span class="inline-flex px-2 text-xs font-semibold leading-5 rounded-full <?= $statusClass ?>">
-                          <?= ucfirst($order['status']) ?>
+                          <?= __('order.status_' . $order['status']) ?>
                         </span>
                       </td>
                       <td class="px-4 py-4 text-right whitespace-nowrap">
@@ -167,7 +167,7 @@ $recentOrders = $recentOrders ?? [];
                       </td>
                       <td class="px-4 py-4 text-right whitespace-nowrap">
                         <a href="/account/orders/<?= $order['id'] ?>" class="text-sm singer-red-text hover:underline">
-                          Détails
+                          <?= __('order.details') ?>
                         </a>
                       </td>
                     </tr>
@@ -181,49 +181,49 @@ $recentOrders = $recentOrders ?? [];
         <!-- User info and quick links -->
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-            <h3 class="mb-3 text-base font-medium text-gray-800">Informations personnelles</h3>
+            <h3 class="mb-3 text-base font-medium text-gray-800"><?= __('dashboard.personal_info') ?></h3>
             <p class="mb-1 text-sm text-gray-600">
-              <span class="font-medium text-gray-800">Nom :</span>
+              <span class="font-medium text-gray-800"><?= __('account.first_name') ?> :</span>
               <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?>
             </p>
             <p class="mb-1 text-sm text-gray-600">
-              <span class="font-medium text-gray-800">Email :</span>
+              <span class="font-medium text-gray-800"><?= __('account.email') ?> :</span>
               <?= htmlspecialchars($user['email']) ?>
             </p>
             <p class="mb-4 text-sm text-gray-600">
-              <span class="font-medium text-gray-800">Membre depuis :</span>
+              <span class="font-medium text-gray-800"><?= __('dashboard.member_since') ?> :</span>
               <?= date('d/m/Y', strtotime($user['created_at'])) ?>
             </p>
             <a href="/account/profile" class="text-sm singer-red-text hover:underline">
-              Modifier mes informations
+              <?= __('dashboard.edit_info') ?>
             </a>
           </div>
 
           <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-            <h3 class="mb-3 text-base font-medium text-gray-800">Liens rapides</h3>
+            <h3 class="mb-3 text-base font-medium text-gray-800"><?= __('dashboard.quick_links') ?></h3>
             <ul class="space-y-2">
               <li>
                 <a href="/account/orders" class="flex items-center text-sm text-gray-600 hover:text-red-600">
                   <i class="w-5 mr-2 fas fa-shopping-bag"></i>
-                  Historique des commandes
+                  <?= __('dashboard.order_history') ?>
                 </a>
               </li>
               <li>
                 <a href="/account/addresses" class="flex items-center text-sm text-gray-600 hover:text-red-600">
                   <i class="w-5 mr-2 fas fa-map-marker-alt"></i>
-                  Gérer mes adresses
+                  <?= __('dashboard.manage_addresses') ?>
                 </a>
               </li>
               <li>
                 <a href="#" class="flex items-center text-sm text-gray-600 hover:text-red-600">
                   <i class="w-5 mr-2 fas fa-heart"></i>
-                  Mes favoris
+                  <?= __('dashboard.wishlist') ?>
                 </a>
               </li>
               <li>
                 <a href="#" class="flex items-center text-sm text-gray-600 hover:text-red-600">
                   <i class="w-5 mr-2 fas fa-gift"></i>
-                  Mes coupons
+                  <?= __('dashboard.my_coupons') ?>
                 </a>
               </li>
             </ul>
