@@ -6,9 +6,8 @@ public/favicon.ico
 public/robots.txt
 pages/*.php
 data/
+scripts/
 .env
 .env.local
 tailwind.config.js
-apply_discount.php
-fix-slugs.php
 test.html
