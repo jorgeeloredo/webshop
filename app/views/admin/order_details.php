@@ -123,11 +123,6 @@ $orderItems = isset($order['items']) ? $order['items'] : [];
                   <?= $order['email'] ?? 'N/A' ?>
                   <?= isset($order['guest_checkout']) && $order['guest_checkout'] ? ' (' . __('admin.guest') . ')' : '' ?>
                 </p>
-                <?php if (isset($order['user_id']) && $order['user_id']): ?>
-                  <p class="mt-1 text-sm text-gray-600">
-                    ID <?= __('admin.user') ?>: <?= $order['user_id'] ?>
-                  </p>
-                <?php endif; ?>
               </div>
               <div>
                 <h3 class="mb-2 text-sm font-medium text-gray-700"><?= __('order.payment_method') ?></h3>

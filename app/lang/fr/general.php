@@ -46,6 +46,7 @@ return [
   'delete' => 'Supprimer',
   'save' => 'Enregistrer',
   'update' => 'Mettre à jour',
+  'actions' => 'Action',
 
   // Common texts
   'all_products' => 'Tous nos produits',

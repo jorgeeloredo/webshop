@@ -19,4 +19,5 @@ return [
   'update_status' => 'Mettre à jour le statut',
   'print_order' => 'Imprimer la commande',
   'contact_customer' => 'Contacter le client',
+  'back_to_orders' => 'Retour aux commandes ',
 ];

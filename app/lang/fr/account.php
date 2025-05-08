@@ -13,6 +13,7 @@ return [
   'login_error' => 'Email ou mot de passe incorrect',
   'login_required' => 'Vous devez être connecté pour accéder à cette page',
   'login_button' => 'Se connecter',
+  'logout' => 'Déconnexion',
 
   // Register
   'register' => 'Créer un compte',
