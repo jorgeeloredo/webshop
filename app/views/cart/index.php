@@ -336,7 +336,7 @@ function getImageUrl($image)
         button.addEventListener('click', function() {
           const itemId = this.getAttribute('data-item-id');
 
-          if (confirm('Êtes-vous sûr de vouloir supprimer cet article ?')) {
+          if (confirm('<?= __('cart.confirm_remove'); ?>')) {
             removeItemId.value = itemId;
             removeForm.submit();
           }
@@ -370,11 +370,11 @@ function getImageUrl($image)
 
                 // Update free shipping message if needed
                 if (data.freeShippingRemaining > 0) {
-                  freeShippingMessage.textContent = `Plus que ${data.freeShippingRemaining} € d'achat pour bénéficier de la livraison gratuite`;
+                  freeShippingMessage.textContent = `<?= __('cart.free_shipping_remaining', ['amount' => '300']); ?>`;
                   freeShippingMessage.classList.remove('text-green-600');
                   freeShippingMessage.classList.add('text-gray-500');
                 } else {
-                  freeShippingMessage.textContent = 'Vous bénéficiez de la livraison gratuite!';
+                  freeShippingMessage.textContent = '<?= __('cart.free_shipping_achieved'); ?>';
                   freeShippingMessage.classList.remove('text-gray-500');
                   freeShippingMessage.classList.add('text-green-600');
                 }

@@ -6,25 +6,25 @@
   <div class="w-full py-8 border-b border-gray-200">
     <div class="grid grid-cols-1 gap-6 px-4 site-container md:grid-cols-2 lg:grid-cols-4">
       <div class="flex flex-col items-center text-center">
-        <img src="/assets/images/footer1.png" alt="<?= __('general.shipping') ?>" />
+        <img src="/assets/images/footer1.png" alt="<?= __('general.free_shipping') ?>" />
         <p class="font-medium text-gray-800"><?= __('general.free_shipping') ?></p>
         <p class="text-sm text-gray-600"><?= __('general.from_amount', ['amount' => '300']) ?></p>
       </div>
 
       <div class="flex flex-col items-center text-center">
-        <img src="/assets/images/footer2.png" alt="<?= __('general.payment') ?>" />
+        <img src="/assets/images/footer2.png" alt="<?= __('general.payment_installments') ?>" />
         <p class="font-medium text-gray-800"><?= __('general.payment_installments') ?></p>
         <p class="text-sm text-gray-600"><?= __('general.no_fees') ?></p>
       </div>
 
       <div class="flex flex-col items-center text-center">
-        <img src="/assets/images/footer3.png" alt="<?= __('general.returns') ?>" />
+        <img src="/assets/images/footer3.png" alt="<?= __('general.free_returns') ?>" />
         <p class="font-medium text-gray-800"><?= __('general.free_returns') ?></p>
         <p class="text-sm text-gray-600"><?= __('general.within_days', ['days' => '30']) ?></p>
       </div>
 
       <div class="flex flex-col items-center text-center">
-        <img src="/assets/images/footer4.png" alt="<?= __('general.contact') ?>" />
+        <img src="/assets/images/footer4.png" alt="<?= __('general.need_help') ?>" />
         <p class="font-medium text-gray-800"><?= __('general.need_help') ?></p>
         <p class="text-sm text-gray-600"><?= __('general.contact_us') ?> <a href="#" class="text-red-600 hover:underline"><?= __('general.here') ?></a></p>
       </div>

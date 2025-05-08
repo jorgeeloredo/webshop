@@ -21,4 +21,5 @@ return [
   'secure_payment' => 'Paiement 100% sécurisé',
   'remove' => 'Supprimer',
   'continue_shopping' => 'Continuer mes achats',
+  'confirm_remove' => 'Êtes-vous sûr de vouloir supprimer cet article ?',
 ];
