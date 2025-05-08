@@ -13,10 +13,14 @@ class Database
 
   private function __construct()
   {
-    $host = getenv('DB_HOST') ?: 'localhost';
-    $db = getenv('DB_NAME') ?: 'singer2';
-    $user = getenv('DB_USER') ?: 'root';
-    $password = getenv('DB_PASSWORD') ?: 'password';
+    // Get database configuration from config file
+    $config = require __DIR__ . '/../config/config.php';
+    $dbConfig = $config['database'];
+
+    $host = $dbConfig['host'];
+    $db = $dbConfig['name'];
+    $user = $dbConfig['user'];
+    $password = $dbConfig['password'];
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host={$host};dbname={$db};charset={$charset}";

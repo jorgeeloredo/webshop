@@ -12,6 +12,10 @@ define('APP_ROOT', dirname(__DIR__));
 // Load Composer's autoloader
 require_once APP_ROOT . '/vendor/autoload.php';
 
+// Load environment variables from .env file
+$dotenv = Dotenv\Dotenv::createImmutable(APP_ROOT);
+$dotenv->safeLoad(); // Won't error if .env is missing
+
 // Initialize language helper
 \App\Helpers\Language::getInstance();
 

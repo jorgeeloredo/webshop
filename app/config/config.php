@@ -4,21 +4,21 @@
 return [
   'app' => [
     'name' => 'Singer Shop',
-    'url' => $_ENV['APP_URL'] ?? 'http://singer.shop',
+    'url' => $_ENV['APP_URL'],
     'env' => $_ENV['APP_ENV'] ?? 'development',
     'debug' => $_ENV['APP_DEBUG'] ?? false,
   ],
 
   'language' => [
-    'default' => 'fr',     // Default language (fr or en)
+    'default' => 'en',     // Default language (fr or en)
     'available' => ['fr', 'en'], // Available languages
   ],
 
   'database' => [
-    'host' => $_ENV['DB_HOST'] ?? '127.0.0.1',
-    'name' => $_ENV['DB_NAME'] ?? 'singer2',
-    'user' => $_ENV['DB_USER'] ?? 'root',
-    'password' => $_ENV['DB_PASSWORD'] ?? 'password',
+    'host' => $_ENV['DB_HOST'],
+    'name' => $_ENV['DB_NAME'],
+    'user' => $_ENV['DB_USER'],
+    'password' => $_ENV['DB_PASSWORD'],
   ],
 
   'mail' => [
@@ -29,7 +29,7 @@ return [
     'encryption' => $_ENV['MAIL_ENCRYPTION'] ?? 'tls',
     'from_address' => $_ENV['MAIL_FROM_ADDRESS'] ?? 'noreply@singer-fr.com',
     'from_name' => $_ENV['MAIL_FROM_NAME'] ?? 'Singer France',
-    'zeptomail_api_key' => $_ENV['ZEPTOMAIL_API_KEY'] ?? 'Zoho-enczapikey yA6KbHtZ7Qmjlj8EFhJu0MOO8I80+K9viXy05yq3fsFxf9To3qFp3hRvK4OzJzKL3IXQs/1QP90TI9i47NpXdsI8ZtMHLJTGTuv4P2uV48xh8ciEYNYih56pAbcUGq5PeRklDyQzRvht',
+    'zeptomail_api_key' => $_ENV['ZEPTOMAIL_API_KEY'] ?? '',
   ],
 
   'session' => [

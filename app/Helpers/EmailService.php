@@ -16,7 +16,7 @@ class EmailService
   {
     $config = require __DIR__ . '/../config/config.php';
 
-    $this->apiKey = $config['mail']['zeptomail_api_key'] ?? 'Zoho-enczapikey my-key';
+    $this->apiKey = $config['mail']['zeptomail_api_key'] ?? '';
     $this->senderEmail = $config['mail']['from_address'] ?? 'noreply@singerfrance.com';
     $this->senderName = $config['mail']['from_name'] ?? 'Singer';
     $this->apiEndpoint = 'https://api.zeptomail.eu/v1.1/email';
