@@ -449,7 +449,7 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "<?= htmlspecialchars($product['name']) ?>",
-      "image": "<?= (isset($product['images'][0])) ? getImageUrl($product['images'][0]) : '' ?>",
+      "image": "<?= (isset($ogImage)) ? $ogImage : '' ?>",
       "description": "<?= htmlspecialchars(strip_tags($product['description'])) ?>",
       "sku": "<?= htmlspecialchars($product['sku']) ?>",
       <?php if (isset($product['gtin']) && !empty($product['gtin'])): ?> "gtin13": "<?= htmlspecialchars($product['gtin']) ?>",

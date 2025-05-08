@@ -20,4 +20,7 @@ return [
   'print_order' => 'Imprimer la commande',
   'contact_customer' => 'Contacter le client',
   'back_to_orders' => 'Retour aux commandes ',
+  'status_updated' => 'Statut de la commande mis à jour avec succès.',
+  'status_update_failed' => 'Échec de la mise à jour du statut de la commande.',
+  'invalid_order_or_status' => 'Identifiant de commande ou statut invalide.',
 ];

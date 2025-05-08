@@ -54,8 +54,8 @@ class OrderController extends Controller
     // Check if order exists and belongs to the user
     if (!$order || $order['user_id'] != $userId) {
       $this->view('error/404', [
-        'message' => 'Commande non trouvée',
-        'title' => '404 - Commande non trouvée'
+        'message' => __('error.order_not_found'),
+        'title' => '404 - ' . __('error.order_not_found')
       ]);
       return;
     }
@@ -189,67 +189,67 @@ class OrderController extends Controller
 
     // Basic validation for shipping address
     if (empty($shippingAddress['first_name'])) {
-      $errors['shipping_first_name'] = 'Le prénom est requis';
+      $errors['shipping_first_name'] = __('validation.shipping_first_name_required');
     }
 
     if (empty($shippingAddress['last_name'])) {
-      $errors['shipping_last_name'] = 'Le nom est requis';
+      $errors['shipping_last_name'] = __('validation.shipping_last_name_required');
     }
 
     if (empty($shippingAddress['address'])) {
-      $errors['shipping_address'] = 'L\'adresse est requise';
+      $errors['shipping_address'] = __('validation.shipping_address_required');
     }
 
     if (empty($shippingAddress['city'])) {
-      $errors['shipping_city'] = 'La ville est requise';
+      $errors['shipping_city'] = __('validation.shipping_city_required');
     }
 
     if (empty($shippingAddress['postal_code'])) {
-      $errors['shipping_postal_code'] = 'Le code postal est requis';
+      $errors['shipping_postal_code'] = __('validation.shipping_postal_code_required');
     }
 
     if (empty($shippingAddress['country'])) {
-      $errors['shipping_country'] = 'Le pays est requis';
+      $errors['shipping_country'] = __('validation.shipping_country_required');
     }
 
     if (empty($shippingAddress['phone'])) {
-      $errors['shipping_phone'] = 'Le téléphone est requis';
+      $errors['shipping_phone'] = __('validation.shipping_phone_required');
     }
 
     // Check billing fields if not same as shipping
     if (!$sameAsBilling) {
       if (empty($billingAddress['first_name'])) {
-        $errors['billing_first_name'] = 'Le prénom est requis';
+        $errors['billing_first_name'] = __('validation.shipping_first_name_required');
       }
 
       if (empty($billingAddress['last_name'])) {
-        $errors['billing_last_name'] = 'Le nom est requis';
+        $errors['billing_last_name'] = __('validation.shipping_last_name_required');
       }
 
       if (empty($billingAddress['address'])) {
-        $errors['billing_address'] = 'L\'adresse est requise';
+        $errors['billing_address'] = __('validation.shipping_address_required');
       }
 
       if (empty($billingAddress['city'])) {
-        $errors['billing_city'] = 'La ville est requise';
+        $errors['billing_city'] = __('validation.shipping_city_required');
       }
 
       if (empty($billingAddress['postal_code'])) {
-        $errors['billing_postal_code'] = 'Le code postal est requis';
+        $errors['billing_postal_code'] = __('validation.shipping_postal_code_required');
       }
 
       if (empty($billingAddress['country'])) {
-        $errors['billing_country'] = 'Le pays est requis';
+        $errors['billing_country'] = __('validation.shipping_country_required');
       }
 
       if (empty($billingAddress['phone'])) {
-        $errors['billing_phone'] = 'Le téléphone est requis';
+        $errors['billing_phone'] = __('validation.shipping_phone_required');
       }
     }
 
     // Validate shipping method
     if (empty($shippingMethod) || !Shipping::getMethod($shippingMethod)) {
-      $errors['shipping_method'] = 'Le mode de livraison est invalide';
+      $errors['shipping_method'] = __('validation.shipping_method_invalid');
     }
 
     // If validation fails, return to checkout form with errors

@@ -50,6 +50,7 @@ return [
 
   // Common texts
   'all_products' => 'Tous nos produits',
+  'all_categories' => 'Toutes nos catégories',
   'free' => 'Gratuit',
   'home' => 'Accueil',
   'in_stock' => 'En stock',

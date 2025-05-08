@@ -44,13 +44,13 @@ class AccountController extends Controller
     $errors = [];
 
     if (empty($email)) {
-      $errors['email'] = 'L\'email est requis';
+      $errors['email'] = __('validation.email_required');
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $errors['email'] = 'Email invalide';
+      $errors['email'] = __('validation.email_invalid');
     }
 
     if (empty($password)) {
-      $errors['password'] = 'Le mot de passe est requis';
+      $errors['password'] = __('validation.password_required');
     }
 
     // If validation fails, return to login form with errors
@@ -149,13 +149,13 @@ class AccountController extends Controller
     }
 
     if (empty($password)) {
-      $errors['password'] = 'Le mot de passe est requis';
+      $errors['password'] = __('validation.password_required');
     } elseif (strlen($password) < 8) {
-      $errors['password'] = 'Le mot de passe doit contenir au moins 8 caractères';
+      $errors['password'] = __('validation.password_min_length');
     }
 
     if ($password !== $passwordConfirm) {
-      $errors['password_confirm'] = 'Les mots de passe ne correspondent pas';
+      $errors['password_confirm'] = __('validation.passwords_dont_match');
     }
 
     // If validation fails, return to register form with errors
@@ -332,7 +332,7 @@ class AccountController extends Controller
     $this->userModel->update($user['id'], $userData);
 
     // Redirect back to profile with success message
-    $_SESSION['success'] = 'Votre profil a été mis à jour avec succès';
+    $_SESSION['success'] = __('account.profile_updated');
     $this->redirect('/account/profile');
   }
   public function addresses()
@@ -399,7 +399,7 @@ class AccountController extends Controller
 
     // Process the form data here
     // For now, we'll just redirect with a success message
-    $_SESSION['success'] = 'Adresse ajoutée avec succès.';
+    $_SESSION['success'] = __('account.address_added');
     $this->redirect('/account/addresses');
   }
 
@@ -418,7 +418,7 @@ class AccountController extends Controller
 
     // Process the form data here
     // For now, we'll just redirect with a success message
-    $_SESSION['success'] = 'Adresse mise à jour avec succès.';
+    $_SESSION['success'] = __('account.address_updated');
     $this->redirect('/account/addresses');
   }
 
@@ -437,7 +437,7 @@ class AccountController extends Controller
 
     // Process the deletion here
     // For now, we'll just redirect with a success message
-    $_SESSION['success'] = 'Adresse supprimée avec succès.';
+    $_SESSION['success'] = __('account.address_deleted');
     $this->redirect('/account/addresses');
   }
 }

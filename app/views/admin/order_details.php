@@ -219,7 +219,7 @@ $orderItems = isset($order['items']) ? $order['items'] : [];
                   <?= htmlspecialchars($shippingAddress['postal_code'] . ' ' . $shippingAddress['city']) ?><br>
                   <?= htmlspecialchars($shippingAddress['country']) ?><br>
                   <?php if (!empty($shippingAddress['phone'])): ?>
-                    Tél: <?= htmlspecialchars($shippingAddress['phone']) ?>
+                    <?= __('account.phone'); ?>: <?= htmlspecialchars($shippingAddress['phone']) ?>
                   <?php endif; ?>
                 </p>
               </div>
@@ -237,7 +237,7 @@ $orderItems = isset($order['items']) ? $order['items'] : [];
                   <?= htmlspecialchars($billingAddress['postal_code'] . ' ' . $billingAddress['city']) ?><br>
                   <?= htmlspecialchars($billingAddress['country']) ?><br>
                   <?php if (!empty($billingAddress['phone'])): ?>
-                    Tél: <?= htmlspecialchars($billingAddress['phone']) ?>
+                    <?= __('account.phone'); ?>: <?= htmlspecialchars($billingAddress['phone']) ?>
                   <?php endif; ?>
                 </p>
               </div>

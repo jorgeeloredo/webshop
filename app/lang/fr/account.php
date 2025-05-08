@@ -37,6 +37,7 @@ return [
   'no_orders' => 'Vous n\'avez pas encore passé de commande.',
   'discover_products' => 'Découvrir nos produits',
 
+
   // Profile
   'profile' => 'Mon profil',
   'manage_info' => 'Gérez vos informations personnelles',
@@ -66,6 +67,10 @@ return [
   'address_type' => 'Type d\'adresse',
   'set_default' => 'Définir comme adresse par défaut',
   'no_addresses' => 'Vous n\'avez pas encore enregistré d\'adresse.',
+  'profile_updated' => 'Votre profil a été mis à jour avec succès',
+  'address_added' => 'Adresse ajoutée avec succès.',
+  'address_updated' => 'Adresse mise à jour avec succès.',
+  'address_deleted' => 'Adresse supprimée avec succès.',
 
   // Orders
   'my_orders' => 'Mes commandes',

@@ -96,7 +96,7 @@ if (isset($_SESSION['success'])) {
                   <p><?= htmlspecialchars($address['postal_code'] . ' ' . $address['city']) ?></p>
                   <p><?= htmlspecialchars($address['country']) ?></p>
                   <?php if (!empty($address['phone'])): ?>
-                    <p>Tél: <?= htmlspecialchars($address['phone']) ?></p>
+                    <p><?= __('account.phone'); ?>: <?= htmlspecialchars($address['phone']) ?></p>
                   <?php endif; ?>
                 </div>
               </div>

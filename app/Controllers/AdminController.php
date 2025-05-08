@@ -91,7 +91,7 @@ class AdminController extends Controller
     $status = $_POST['status'] ?? '';
 
     if (!$orderId || !$status) {
-      $_SESSION['error'] = 'Identifiant de commande ou statut invalide.';
+      $_SESSION['error'] = __('admin.invalid_order_or_status');
       $this->redirect('/admin/orders');
       return;
     }
@@ -100,9 +100,9 @@ class AdminController extends Controller
     $success = $this->orderModel->updateStatus($orderId, $status);
 
     if ($success) {
-      $_SESSION['success'] = 'Statut de la commande mis à jour avec succès.';
+      $_SESSION['success'] = __('admin.status_updated');
     } else {
-      $_SESSION['error'] = 'Échec de la mise à jour du statut de la commande.';
+      $_SESSION['error'] = __('admin.status_update_failed');
     }
 
     $this->redirect('/admin/orders');

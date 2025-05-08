@@ -33,8 +33,8 @@ class ProductController extends Controller
       } else {
         // Category not found, show 404
         $this->view('error/404', [
-          'message' => 'Catégorie non trouvée',
-          'title' => '404 - Catégorie non trouvée'
+          'message' => __('error.category_not_found'),
+          'title' => '404 - ' . __('error.category_not_found')
         ]);
         return;
       }
@@ -44,7 +44,7 @@ class ProductController extends Controller
       'products' => $products,
       'categories' => $categories,
       'category' => $category ?? null,
-      'title' => isset($category) ? $category['name'] : 'Tous nos produits'
+      'title' => isset($category) ? $category['name'] : __('listing.all_products')
     ]);
   }
 
@@ -54,8 +54,8 @@ class ProductController extends Controller
 
     if (!$product) {
       $this->view('error/404', [
-        'message' => 'Produit non trouvé',
-        'title' => '404 - Produit non trouvé'
+        'message' => __('error.product_not_found'),
+        'title' => '404 - ' . __('error.product_not_found')
       ]);
       return;
     }

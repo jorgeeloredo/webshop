@@ -23,7 +23,7 @@ class CategoryController extends Controller
 
     $this->view('category/index', [
       'categories' => $categories,
-      'title' => 'Toutes nos catégories'
+      'title' => __('general.all_categories')
     ]);
   }
 
@@ -33,8 +33,8 @@ class CategoryController extends Controller
 
     if (!$category) {
       $this->view('error/404', [
-        'message' => 'Catégorie non trouvée',
-        'title' => '404 - Catégorie non trouvée'
+        'message' => __('error.category_not_found'),
+        'title' => '404 - ' . __('error.category_not_found')
       ]);
       return;
     }

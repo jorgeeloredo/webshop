@@ -40,7 +40,7 @@ class HomeController extends Controller
     $this->view('home/index', [
       'featuredProducts' => $featuredProducts,
       'categories' => $categories,
-      'title' => 'Accueil'
+      'title' => __('general.home')
     ]);
   }
 }
