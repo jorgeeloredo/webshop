@@ -25,7 +25,7 @@ class AccountController extends Controller
     }
 
     $this->view('account/login', [
-      'title' => 'Connexion'
+      'title' => __('account.login')
     ]);
   }
 
@@ -56,7 +56,7 @@ class AccountController extends Controller
     // If validation fails, return to login form with errors
     if (!empty($errors)) {
       $this->view('account/login', [
-        'title' => 'Connexion',
+        'title' => __('account.login'),
         'errors' => $errors,
         'old' => [
           'email' => $email,
@@ -71,8 +71,8 @@ class AccountController extends Controller
 
     if (!$user) {
       $this->view('account/login', [
-        'title' => 'Connexion',
-        'error' => 'Email ou mot de passe incorrect',
+        'title' => __('account.login'),
+        'error' => __('account.login_error'),
         'old' => [
           'email' => $email,
           'remember' => $remember
@@ -111,7 +111,7 @@ class AccountController extends Controller
     }
 
     $this->view('account/register', [
-      'title' => 'Créer un compte'
+      'title' => __('account.register')
     ]);
   }
 
@@ -133,19 +133,19 @@ class AccountController extends Controller
     $errors = [];
 
     if (empty($firstName)) {
-      $errors['first_name'] = 'Le prénom est requis';
+      $errors['first_name'] = __('validation.first_name_required');
     }
 
     if (empty($lastName)) {
-      $errors['last_name'] = 'Le nom est requis';
+      $errors['last_name'] = __('validation.last_name_required');
     }
 
     if (empty($email)) {
-      $errors['email'] = 'L\'email est requis';
+      $errors['email'] = __('validation.email_required');
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $errors['email'] = 'Email invalide';
+      $errors['email'] = __('validation.email_invalid');
     } elseif ($this->userModel->findByEmail($email)) {
-      $errors['email'] = 'Cet email est déjà utilisé';
+      $errors['email'] = __('validation.email_already_used');
     }
 
     if (empty($password)) {
@@ -161,7 +161,7 @@ class AccountController extends Controller
     // If validation fails, return to register form with errors
     if (!empty($errors)) {
       $this->view('account/register', [
-        'title' => 'Créer un compte',
+        'title' => __('account.register'),
         'errors' => $errors,
         'old' => [
           'first_name' => $firstName,
@@ -225,7 +225,7 @@ class AccountController extends Controller
     $recentOrders = $this->userModel->getOrders($user['id']);
 
     $this->view('account/dashboard', [
-      'title' => 'Mon compte',
+      'title' => __('dashboard.my_account'),
       'user' => $user,
       'recentOrders' => $recentOrders
     ]);
@@ -243,7 +243,7 @@ class AccountController extends Controller
     $user = Auth::user();
 
     $this->view('account/profile', [
-      'title' => 'Mon profil',
+      'title' => __('profile.my_profile'),
       'user' => $user
     ]);
   }
@@ -275,42 +275,42 @@ class AccountController extends Controller
     $errors = [];
 
     if (empty($firstName)) {
-      $errors['first_name'] = 'Le prénom est requis';
+      $errors['first_name'] = __('validation.first_name_required');
     }
 
     if (empty($lastName)) {
-      $errors['last_name'] = 'Le nom est requis';
+      $errors['last_name'] = __('validation.last_name_required');
     }
 
     if (empty($email)) {
-      $errors['email'] = 'L\'email est requis';
+      $errors['email'] = __('validation.email_required');
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $errors['email'] = 'Email invalide';
+      $errors['email'] = __('validation.email_invalid');
     } elseif ($email !== $user['email'] && $this->userModel->findByEmail($email)) {
-      $errors['email'] = 'Cet email est déjà utilisé';
+      $errors['email'] = __('validation.email_already_used');
     }
 
     // If password is being updated, validate it
     if (!empty($newPassword)) {
       if (empty($currentPassword)) {
-        $errors['current_password'] = 'Le mot de passe actuel est requis';
+        $errors['current_password'] = __('validation.current_password_required');
       } elseif (!password_verify($currentPassword, $user['password'])) {
-        $errors['current_password'] = 'Mot de passe actuel incorrect';
+        $errors['current_password'] = __('validation.current_password_invalid');
       }
 
       if (strlen($newPassword) < 8) {
-        $errors['new_password'] = 'Le nouveau mot de passe doit contenir au moins 8 caractères';
+        $errors['new_password'] = __('validation.password_min_length');
       }
 
       if ($newPassword !== $newPasswordConfirm) {
-        $errors['new_password_confirm'] = 'Les mots de passe ne correspondent pas';
+        $errors['new_password_confirm'] = __('validation.passwords_dont_match');
       }
     }
 
     // If validation fails, return to profile form with errors
     if (!empty($errors)) {
       $this->view('account/profile', [
-        'title' => 'Mon profil',
+        'title' => __('profile.my_profile'),
         'user' => $user,
         'errors' => $errors
       ]);
@@ -335,6 +335,7 @@ class AccountController extends Controller
     $_SESSION['success'] = __('account.profile_updated');
     $this->redirect('/account/profile');
   }
+
   public function addresses()
   {
     // Check if user is logged in
@@ -378,7 +379,7 @@ class AccountController extends Controller
     ];
 
     $this->view('account/addresses', [
-      'title' => 'Mes adresses',
+      'title' => __('addresses.my_addresses'),
       'user' => $user,
       'addresses' => $addresses
     ]);

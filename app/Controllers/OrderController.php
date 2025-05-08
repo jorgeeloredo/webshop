@@ -34,7 +34,7 @@ class OrderController extends Controller
     $orders = $this->orderModel->findByUser($userId);
 
     $this->view('orders/index', [
-      'title' => 'Mes commandes',
+      'title' => __('order.my_orders'),
       'orders' => $orders
     ]);
   }
@@ -61,7 +61,7 @@ class OrderController extends Controller
     }
 
     $this->view('orders/details', [
-      'title' => 'Détails de la commande #' . $order['id'],
+      'title' => __('order.order_details', ['id' => $order['id']]),
       'order' => $order
     ]);
   }
@@ -80,7 +80,7 @@ class OrderController extends Controller
 
       // Just display the checkout page without requiring login
       $this->view('orders/checkout', [
-        'title' => 'Finaliser la commande',
+        'title' => __('checkout.finalize_order'),
         'cart' => $this->cartModel,
         'shippingMethods' => $shippingMethods
       ]);
@@ -104,27 +104,27 @@ class OrderController extends Controller
       // Validate email
       $errors = [];
       if (empty($email)) {
-        $errors['email'] = 'L\'email est requis';
+        $errors['email'] = __('validation.email_required');
       } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = 'Email invalide';
+        $errors['email'] = __('validation.email_invalid');
       }
 
       // If creating account, validate password
       if ($createAccount) {
         if (empty($password)) {
-          $errors['password'] = 'Le mot de passe est requis pour créer un compte';
+          $errors['password'] = __('validation.account_creation_password_required');
         } elseif (strlen($password) < 8) {
-          $errors['password'] = 'Le mot de passe doit contenir au moins 8 caractères';
+          $errors['password'] = __('validation.password_min_length');
         }
 
         if ($password !== $passwordConfirm) {
-          $errors['password_confirm'] = 'Les mots de passe ne correspondent pas';
+          $errors['password_confirm'] = __('validation.passwords_dont_match');
         }
 
         // Check if email is already registered
         $userModel = new \App\Models\User();
         if ($userModel->findByEmail($email)) {
-          $errors['email'] = 'Cet email est déjà utilisé. Veuillez vous connecter.';
+          $errors['email'] = __('validation.email_login_required');
         }
       }
 
@@ -219,31 +219,31 @@ class OrderController extends Controller
     // Check billing fields if not same as shipping
     if (!$sameAsBilling) {
       if (empty($billingAddress['first_name'])) {
-        $errors['billing_first_name'] = __('validation.shipping_first_name_required');
+        $errors['billing_first_name'] = __('validation.billing_first_name_required');
       }
 
       if (empty($billingAddress['last_name'])) {
-        $errors['billing_last_name'] = __('validation.shipping_last_name_required');
+        $errors['billing_last_name'] = __('validation.billing_last_name_required');
       }
 
       if (empty($billingAddress['address'])) {
-        $errors['billing_address'] = __('validation.shipping_address_required');
+        $errors['billing_address'] = __('validation.billing_address_required');
       }
 
       if (empty($billingAddress['city'])) {
-        $errors['billing_city'] = __('validation.shipping_city_required');
+        $errors['billing_city'] = __('validation.billing_city_required');
       }
 
       if (empty($billingAddress['postal_code'])) {
-        $errors['billing_postal_code'] = __('validation.shipping_postal_code_required');
+        $errors['billing_postal_code'] = __('validation.billing_postal_code_required');
       }
 
       if (empty($billingAddress['country'])) {
-        $errors['billing_country'] = __('validation.shipping_country_required');
+        $errors['billing_country'] = __('validation.billing_country_required');
       }
 
       if (empty($billingAddress['phone'])) {
-        $errors['billing_phone'] = __('validation.shipping_phone_required');
+        $errors['billing_phone'] = __('validation.billing_phone_required');
       }
     }
 
@@ -255,7 +255,7 @@ class OrderController extends Controller
     // If validation fails, return to checkout form with errors
     if (!empty($errors)) {
       $this->view('orders/checkout', [
-        'title' => 'Finaliser la commande',
+        'title' => __('checkout.finalize_order'),
         'cart' => $this->cartModel,
         'errors' => $errors,
         'old' => $_POST,
@@ -297,7 +297,6 @@ class OrderController extends Controller
     }
 
     // Send order confirmation email
-    // Then when initializing the EmailService:
     $emailService = new EmailService();
     $emailService->sendOrderConfirmationEmail($order, $orderItems, $user);
 
@@ -316,8 +315,8 @@ class OrderController extends Controller
     // Check if order exists
     if (!$order) {
       $this->view('error/404', [
-        'message' => 'Commande non trouvée',
-        'title' => '404 - Commande non trouvée'
+        'message' => __('error.order_not_found'),
+        'title' => '404 - ' . __('error.order_not_found')
       ]);
       return;
     }
@@ -327,8 +326,8 @@ class OrderController extends Controller
       $userId = Auth::id();
       if ($order['user_id'] && $order['user_id'] != $userId) {
         $this->view('error/404', [
-          'message' => 'Commande non trouvée',
-          'title' => '404 - Commande non trouvée'
+          'message' => __('error.order_not_found'),
+          'title' => '404 - ' . __('error.order_not_found')
         ]);
         return;
       }
@@ -345,7 +344,7 @@ class OrderController extends Controller
     }
 
     $this->view('orders/success', [
-      'title' => 'Commande confirmée',
+      'title' => __('success.thank_you'),
       'order' => $order
     ]);
   }

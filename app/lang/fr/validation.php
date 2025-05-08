@@ -30,4 +30,10 @@ return [
   'billing_postal_code_required' => 'Le code postal est requis',
   'billing_country_required' => 'Le pays est requis',
   'billing_phone_required' => 'Le téléphone est requis',
+
+  // Account validation 
+  'current_password_required' => 'Le mot de passe actuel est requis',
+  'current_password_invalid' => 'Mot de passe actuel incorrect',
+  'account_creation_password_required' => 'Le mot de passe est requis pour créer un compte',
+  'email_login_required' => 'Cet email est déjà utilisé. Veuillez vous connecter.',
 ];

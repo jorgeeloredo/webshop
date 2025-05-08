@@ -42,7 +42,7 @@ class AdminController extends Controller
     $orders = $this->orderModel->getAll();
 
     $this->view('admin/orders', [
-      'title' => 'Admin - Commandes',
+      'title' => __('admin.admin') . ' - ' . __('admin.manage_orders'),
       'orders' => $orders,
       'orderStatuses' => $this->orderModel->getAllStatuses()
     ]);
@@ -61,14 +61,14 @@ class AdminController extends Controller
 
     if (!$order) {
       $this->view('error/404', [
-        'message' => 'Commande non trouvée',
-        'title' => '404 - Commande non trouvée'
+        'message' => __('error.order_not_found'),
+        'title' => '404 - ' . __('error.order_not_found')
       ]);
       return;
     }
 
     $this->view('admin/order_details', [
-      'title' => 'Admin - Détails de la commande #' . $id,
+      'title' => __('admin.admin') . ' - ' . __('admin.order_details', ['id' => $id]),
       'order' => $order,
       'orderStatuses' => $this->orderModel->getAllStatuses()
     ]);
