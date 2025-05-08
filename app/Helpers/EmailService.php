@@ -100,18 +100,18 @@ class EmailService
   public function sendAccountCreationEmail(string $email, string $firstName, string $lastName, string $password = ''): bool
   {
     $fullName = $firstName . ' ' . $lastName;
-    $subject = 'Bienvenue - Votre compte Singer France a été créé';
+    $subject = __('email.account_created_subject');
 
     // Get the template content from file
     $templatePath = __DIR__ . '/../../templates/emails/accountsinformation.html';
     if (!file_exists($templatePath)) {
-      error_log("Account creation email template not found at: " . $templatePath);
+      error_log(__('email.error_template_not_found') . $templatePath);
       return false;
     }
 
     $template = file_get_contents($templatePath);
     if (!$template) {
-      error_log("Failed to read account creation email template");
+      error_log(__('email.error_read_template'));
       return false;
     }
 
@@ -145,27 +145,27 @@ class EmailService
    */
   public function sendOrderConfirmationEmail(array $order, array $orderItems, array $user): bool
   {
-    $subject = 'Confirmation de votre commande #' . $order['id'];
+    $subject = __('email.order_confirmation_subject', ['id' => $order['id']]);
     $email = $user['email'] ?? $order['email'] ?? '';
     $firstName = $user['first_name'] ?? '';
     $lastName = $user['last_name'] ?? '';
     $fullName = $firstName . ' ' . $lastName;
 
     if (empty($email)) {
-      error_log("Cannot send order confirmation: email address is missing");
+      error_log(__('email.error_email_missing'));
       return false;
     }
 
     // Get the template content from file
     $templatePath = __DIR__ . '/../../templates/emails/confirmation_order.html';
     if (!file_exists($templatePath)) {
-      error_log("Order confirmation email template not found at: " . $templatePath);
+      error_log(__('email.error_template_not_found') . $templatePath);
       return false;
     }
 
     $template = file_get_contents($templatePath);
     if (!$template) {
-      error_log("Failed to read order confirmation email template");
+      error_log(__('email.error_read_template'));
       return false;
     }
 
@@ -195,7 +195,7 @@ class EmailService
 
     // Format prices
     $subTotalFormatted = number_format($subTotal, 2, ',', ' ') . ' €';
-    $shippingCostFormatted = ($shippingCost > 0) ? number_format($shippingCost, 2, ',', ' ') . ' €' : 'Gratuit';
+    $shippingCostFormatted = ($shippingCost > 0) ? number_format($shippingCost, 2, ',', ' ') . ' €' : __('general.free');
     $totalPriceFormatted = number_format($totalPrice, 2, ',', ' ') . ' €';
 
     // Replace placeholders in the template

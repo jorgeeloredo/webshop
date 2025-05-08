@@ -8,41 +8,41 @@ use App\Core\Controller;
 class PageController extends Controller
 {
   /**
-   * Affiche une page statique du répertoire des pages
+   * Display a static page from the pages directory
    * 
-   * @param string $slug Le nom de la page à afficher
+   * @param string $slug The name of the page to display
    * @return void
    */
   public function show($slug = 'index')
   {
-    // Sécuriser le nom de la page pour éviter les attaques de traversée de répertoire
+    // Secure the page name to prevent directory traversal attacks
     $slug = preg_replace('/[^a-zA-Z0-9_\-]/', '', $slug);
 
-    // Définir le chemin vers le répertoire des pages
+    // Define the path to the pages directory
     $pagesDir = __DIR__ . '/../../pages/';
 
-    // Vérifier si la page demandée existe
+    // Check if the requested page exists
     $pageFile = $pagesDir . $slug . '.php';
 
     if (file_exists($pageFile)) {
-      // Inclure la page pour obtenir son contenu et son titre
-      // Le titre et le contenu sont définis dans le fichier de la page
+      // Include the page to get its content and title
+      // Title and content are defined in the page file
       include $pageFile;
 
-      // Assurer que $pageTitle et $pageContent sont définis
+      // Ensure $pageTitle and $pageContent are defined
       $pageTitle = $pageTitle ?? 'Singer Shop';
 
-      // Afficher la vue de la page
+      // Display the page view
       $this->view('page/show', [
         'title' => $pageTitle,
         'content' => $pageContent ?? '',
         'slug' => $slug
       ]);
     } else {
-      // Page non trouvée, afficher la page d'erreur 404
+      // Page not found, display 404 error page
       $this->view('error/404', [
-        'message' => 'Page non trouvée',
-        'title' => '404 - Page non trouvée'
+        'message' => __('error.page_not_found'),
+        'title' => '404 - ' . __('error.page_not_found')
       ]);
     }
   }

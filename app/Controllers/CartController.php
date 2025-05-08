@@ -23,7 +23,7 @@ class CartController extends Controller
 
     $this->view('cart/index', [
       'cart' => $this->cartModel,
-      'title' => 'Votre panier',
+      'title' => __('cart.your_cart'),
       'shippingMethods' => $shippingMethods
     ]);
   }
