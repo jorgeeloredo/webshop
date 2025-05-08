@@ -220,9 +220,9 @@ function getImageUrl($image)
           </div>
 
 
-          href="/checkout"
-          class="block w-full py-3 text-base font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
-          <?= __('cart.checkout') ?>
+          <a href="/checkout"
+            class="block w-full py-3 text-base font-medium text-center text-white transition rounded-full singer-red hover:bg-red-700">
+            <?= __('cart.checkout') ?>
           </a>
 
           <div class="flex flex-col mt-4 space-y-2">

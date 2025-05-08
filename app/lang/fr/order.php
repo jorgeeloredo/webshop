@@ -7,7 +7,7 @@ return [
   'no_orders' => 'Vous n\'avez pas encore passé de commande.',
   'discover_products' => 'Découvrir nos produits',
   'back_to_orders' => 'Retour aux commandes',
-  'order_number' => 'Commande #:id',
+  'order_number' => 'N° commande',
   'placed_on' => 'Passée le :date',
   'order_summary' => 'Résumé de la commande',
   'shipping_method' => 'Mode de livraison',
