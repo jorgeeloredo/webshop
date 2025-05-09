@@ -94,14 +94,16 @@ class GoogleShoppingController extends Controller
     // Base URL
     $baseUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'];
 
+    $config = require __DIR__ . '/../config/config.php';
+
     // Start XML
     echo '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
     echo '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:g="http://base.google.com/ns/1.0">' . PHP_EOL;
-    echo '  <title>Singer Shop - Feed Google Shopping</title>' . PHP_EOL;
+    echo '  <title>' . $config['app']['name'] . ' - Feed Google Shopping</title>' . PHP_EOL;
     echo '  <link rel="self" href="' . $baseUrl . '/feed/google-shopping"/>' . PHP_EOL;
     echo '  <updated>' . date('Y-m-d\TH:i:sP') . '</updated>' . PHP_EOL;
     echo '  <author>' . PHP_EOL;
-    echo '    <name>Singer Shop</name>' . PHP_EOL;
+    echo '  <name>' . $config['app']['name'] . '</name>' . PHP_EOL;
     echo '  </author>' . PHP_EOL;
     echo '  <id>' . $baseUrl . '</id>' . PHP_EOL;
 

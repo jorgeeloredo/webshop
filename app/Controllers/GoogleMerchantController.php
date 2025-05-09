@@ -90,7 +90,7 @@ class GoogleMerchantController extends Controller
         $categoryIdToName[$category['id']] = $category['name'];
       }
     }
-
+    $config = require __DIR__ . '/../config/config.php';
     // Base URL
     $baseUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'];
 
@@ -98,7 +98,7 @@ class GoogleMerchantController extends Controller
     echo '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
     echo '<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">' . PHP_EOL;
     echo '<channel>' . PHP_EOL;
-    echo '  <title>Singer Shop</title>' . PHP_EOL;
+    echo '  <title>' . $config['app']['name'] . '</title>' . PHP_EOL;
     echo '  <link>' . $baseUrl . '</link>' . PHP_EOL;
     echo '  <description>Produits Singer - Machines à coudre, surjeteuses et accessoires</description>' . PHP_EOL;
 

@@ -3,7 +3,7 @@
 
 return [
   'app' => [
-    'name' => 'Singer Shop',
+    'name' => 'Singer',
     'url' => $_ENV['APP_URL'] ?? '',
     'env' => $_ENV['APP_ENV'] ?? 'development',
     'debug' => $_ENV['APP_DEBUG'] ?? false,

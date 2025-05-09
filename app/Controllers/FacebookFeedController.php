@@ -28,11 +28,11 @@ class FacebookFeedController extends Controller
 
     // Base URL
     $baseUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'];
-
+    $config = require __DIR__ . '/../config/config.php';
     // Start XML
     echo '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
     echo '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:g="http://base.google.com/ns/1.0">' . PHP_EOL;
-    echo '  <title>Singer Shop - Facebook Catalog Feed</title>' . PHP_EOL;
+    echo '  <title>' . $config['app']['name'] . ' - Facebook Catalog Feed</title>' . PHP_EOL;
     echo '  <link href="' . $baseUrl . '"/>' . PHP_EOL;
     echo '  <updated>' . date('Y-m-d\TH:i:sP') . '</updated>' . PHP_EOL;
     echo '  <id>' . $baseUrl . '</id>' . PHP_EOL;

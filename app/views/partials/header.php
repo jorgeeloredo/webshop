@@ -1,6 +1,11 @@
 <?php
 // app/views/partials/header.php (Modified to use translations)
 
+// Load configuration
+if (!isset($config)) {
+  $config = require __DIR__ . '/../../config/config.php';
+}
+
 // Get cart items if Cart model is available
 $cartCount = 0;
 try {
@@ -38,17 +43,17 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <title><?= isset($title) ? $title . ' | Singer ' . (get_language() === 'fr' ? 'France' : 'Shop') : 'Singer ' . (get_language() === 'fr' ? 'France' : 'Shop') ?></title>
+  <title><?= isset($title) ? $title . ' | ' . $config['app']['name'] : $config['app']['name'] ?></title>
   <meta name="description" content="<?= htmlspecialchars($metaDescription) ?>">
   <meta name="keywords" content="<?= htmlspecialchars($metaKeywords) ?>">
   <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
 
   <!-- Open Graph tags for social sharing -->
-  <meta property="og:title" content="<?= isset($title) ? htmlspecialchars($title) . ' - Singer Shop' : 'Singer Shop' ?>">
+  <meta property="og:title" content="<?= isset($title) ? htmlspecialchars($title) . ' - ' . $config['app']['name'] : $config['app']['name'] ?>">
   <meta property="og:description" content="<?= htmlspecialchars($metaDescription) ?>">
   <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl) ?>">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Singer Shop">
+  <meta property="og:site_name" content="<?= $config['app']['name'] ?>">
   <?php if (isset($ogImage)): ?>
     <meta property="og:image" content="<?= htmlspecialchars($ogImage) ?>">
   <?php else: ?>
