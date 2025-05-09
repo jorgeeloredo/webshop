@@ -82,6 +82,7 @@ if (isset($product['features']) && !empty($product['features'])) {
       <!-- Product Title & Price -->
       <h1 class="mb-4 text-2xl font-normal text-gray-800"><?= htmlspecialchars($product['name']) ?></h1>
 
+
       <div class="mb-6">
         <div class="flex items-baseline">
           <span class="mr-2 text-xl font-semibold price-color"><?= number_format($product['price'], 2, ',', ' ') ?> €</span>

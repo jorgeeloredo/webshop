@@ -1,5 +1,6 @@
 <?php
 // app/views/home/index.php
+$reviewModel = new \App\Models\Review();
 ?>
 
 
@@ -52,6 +53,18 @@
             </div>
             <div class="p-4">
               <h3 class="mb-2 text-sm font-medium text-gray-800"><?= htmlspecialchars($product['name']) ?></h3>
+              <div class="flex items-center mt-1 mb-2">
+                <div class="flex">
+                  <?php
+                  $averageRating = $reviewModel->getAverageRating($product['id']);
+                  $reviewCount = $reviewModel->getReviewCount($product['id']);
+                  for ($i = 1; $i <= 5; $i++):
+                  ?>
+                    <span class="<?= $i <= round($averageRating) ? 'text-yellow-400 fas' : 'text-gray-300 far' ?> fa-star text-sm"></span>
+                  <?php endfor; ?>
+                </div>
+                <span class="ml-2 text-xs text-gray-600"><?= $reviewCount ?> <?= __('general.reviews') ?></span>
+              </div>
               <div class="flex items-baseline">
                 <span class="mr-2 text-lg font-semibold price-color"><?= number_format($product['price'], 2, ',', ' ') ?> €</span>
                 <?php if (isset($product['old_price']) && $product['old_price'] > 0): ?>

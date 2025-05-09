@@ -41,10 +41,14 @@ class CategoryController extends Controller
 
     $products = $this->productModel->getByCategory($category['id']);
 
+    // Load review model for star ratings - add this line
+    $reviewModel = new \App\Models\Review();
+
     $this->view('product/list', [
       'category' => $category,
       'products' => $products,
-      'title' => $category['name']
+      'title' => $category['name'],
+      'reviewModel' => $reviewModel  // Pass the model to the view - add this line
     ]);
   }
 }
