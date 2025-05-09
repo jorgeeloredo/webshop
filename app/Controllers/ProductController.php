@@ -60,6 +60,17 @@ class ProductController extends Controller
       return;
     }
 
+    // Get query parameters for filtering, sorting, and pagination
+    $page = isset($_GET['review_page']) ? max(1, intval($_GET['review_page'])) : 1;
+    $filter = isset($_GET['filter']) ? $_GET['filter'] : null;
+    $sort = isset($_GET['sort']) ? $_GET['sort'] : 'recent';
+
+    // Load reviews for this product
+    $reviewModel = new \App\Models\Review();
+    $reviewData = $reviewModel->getByProductId($product['id'], $page, $filter, $sort);
+    $averageRating = $reviewModel->getAverageRating($product['id']);
+    $reviewCount = $reviewModel->getReviewCount($product['id']);
+
     // Get related products
     $relatedProducts = [];
     if (isset($product['category_id'])) {
@@ -115,7 +126,12 @@ class ProductController extends Controller
       'metaDescription' => $metaDescription,
       'metaKeywords' => $metaKeywords,
       'canonicalUrl' => $canonicalUrl,
-      'ogImage' => $ogImage
+      'ogImage' => $ogImage,
+      'reviewData' => $reviewData,
+      'averageRating' => $averageRating,
+      'reviewCount' => $reviewCount,
+      'currentFilter' => $filter,
+      'currentSort' => $sort
     ]);
   }
 }

@@ -6,11 +6,13 @@ function getImageUrl($image)
 {
   return '/assets/images/products/' . $image;
 }
-
+$featuresCount = 0;
 // Get product features in two columns
-$featuresCount = count($product['features']);
-$featuresFirstColumn = array_slice($product['features'], 0, ceil($featuresCount / 2));
-$featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 2));
+if (isset($product['features']) && !empty($product['features'])) {
+  $featuresCount = count($product['features']);
+  $featuresFirstColumn = array_slice($product['features'], 0, ceil($featuresCount / 2));
+  $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 2));
+}
 ?>
 
 <!-- Main Product Content -->
@@ -268,6 +270,168 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
       </div>
     </div>
   <?php endif; ?>
+
+  <!-- Customer Reviews Section -->
+  <section class="py-16">
+    <div class="max-w-[1140px] mx-auto px-4">
+      <div class="flex items-center mb-8">
+        <h2 class="mr-4 text-2xl font-normal text-gray-800"><?= __('product.customer_reviews') ?></h2>
+        <div class="flex items-center">
+          <div class="flex mr-2">
+            <?php for ($i = 1; $i <= 5; $i++): ?>
+              <span class="text-yellow-400 <?= $i <= $averageRating ? 'fas' : 'far' ?> fa-star"></span>
+            <?php endfor; ?>
+          </div>
+          <span class="text-lg font-semibold"><?= $averageRating ?></span>
+          <span class="ml-2 text-sm text-gray-600">
+            <?= __('product.based_on', ['count' => $reviewCount]) ?>
+          </span>
+        </div>
+        <a href="#write-review" class="px-6 py-2 ml-auto text-white transition rounded-full bg-primary hover:bg-primary-hover">
+          <?= __('product.write_review') ?>
+        </a>
+      </div>
+
+      <?php if ($reviewCount > 0): ?>
+        <!-- Review filters and sorting -->
+        <form id="reviewFilterForm" method="GET" action="" class="flex flex-wrap items-center mb-6">
+          <input type="hidden" name="review_page" value="1" id="reviewPageInput">
+
+          <div class="mb-2 mr-4">
+            <label class="mr-2 text-sm text-gray-600"><?= __('product.filter_by') ?>:</label>
+            <select name="filter" class="px-3 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200" onchange="this.form.submit()">
+              <option value=""><?= __('product.all_stars') ?></option>
+              <option value="5" <?= $currentFilter == 5 ? 'selected' : '' ?>>5 <?= __('product.stars') ?></option>
+              <option value="4" <?= $currentFilter == 4 ? 'selected' : '' ?>>4 <?= __('product.stars') ?></option>
+              <option value="3" <?= $currentFilter == 3 ? 'selected' : '' ?>>3 <?= __('product.stars') ?></option>
+              <option value="2" <?= $currentFilter == 2 ? 'selected' : '' ?>>2 <?= __('product.stars') ?></option>
+              <option value="1" <?= $currentFilter == 1 ? 'selected' : '' ?>>1 <?= __('product.stars') ?></option>
+            </select>
+          </div>
+
+          <div>
+            <label class="mr-2 text-sm text-gray-600"><?= __('product.sort_by') ?>:</label>
+            <select name="sort" class="px-3 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-200" onchange="this.form.submit()">
+              <option value="recent" <?= $currentSort == 'recent' ? 'selected' : '' ?>><?= __('product.most_recent') ?></option>
+              <option value="helpful" <?= $currentSort == 'helpful' ? 'selected' : '' ?>><?= __('product.most_helpful') ?></option>
+              <option value="highest" <?= $currentSort == 'highest' ? 'selected' : '' ?>><?= __('product.highest_rating') ?></option>
+              <option value="lowest" <?= $currentSort == 'lowest' ? 'selected' : '' ?>><?= __('product.lowest_rating') ?></option>
+            </select>
+          </div>
+        </form>
+
+        <!-- Reviews pagination info -->
+        <div class="mb-4 text-sm text-gray-600">
+          <?php
+          $first = (($reviewData['current_page'] - 1) * $reviewData['per_page']) + 1;
+          $last = min($first + $reviewData['per_page'] - 1, $reviewData['total']);
+          ?>
+          <?= __('product.showing') ?> <?= $first ?> <?= __('product.to') ?> <?= $last ?> <?= __('product.of_total') ?> <?= $reviewData['total'] ?> <?= __('product.reviews') ?>
+        </div>
+
+        <!-- Reviews list -->
+        <div class="mb-8 space-y-8">
+          <?php foreach ($reviewData['reviews'] as $review): ?>
+            <div class="p-6 bg-white border border-gray-200 rounded-lg">
+              <div class="flex justify-between mb-4">
+                <div>
+                  <div class="flex items-center mb-2">
+                    <div class="flex mr-2">
+                      <?php for ($i = 1; $i <= 5; $i++): ?>
+                        <span class="text-yellow-400 <?= $i <= $review['rating'] ? 'fas' : 'far' ?> fa-star"></span>
+                      <?php endfor; ?>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-800">
+                      <?= htmlspecialchars($review['title'] ?? '') ?>
+                    </h3>
+                  </div>
+                  <p class="text-sm text-gray-600">
+                    <?= __('product.by') ?> <?= htmlspecialchars($review['reviewer_name']) ?>
+                    <?= __('product.on') ?> <?= date('d/m/Y', strtotime($review['date'])) ?>
+                  </p>
+                </div>
+              </div>
+
+              <div class="mb-4 text-gray-700">
+                <?= htmlspecialchars($review['text']) ?>
+              </div>
+
+              <?php if (!empty($review['images'])): ?>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <?php foreach ($review['images'] as $index => $image): ?>
+                    <div class="review-image-thumb" data-review-id="<?= $review['id'] ?>" data-image-index="<?= $index ?>">
+                      <img src="/assets/images/reviews/<?= $image ?>" alt="Review image" class="object-cover w-20 h-20 rounded cursor-pointer hover:opacity-80">
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+              <?php endif; ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+
+        <!-- Pagination controls -->
+        <?php if ($reviewData['last_page'] > 1): ?>
+          <div class="flex items-center justify-center">
+            <nav class="flex items-center">
+              <!-- First page -->
+              <?php if ($reviewData['current_page'] > 1): ?>
+                <a href="?review_page=1<?= $currentFilter ? '&filter=' . $currentFilter : '' ?><?= $currentSort ? '&sort=' . $currentSort : '' ?>" class="px-3 py-1 mx-1 border border-gray-300 rounded hover:bg-gray-100">
+                  &laquo; <?= __('product.first') ?>
+                </a>
+              <?php else: ?>
+                <span class="px-3 py-1 mx-1 text-gray-400 border border-gray-200 rounded cursor-not-allowed">
+                  &laquo; <?= __('product.first') ?>
+                </span>
+              <?php endif; ?>
+
+              <!-- Previous page -->
+              <?php if ($reviewData['current_page'] > 1): ?>
+                <a href="?review_page=<?= $reviewData['current_page'] - 1 ?><?= $currentFilter ? '&filter=' . $currentFilter : '' ?><?= $currentSort ? '&sort=' . $currentSort : '' ?>" class="px-3 py-1 mx-1 border border-gray-300 rounded hover:bg-gray-100">
+                  &lsaquo; <?= __('product.previous') ?>
+                </a>
+              <?php else: ?>
+                <span class="px-3 py-1 mx-1 text-gray-400 border border-gray-200 rounded cursor-not-allowed">
+                  &lsaquo; <?= __('product.previous') ?>
+                </span>
+              <?php endif; ?>
+
+              <!-- Page info -->
+              <span class="px-3 py-1 mx-2 text-gray-700">
+                <?= __('product.page') ?> <?= $reviewData['current_page'] ?> <?= __('product.of') ?> <?= $reviewData['last_page'] ?>
+              </span>
+
+              <!-- Next page -->
+              <?php if ($reviewData['current_page'] < $reviewData['last_page']): ?>
+                <a href="?review_page=<?= $reviewData['current_page'] + 1 ?><?= $currentFilter ? '&filter=' . $currentFilter : '' ?><?= $currentSort ? '&sort=' . $currentSort : '' ?>" class="px-3 py-1 mx-1 border border-gray-300 rounded hover:bg-gray-100">
+                  <?= __('product.next') ?> &rsaquo;
+                </a>
+              <?php else: ?>
+                <span class="px-3 py-1 mx-1 text-gray-400 border border-gray-200 rounded cursor-not-allowed">
+                  <?= __('product.next') ?> &rsaquo;
+                </span>
+              <?php endif; ?>
+
+              <!-- Last page -->
+              <?php if ($reviewData['current_page'] < $reviewData['last_page']): ?>
+                <a href="?review_page=<?= $reviewData['last_page'] ?><?= $currentFilter ? '&filter=' . $currentFilter : '' ?><?= $currentSort ? '&sort=' . $currentSort : '' ?>" class="px-3 py-1 mx-1 border border-gray-300 rounded hover:bg-gray-100">
+                  <?= __('product.last') ?> &raquo;
+                </a>
+              <?php else: ?>
+                <span class="px-3 py-1 mx-1 text-gray-400 border border-gray-200 rounded cursor-not-allowed">
+                  <?= __('product.last') ?> &raquo;
+                </span>
+              <?php endif; ?>
+            </nav>
+          </div>
+        <?php endif; ?>
+
+      <?php else: ?>
+        <div class="p-6 text-center bg-white border border-gray-200 rounded-lg">
+          <p class="text-gray-600"><?= __('product.no_reviews') ?></p>
+        </div>
+      <?php endif; ?>
+    </div>
+  </section>
 
   <!-- Related Products Section (if any) -->
   <?php if (isset($relatedProducts) && !empty($relatedProducts)): ?>
@@ -574,4 +738,23 @@ $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 
       icon.classList.add('fa-minus');
     }
   }
+
+  // Review filter and pagination handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const reviewFilterForm = document.getElementById('reviewFilterForm');
+
+    if (reviewFilterForm) {
+      // Update page number when using pagination links
+      const updatePage = (pageNum) => {
+        document.getElementById('reviewPageInput').value = pageNum;
+        reviewFilterForm.submit();
+      };
+
+      // Preserve other query parameters when changing filter/sort
+      const queryParams = new URLSearchParams(window.location.search);
+      if (queryParams.has('review_page') && !document.getElementById('reviewPageInput').value) {
+        document.getElementById('reviewPageInput').value = queryParams.get('review_page');
+      }
+    }
+  });
 </script>
