@@ -100,7 +100,7 @@ class GoogleMerchantController extends Controller
     echo '<channel>' . PHP_EOL;
     echo '  <title>' . $config['app']['name'] . '</title>' . PHP_EOL;
     echo '  <link>' . $baseUrl . '</link>' . PHP_EOL;
-    echo '  <description>Produits Singer - Machines à coudre, surjeteuses et accessoires</description>' . PHP_EOL;
+    echo '  <description>Produits ' . $config['app']['name'] . '</description>' . PHP_EOL;
 
     foreach ($products as $product) {
       // Skip products without essential data
@@ -137,7 +137,7 @@ class GoogleMerchantController extends Controller
       }
 
       // Generate unique ID
-      $id = isset($product['sku']) ? $product['sku'] : 'SINGER-' . $product['id'];
+      $id = isset($product['sku']) ? $product['sku'] : $product['id'];
 
       // Clean description
       $description = isset($product['description']) ? strip_tags($product['description']) : '';
@@ -185,7 +185,7 @@ class GoogleMerchantController extends Controller
       }
 
       // Add brand
-      echo '    <g:brand>Singer</g:brand>' . PHP_EOL;
+      echo '    <g:brand>' . $config['app']['name'] . '</g:brand>' . PHP_EOL;
 
       // Add condition
       echo '    <g:condition>new</g:condition>' . PHP_EOL;

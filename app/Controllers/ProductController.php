@@ -103,7 +103,8 @@ class ProductController extends Controller
     }
 
     // Create meta keywords from product features
-    $metaKeywords = 'Singer, ' . $product['name'];
+    $config = require __DIR__ . '/../config/config.php';
+    $metaKeywords = $config['app']['name'] . ', ' . $product['name'];
     if (isset($product['features']) && !empty($product['features'])) {
       $featureKeywords = array_slice($product['features'], 0, 5);
       $metaKeywords .= ', ' . implode(', ', $featureKeywords);

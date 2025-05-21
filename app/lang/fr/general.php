@@ -16,7 +16,7 @@ return [
   // Missing returns contact
   'contact_us' => 'Contactez-nous',
   'contact_us_page' => 'Nous contacter',
-  'copyright' => '© :year Singer · Mentions légales',
+  'copyright' => '© :year :brand · Mentions légales',
   'faq' => 'Questions fréquentes',
   'free_returns' => 'Retour gratuit',
   'free_shipping' => 'Livraison offerte',

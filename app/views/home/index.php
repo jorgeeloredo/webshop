@@ -6,11 +6,11 @@ $reviewModel = new \App\Models\Review();
 
 
 <!-- Category Navigation -->
-<section class="py-12 bg-secondary-light">
+<section class="py-12 mx-auto bg-secondary-light">
   <div class="px-4 site-container">
     <h2 class="mb-8 text-2xl font-normal text-center text-gray-800"><?= __('home.categories_title') ?></h2>
 
-    <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+    <div class="grid gap-4 mx autogrid-cols-2 md:grid-cols-3 lg:grid-cols-6">
       <?php foreach ($categories as $category): ?>
         <a href="/category/<?= $category['slug'] ?>" class="group">
           <div class="mb-2 overflow-hidden bg-white border border-gray-200 rounded-lg aspect-square">

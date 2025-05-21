@@ -3,7 +3,7 @@
 
 return [
   'app' => [
-    'name' => 'Singer',
+    'name' => $_ENV['APP_NAME'] ?? 'ShopName',
     'url' => $_ENV['APP_URL'] ?? '',
     'env' => $_ENV['APP_ENV'] ?? 'development',
     'debug' => $_ENV['APP_DEBUG'] ?? false,
@@ -33,13 +33,13 @@ return [
     'username' => $_ENV['MAIL_USERNAME'] ?? '',
     'password' => $_ENV['MAIL_PASSWORD'] ?? '',
     'encryption' => $_ENV['MAIL_ENCRYPTION'] ?? 'tls',
-    'from_address' => $_ENV['MAIL_FROM_ADDRESS'] ?? 'noreply@singer-fr.com',
-    'from_name' => $_ENV['MAIL_FROM_NAME'] ?? 'Singer France',
+    'from_address' => $_ENV['MAIL_FROM_ADDRESS'] ?? '',
+    'from_name' => $_ENV['MAIL_FROM_NAME'] ?? '',
     'zeptomail_api_key' => $_ENV['ZEPTOMAIL_API_KEY'] ?? '',
   ],
 
   'session' => [
-    'name' => 'singer_session',
+    'name' => 'shop_session',
     'lifetime' => 7200, // 2 hours
     'secure' => true,
     'httponly' => true,

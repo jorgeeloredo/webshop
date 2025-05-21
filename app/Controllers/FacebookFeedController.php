@@ -65,7 +65,7 @@ class FacebookFeedController extends Controller
       }
 
       // Generate unique ID
-      $id = isset($product['sku']) ? $product['sku'] : 'SINGER-' . $product['id'];
+      $id = isset($product['sku']) ? $product['sku'] : $product['id'];
 
       // Clean description
       $description = isset($product['description']) ? strip_tags($product['description']) : '';
@@ -83,7 +83,7 @@ class FacebookFeedController extends Controller
       echo '    <id>' . htmlspecialchars($id) . '</id>' . PHP_EOL;
       echo '    <title>' . htmlspecialchars($product['name']) . '</title>' . PHP_EOL;
       echo '    <g:description>' . htmlspecialchars($description) . '</g:description>' . PHP_EOL;
-      echo '    <g:brand>Singer</g:brand>' . PHP_EOL;
+      echo '    <g:brand>' . $config['app']['name'] . '</g:brand>' . PHP_EOL;
       echo '    <g:condition>new</g:condition>' . PHP_EOL;
       echo '    <g:availability>' . $availability . '</g:availability>' . PHP_EOL;
 

@@ -361,7 +361,11 @@ if (isset($product['features']) && !empty($product['features'])) {
                 <div class="flex flex-wrap gap-2 mb-4">
                   <?php foreach ($review['images'] as $index => $image): ?>
                     <div class="review-image-thumb" data-review-id="<?= $review['id'] ?>" data-image-index="<?= $index ?>">
-                      <img src="/assets/images/reviews/<?= $image ?>" alt="Review image" class="object-cover w-20 h-20 rounded cursor-pointer hover:opacity-80">
+                      <img
+                        src="/assets/images/reviews/<?= $image ?>"
+                        alt="Review image"
+                        class="object-cover w-20 h-20 rounded cursor-pointer hover:opacity-80 review-thumbnail"
+                        data-full-image="/assets/images/reviews/<?= $image ?>">
                     </div>
                   <?php endforeach; ?>
                 </div>
@@ -608,31 +612,41 @@ if (isset($product['features']) && !empty($product['features'])) {
       </div>
     </div>
   </section>
-  <!-- Schema.org markup for Product -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "<?= htmlspecialchars($product['name']) ?>",
-      "image": "<?= (isset($ogImage)) ? $ogImage : '' ?>",
-      "description": "<?= htmlspecialchars(strip_tags($product['description'])) ?>",
-      "sku": "<?= htmlspecialchars($product['sku']) ?>",
-      <?php if (isset($product['gtin']) && !empty($product['gtin'])): ?> "gtin13": "<?= htmlspecialchars($product['gtin']) ?>",
-      <?php endif; ?> "brand": {
-        "@type": "Brand",
-        "name": "Singer"
-      },
-      <?php if (isset($category) && !empty($category)): ?> "category": "<?= htmlspecialchars($category['name']) ?>",
-      <?php endif; ?> "offers": {
-        "@type": "Offer",
-        "url": "<?= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . '/product/' . $product['slug'] ?>",
-        "priceCurrency": "EUR",
-        "price": "<?= number_format($product['price'], 2, '.', '') ?>",
-        "availability": "<?= (isset($product['stock']) && $product['stock'] > 0) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>"
-      }
-    }
-  </script>
+  <!-- Review Image Lightbox Modal -->
+  <div id="review-image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-75">
+    <div class="relative max-w-3xl mx-4">
+      <button id="close-review-modal" class="absolute p-2 text-white bg-black bg-opacity-50 rounded-full top-3 right-3 hover:bg-opacity-70">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="modal-review-image" src="" alt="Review image" class="max-w-full max-h-[80vh] object-contain">
+    </div>
+  </div>
 </div>
+
+<!-- Schema.org markup for Product -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "<?= htmlspecialchars($product['name']) ?>",
+    "image": "<?= (isset($ogImage)) ? $ogImage : '' ?>",
+    "description": "<?= htmlspecialchars(strip_tags($product['description'])) ?>",
+    "sku": "<?= htmlspecialchars($product['sku']) ?>",
+    <?php if (isset($product['gtin']) && !empty($product['gtin'])): ?> "gtin13": "<?= htmlspecialchars($product['gtin']) ?>",
+    <?php endif; ?> "brand": {
+      "@type": "Brand",
+      "name": "Singer"
+    },
+    <?php if (isset($category) && !empty($category)): ?> "category": "<?= htmlspecialchars($category['name']) ?>",
+    <?php endif; ?> "offers": {
+      "@type": "Offer",
+      "url": "<?= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . '/product/' . $product['slug'] ?>",
+      "priceCurrency": "EUR",
+      "price": "<?= number_format($product['price'], 2, '.', '') ?>",
+      "availability": "<?= (isset($product['stock']) && $product['stock'] > 0) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' ?>"
+    }
+  }
+</script>
 
 <script>
   // Image gallery functionality
@@ -756,6 +770,49 @@ if (isset($product['features']) && !empty($product['features'])) {
       if (queryParams.has('review_page') && !document.getElementById('reviewPageInput').value) {
         document.getElementById('reviewPageInput').value = queryParams.get('review_page');
       }
+    }
+  });
+
+  // Review image lightbox functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('review-image-modal');
+    const modalImage = document.getElementById('modal-review-image');
+    const closeBtn = document.getElementById('close-review-modal');
+    const reviewThumbnails = document.querySelectorAll('.review-thumbnail');
+
+    // Open modal when clicking on a thumbnail
+    reviewThumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', function() {
+        const fullImageSrc = this.getAttribute('data-full-image');
+        modalImage.src = fullImageSrc;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+      });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.addEventListener('click', function() {
+      closeModal();
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close modal when pressing Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    // Function to close the modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = ''; // Restore scrolling
     }
   });
 </script>

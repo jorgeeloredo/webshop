@@ -30,7 +30,7 @@ class PageController extends Controller
       include $pageFile;
 
       // Ensure $pageTitle and $pageContent are defined
-      $pageTitle = $pageTitle ?? 'Singer Shop';
+      $pageTitle = $pageTitle ?? 'Shop';
 
       // Display the page view
       $this->view('page/show', [
