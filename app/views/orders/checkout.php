@@ -41,7 +41,7 @@ function getImageUrl($image)
   </div>
 
   <?php if (!empty($errors)): ?>
-    <div class="p-4 mb-6 text-primary-hover bg-red-100 border border-red-200 rounded-lg">
+    <div class="p-4 mb-6 bg-red-100 border border-red-200 rounded-lg text-primary-hover">
       <p class="font-medium"><?= __('checkout.correct_errors') ?></p>
       <ul class="ml-4 list-disc">
         <?php foreach ($errors as $error): ?>
@@ -61,7 +61,7 @@ function getImageUrl($image)
           <div class="p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-sm">
             <div class="flex items-center justify-between mb-4">
               <h2 class="text-xl font-medium text-gray-800"><?= __('checkout.my_account') ?></h2>
-              <a href="/login" class="text-sm singer-red-text hover:underline">
+              <a href="/login" class="text-sm text-primary hover:underline">
                 <?= __('checkout.already_account') ?>
               </a>
             </div>
@@ -82,7 +82,7 @@ function getImageUrl($image)
 
             <div class="mb-4">
               <label class="flex items-center">
-                <input type="checkbox" id="create_account" name="create_account" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" <?= isset($old['create_account']) && $old['create_account'] ? 'checked' : '' ?>>
+                <input type="checkbox" id="create_account" name="create_account" class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary" <?= isset($old['create_account']) && $old['create_account'] ? 'checked' : '' ?>>
                 <span class="ml-2 text-sm text-gray-700"><?= __('checkout.create_account') ?></span>
               </label>
             </div>
@@ -306,7 +306,7 @@ function getImageUrl($image)
                     name="shipping_method"
                     id="shipping_<?= $code ?>"
                     value="<?= $code ?>"
-                    class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                    class="w-4 h-4 border-gray-300 text-primary focus:ring-primary"
                     <?= $currentShippingMethod === $code ? 'checked' : '' ?>>
                   <label for="shipping_<?= $code ?>" class="flex flex-col flex-1 ml-3">
                     <span class="text-sm font-medium text-gray-700"><?= htmlspecialchars($method['name']) ?></span>
@@ -332,7 +332,7 @@ function getImageUrl($image)
               type="checkbox"
               id="same_as_billing"
               name="same_as_billing"
-              class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+              class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
               checked>
             <label for="same_as_billing" class="block ml-2 text-sm font-medium text-gray-700">
               <?= __('checkout.same_billing') ?>
@@ -469,7 +469,7 @@ function getImageUrl($image)
                 id="payment_card"
                 name="payment_method"
                 value="card"
-                class="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                class="w-4 h-4 border-gray-300 text-primary focus:ring-primary"
                 checked>
               <label for="payment_card" class="block ml-3 text-sm font-medium text-gray-700">
                 <?= __('checkout.card') ?>
@@ -561,7 +561,7 @@ function getImageUrl($image)
           </button>
 
           <p class="mt-4 text-xs text-center text-gray-500">
-            <?= __('checkout.agree_terms') ?> <a href="/page/conditions-generales-de-vente" class="singer-red-text hover:underline"><?= __('checkout.terms_of_sale') ?></a>
+            <?= __('checkout.agree_terms') ?> <a href="/page/conditions-generales-de-vente" class="text-primary hover:underline"><?= __('checkout.terms_of_sale') ?></a>
           </p>
         </div>
       </div>

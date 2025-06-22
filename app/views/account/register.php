@@ -93,7 +93,7 @@ $errors = $errors ?? [];
               type="checkbox"
               id="agreement"
               name="agreement"
-              class="w-4 h-4 mt-1 text-primary border-gray-300 rounded focus:ring-primary"
+              class="w-4 h-4 mt-1 border-gray-300 rounded text-primary focus:ring-primary"
               required>
             <label for="agreement" class="block ml-2 text-sm text-gray-700">
               <?= __('account.agree_terms') ?>
@@ -109,7 +109,7 @@ $errors = $errors ?? [];
 
       <div class="pt-4 mt-6 text-sm text-center border-t border-gray-200">
         <p class="text-gray-600"><?= __('account.already_account') ?></p>
-        <a href="/login" class="font-medium singer-red-text hover:underline"><?= __('account.login_button') ?></a>
+        <a href="/login" class="font-medium text-primary hover:underline"><?= __('account.login_button') ?></a>
       </div>
     </div>
   </div>

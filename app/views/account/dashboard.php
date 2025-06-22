@@ -91,7 +91,7 @@ $recentOrders = $recentOrders ?? [];
         <div class="mb-6">
           <div class="flex items-center justify-between mb-4">
             <h2 class="text-lg font-medium text-gray-800"><?= __('dashboard.recent_orders') ?></h2>
-            <a href="/account/orders" class="text-sm singer-red-text hover:underline"><?= __('dashboard.view_all') ?></a>
+            <a href="/account/orders" class="text-sm text-primary hover:underline"><?= __('dashboard.view_all') ?></a>
           </div>
 
           <?php if (empty($recentOrders)): ?>
@@ -166,7 +166,7 @@ $recentOrders = $recentOrders ?? [];
                         </span>
                       </td>
                       <td class="px-4 py-4 text-right whitespace-nowrap">
-                        <a href="/account/orders/<?= $order['id'] ?>" class="text-sm singer-red-text hover:underline">
+                        <a href="/account/orders/<?= $order['id'] ?>" class="text-sm text-primary hover:underline">
                           <?= __('order.details') ?>
                         </a>
                       </td>
@@ -194,7 +194,7 @@ $recentOrders = $recentOrders ?? [];
               <span class="font-medium text-gray-800"><?= __('dashboard.member_since') ?> :</span>
               <?= date('d/m/Y', strtotime($user['created_at'])) ?>
             </p>
-            <a href="/account/profile" class="text-sm singer-red-text hover:underline">
+            <a href="/account/profile" class="text-sm text-primary hover:underline">
               <?= __('dashboard.edit_info') ?>
             </a>
           </div>

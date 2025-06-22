@@ -128,7 +128,7 @@ $orders = $orders ?? [];
                       </span>
                     </td>
                     <td class="px-4 py-4 text-right whitespace-nowrap">
-                      <a href="/account/orders/<?= $order['id'] ?>" class="text-sm singer-red-text hover:underline">
+                      <a href="/account/orders/<?= $order['id'] ?>" class="text-sm text-primary hover:underline">
                         <?= __('order.details') ?>
                       </a>
                     </td>

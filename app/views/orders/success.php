@@ -155,7 +155,7 @@ $estimatedDelivery = $shippingMethod ? $shippingMethod['estimated_delivery'] : '
         <a href="/account/orders" class="flex-1 px-6 py-3 font-medium text-center text-white transition rounded-full bg-primary hover:bg-primary-hover">
           <?= __('success.view_orders') ?>
         </a>
-        <a href="/products" class="flex-1 px-6 py-3 font-medium text-center transition border rounded-full singer-red-text border-primary hover:bg-primary hover:text-white">
+        <a href="/products" class="flex-1 px-6 py-3 font-medium text-center transition border rounded-full text-primary border-primary hover:bg-primary hover:text-white">
           <?= __('success.continue_shopping') ?>
         </a>
       </div>

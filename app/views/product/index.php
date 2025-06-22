@@ -1,6 +1,9 @@
 <?php
 // app/views/product/index.php
 
+// Use ImageHelper for thumbnails
+use App\Helpers\ImageHelper;
+
 // Function to generate image URL
 function getImageUrl($image)
 {
@@ -13,6 +16,7 @@ if (isset($product['features']) && !empty($product['features'])) {
   $featuresFirstColumn = array_slice($product['features'], 0, ceil($featuresCount / 2));
   $featuresSecondColumn = array_slice($product['features'], ceil($featuresCount / 2));
 }
+$config = require __DIR__ . '/../../config/config.php';
 ?>
 
 <!-- Main Product Content -->
@@ -36,7 +40,7 @@ if (isset($product['features']) && !empty($product['features'])) {
       <!-- Main Image -->
       <div class="relative pt-8">
         <img
-          src="<?= getImageUrl($product['images'][0]) ?>"
+          src="<?= ImageHelper::getImageUrl($product['images'][0], 'original') ?>"
           alt="<?= htmlspecialchars($product['name']) ?>"
           class="object-contain w-full h-auto mx-auto"
           id="mainProductImage" />
@@ -57,11 +61,11 @@ if (isset($product['features']) && !empty($product['features'])) {
       </div>
 
       <?php if (count($product['images']) > 1): ?>
-        <!-- Thumbnails -->
+        <!-- Thumbnails (use smaller optimized images) -->
         <div class="grid grid-cols-6 gap-2 mt-4">
           <?php foreach ($product['images'] as $index => $image): ?>
             <div class="border-2 <?= $index === 0 ? 'border-[' . get_color('primary') . '] thumbnail-active' : 'border-gray-200' ?> rounded cursor-pointer thumbnail" data-index="<?= $index ?>">
-              <img src="<?= getImageUrl($image) ?>" alt="Vue <?= $index + 1 ?>" class="object-cover w-full" />
+              <img src="<?= ImageHelper::getImageUrl($image, 'thumbnail', ['width' => 140, 'height' => 140]) ?>" alt="Vue <?= $index + 1 ?>" class="object-cover w-full" />
             </div>
           <?php endforeach; ?>
 
@@ -203,7 +207,7 @@ if (isset($product['features']) && !empty($product['features'])) {
       <!-- Section Header -->
       <div class="flex items-center mb-8">
         <h2 class="text-2xl font-normal text-gray-800"><?= __('product.characteristics') ?></h2>
-        <a href="#" class="ml-4 text-sm singer-red-text hover:underline"><?= __('product.more_info') ?></a>
+        <a href="#" class="ml-4 text-sm text-primary hover:underline"><?= __('product.more_info') ?></a>
         <div class="flex items-center justify-center w-5 h-5 ml-2 border border-gray-300 rounded-full">
           <span class="text-sm text-gray-500">?</span>
         </div>
@@ -249,7 +253,7 @@ if (isset($product['features']) && !empty($product['features'])) {
           <div class="space-y-3">
             <?php if (isset($product['documents']) && !empty($product['documents'])): ?>
               <?php foreach ($product['documents'] as $document): ?>
-                <a href="/assets/pdfs/<?= htmlspecialchars($document['url']) ?>" class="flex items-center text-sm singer-red-text hover:underline">
+                <a href="/assets/pdfs/<?= htmlspecialchars($document['url']) ?>" class="flex items-center text-sm text-primary hover:underline">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-5 h-5 mr-2"
@@ -448,11 +452,11 @@ if (isset($product['features']) && !empty($product['features'])) {
           <?php foreach ($relatedProducts as $relatedProduct): ?>
             <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-sm">
               <a href="/product/<?= $relatedProduct['slug'] ?>" class="block">
-                <!-- Updated image container with fixed aspect ratio -->
+                <!-- Updated image container with optimized thumbnails -->
                 <div class="relative overflow-hidden bg-gray-100" style="padding-bottom: 100%;">
                   <?php if (isset($relatedProduct['images']) && !empty($relatedProduct['images'])): ?>
                     <img
-                      src="<?= getImageUrl($relatedProduct['images'][0]) ?>"
+                      src="<?= ImageHelper::getImageUrl($relatedProduct['images'][0], 'thumbnail') ?>"
                       alt="<?= htmlspecialchars($relatedProduct['name']) ?>"
                       class="absolute top-0 left-0 object-contain w-full h-full">
                   <?php else: ?>
@@ -524,7 +528,7 @@ if (isset($product['features']) && !empty($product['features'])) {
               </div>
 
               <div>
-                <a href="#" class="text-sm singer-red-text hover:underline"><?= __('product.view_full_faq') ?></a>
+                <a href="#" class="text-sm text-primary hover:underline"><?= __('product.view_full_faq') ?></a>
               </div>
             </div>
           </div>
@@ -635,7 +639,7 @@ if (isset($product['features']) && !empty($product['features'])) {
     <?php if (isset($product['gtin']) && !empty($product['gtin'])): ?> "gtin13": "<?= htmlspecialchars($product['gtin']) ?>",
     <?php endif; ?> "brand": {
       "@type": "Brand",
-      "name": "Singer"
+      "name": "<?= $config['app']['name'] ?>"
     },
     <?php if (isset($category) && !empty($category)): ?> "category": "<?= htmlspecialchars($category['name']) ?>",
     <?php endif; ?> "offers": {
@@ -650,14 +654,18 @@ if (isset($product['features']) && !empty($product['features'])) {
 
 <script>
   // Image gallery functionality
+  // Image gallery functionality
   document.addEventListener('DOMContentLoaded', function() {
     const mainImage = document.getElementById('mainProductImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const prevButton = document.getElementById('prev-image');
     const nextButton = document.getElementById('next-image');
+
+    // Get the original image URLs, not thumbnails
     const images = <?= json_encode(array_map(function ($img) {
-                      return getImageUrl($img);
+                      return \App\Helpers\ImageHelper::getImageUrl($img, 'original');
                     }, $product['images'])) ?>;
+
     let currentIndex = 0;
 
     // Function to update main image
@@ -694,44 +702,6 @@ if (isset($product['features']) && !empty($product['features'])) {
       nextButton.addEventListener('click', function() {
         const newIndex = (currentIndex + 1) % images.length;
         updateMainImage(newIndex);
-      });
-    }
-
-    // Toggle description
-    const toggleBtn = document.getElementById('toggle-description');
-    const fullDescription = document.getElementById('full-description');
-
-    if (toggleBtn && fullDescription) {
-      toggleBtn.addEventListener('click', function() {
-        const isHidden = fullDescription.classList.contains('hidden');
-
-        if (isHidden) {
-          fullDescription.classList.remove('hidden');
-          toggleBtn.textContent = 'Lire moins';
-        } else {
-          fullDescription.classList.add('hidden');
-          toggleBtn.textContent = 'Lire plus';
-        }
-      });
-    }
-
-    // Quantity buttons
-    const quantityInput = document.getElementById('quantity');
-    const quantityBtns = document.querySelectorAll('.quantity-btn');
-
-    if (quantityInput && quantityBtns.length) {
-      quantityBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          const action = this.getAttribute('data-action');
-          const currentValue = parseInt(quantityInput.value);
-          const max = parseInt(quantityInput.getAttribute('max'));
-
-          if (action === 'increase' && currentValue < max) {
-            quantityInput.value = currentValue + 1;
-          } else if (action === 'decrease' && currentValue > 1) {
-            quantityInput.value = currentValue - 1;
-          }
-        });
       });
     }
   });

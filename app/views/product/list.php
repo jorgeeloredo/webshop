@@ -1,11 +1,8 @@
 <?php
 // app/views/product/list.php
 
-// Function to generate image URL
-function getImageUrl($image)
-{
-  return '/assets/images/products/' . $image;
-}
+// Use ImageHelper for thumbnails
+use App\Helpers\ImageHelper;
 
 // Initialize Review model to get ratings
 $reviewModel = new \App\Models\Review();
@@ -39,11 +36,11 @@ $reviewModel = new \App\Models\Review();
       <?php foreach ($products as $product): ?>
         <div class="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-sm">
           <a href="/product/<?= $product['slug'] ?>" class="block">
-            <!-- Updated image container with fixed aspect ratio -->
+            <!-- Updated image container with fixed aspect ratio and optimized thumbnails -->
             <div class="relative overflow-hidden bg-gray-100" style="padding-bottom: 100%;">
               <?php if (isset($product['images']) && !empty($product['images'])): ?>
                 <img
-                  src="<?= getImageUrl($product['images'][0]) ?>"
+                  src="<?= ImageHelper::getImageUrl($product['images'][0], 'thumbnail') ?>"
                   alt="<?= htmlspecialchars($product['name']) ?>"
                   class="absolute top-0 left-0 object-contain w-full h-full">
               <?php else: ?>
@@ -82,18 +79,6 @@ $reviewModel = new \App\Models\Review();
               <?php endif; ?>
             </div>
           </a>
-          <!--<div class="px-4 pb-4">
-            <form action="/cart/buy-now" method="POST">
-              <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
-              <input type="hidden" name="quantity" value="1">
-              <button
-                type="submit"
-                class="w-full py-2 text-sm text-white transition rounded-full bg-primary hover:bg-primary-hover"
-                <?= (isset($product['stock']) && $product['stock'] <= 0) ? 'disabled' : '' ?>>
-                <?= (isset($product['stock']) && $product['stock'] <= 0) ? __('general.unavailable') : __('listing.buy_now') ?>
-              </button>
-            </form>
-          </div>-->
         </div>
       <?php endforeach; ?>
     </div>

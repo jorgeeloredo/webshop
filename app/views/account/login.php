@@ -12,7 +12,7 @@ $error = $error ?? null;
     <h1 class="mb-6 text-2xl font-normal text-center text-gray-800"><?= __('account.login') ?></h1>
 
     <?php if ($error): ?>
-      <div class="p-4 mb-4 text-primary-hover bg-red-100 border border-red-200 rounded-lg">
+      <div class="p-4 mb-4 bg-red-100 border border-red-200 rounded-lg text-primary-hover">
         <?= htmlspecialchars($error) ?>
       </div>
     <?php endif; ?>
@@ -54,7 +54,7 @@ $error = $error ?? null;
             type="checkbox"
             id="remember"
             name="remember"
-            class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
             <?= isset($old['remember']) && $old['remember'] ? 'checked' : '' ?>>
           <label for="remember" class="block ml-2 text-sm text-gray-700"><?= __('account.remember_me') ?></label>
         </div>
@@ -71,7 +71,7 @@ $error = $error ?? null;
 
       <div class="pt-4 mt-6 text-sm text-center border-t border-gray-200">
         <p class="text-gray-600"><?= __('account.no_account') ?></p>
-        <a href="/register" class="font-medium singer-red-text hover:underline"><?= __('account.create_account') ?></a>
+        <a href="/register" class="font-medium text-primary hover:underline"><?= __('account.create_account') ?></a>
       </div>
     </div>
   </div>

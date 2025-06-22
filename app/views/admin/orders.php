@@ -30,7 +30,7 @@ if (isset($_SESSION['error'])) {
     <?php endif; ?>
 
     <?php if ($error): ?>
-      <div class="p-4 mb-6 text-primary-hover bg-red-100 border border-red-200 rounded-lg">
+      <div class="p-4 mb-6 bg-red-100 border border-red-200 rounded-lg text-primary-hover">
         <?= htmlspecialchars($error) ?>
       </div>
     <?php endif; ?>
@@ -121,7 +121,7 @@ if (isset($_SESSION['error'])) {
                   </span>
                 </td>
                 <td class="px-4 py-4 text-right whitespace-nowrap">
-                  <a href="/admin/orders/<?= $order['id'] ?>" class="text-sm singer-red-text hover:underline">
+                  <a href="/admin/orders/<?= $order['id'] ?>" class="text-sm text-primary hover:underline">
                     <?= __('admin.details') ?>
                   </a>
                 </td>
