@@ -175,27 +175,37 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
       line-height: 37px;
     }
   </style>
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-P4GLVBPJ');
-  </script>
-  <!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-THJLCSNH');</script>
+<!-- End Google Tag Manager -->
+   <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1714961376562218');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1714961376562218&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 
 <body class="bg-white">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THJLCSNH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <!-- Non-fixed promotional bar at the top (full-width background) -->
   <div class="bg-primary text-white text-center text-sm font-medium py-1.5">
     <div class="site-container"><?= __('general.top_text', ['amount' => '300']) ?></div>
@@ -236,7 +246,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
 
       <!-- Right side controls -->
       <div class="flex items-center">
-        <form action="/search" method="GET" class="flex items-center">
+        <!--<form action="/search" method="GET" class="flex items-center">
           <input
             type="text"
             name="q"
@@ -245,7 +255,7 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : (isset($_SERVER['HTTPS'])
           <button type="submit" class="flex items-center justify-center w-8 h-8 text-gray-600">
             <i class="fas fa-search"></i>
           </button>
-        </form>
+        </form>-->
         <a href="<?= $isLoggedIn ? '/account' : '/login' ?>" class="flex items-center ml-4">
           <i class="text-gray-600 fas fa-user"></i>
         </a>

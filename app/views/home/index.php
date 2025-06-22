@@ -1,5 +1,6 @@
 <?php
 // app/views/home/index.php
+use App\Helpers\ImageHelper;
 $reviewModel = new \App\Models\Review();
 ?>
 
@@ -15,7 +16,7 @@ $reviewModel = new \App\Models\Review();
         <a href="/category/<?= $category['slug'] ?>" class="group">
           <div class="mb-2 overflow-hidden bg-white border border-gray-200 rounded-lg aspect-square">
             <?php if (isset($category['image']) && !empty($category['image'])): ?>
-              <img src="/assets/images/products/<?= $category['image'] ?>" alt="<?= htmlspecialchars($category['name']) ?>" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
+              <img src="<?= ImageHelper::getImageUrl($category['image'], 'thumbnail', ['width' => 300, 'height' => 300]) ?>" alt="<?= htmlspecialchars($category['name']) ?>" class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
             <?php else: ?>
               <div class="flex items-center justify-center w-full h-full bg-gray-100">
                 <span class="text-gray-400 fas fa-image fa-3x"></span>
@@ -42,7 +43,7 @@ $reviewModel = new \App\Models\Review();
             <div class="relative overflow-hidden bg-gray-100" style="padding-bottom: 100%;">
               <?php if (isset($product['images']) && !empty($product['images'])): ?>
                 <img
-                  src="/assets/images/products/<?= $product['images'][0] ?>"
+                  src="<?= ImageHelper::getImageUrl($product['images'][0], 'thumbnail') ?>"
                   alt="<?= htmlspecialchars($product['name']) ?>"
                   class="absolute top-0 left-0 object-contain w-full h-full">
               <?php else: ?>
